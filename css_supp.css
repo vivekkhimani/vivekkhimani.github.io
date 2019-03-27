@@ -1,0 +1,57 @@
+.img {
+    max-width: 40%;
+    max-height: 40%;
+}
+
+.square {
+    height: auto;
+    width: auto;
+}
+
+.navbar{
+	margin-bottom: 0;
+	border-radius: 0;
+	background-color: #00000;
+	color: #fff;
+	font-size: 1.2em;
+	border: 0;
+}
+
+
+#carousel_0{
+	position: center;
+    height:100px;
+    width:100%;
+    top:50%;
+    bottom:50%;
+    margin-top: -50px; 
+    margin-bottom: -50px;
+	right: 50%;
+	left: 2.5%;
+}
+
+#carousel_1{
+	position: center;
+    height:100px;
+    width:100%;
+    top:50%;
+    bottom:90%;
+    margin-top: 10px; 
+    margin-bottom: -50px;
+	right: 50%;
+	left: 2.5%
+
+}
+
+#carousel_2{
+	position: center;
+    height:100px;
+    width:100%;
+    top:10%;
+    bottom:50%;
+    margin-top: -50px; 
+    margin-bottom: -50px;
+	right: 50%;
+	left: 2.5%;
+}
+	

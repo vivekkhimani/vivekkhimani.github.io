@@ -11,20 +11,73 @@
 .navbar{
 	margin-bottom: 0;
 	border-radius: 0;
-	background-color: #00000;
-	color: #fff;
+	background-color: #000000;
 	font-size: 1.2em;
 	border: 0;
+  color: #ffffff;
+}
+
+#jumbo_1{
+  background-color: black;
+}
+
+#about{
+  margin-top: 75px;
+}
+#about_header{
+  margin-top: -50px;
 }
 
 
+
+#main_logo{
+  width:50%;
+  height:50%;
+}
+#main_img{
+  margin-top:auto;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#main1_img{
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius: 8px;
+  margin-top:20px;
+}
+
+#sublogos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5%;
+}
+
+#sublogo1{
+  display:inline-block;
+}
+#sublogo2{
+  display:inline-block;
+  margin-bottom: -20px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+
+#slides{
+  height:75%;
+  width:auto;
+}
 #carousel_0{
 	position: center;
     height:100px;
     width:100%;
     top:50%;
     bottom:50%;
-    margin-top: -50px; 
+    margin-top: -50px;
     margin-bottom: -50px;
 	right: 50%;
 	left: 2.5%;
@@ -36,7 +89,7 @@
     width:100%;
     top:50%;
     bottom:90%;
-    margin-top: 10px; 
+    margin-top: 10px;
     margin-bottom: -50px;
 	right: 50%;
 	left: 2.5%
@@ -49,9 +102,8 @@
     width:100%;
     top:10%;
     bottom:50%;
-    margin-top: -50px; 
+    margin-top: -50px;
     margin-bottom: -50px;
 	right: 50%;
 	left: 2.5%;
 }
-	

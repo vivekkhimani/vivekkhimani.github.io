@@ -1,8 +1,8 @@
-.img {
-    max-width: 40%;
-    max-height: 40%;
-}
 
+#map_display{
+  height: 25%;
+  width: 75%;
+}
 .square {
     height: auto;
     width: auto;
@@ -23,13 +23,21 @@
 
 #about{
   margin-top: 5%;
+
+}
+
+#education{
+  margin-top: 2.5%;
 }
 #about_header{
   margin-top: -2%;
 }
 
+#edu_images{
+  width: 200px;
+  height: 200px;
 
-
+}
 #main_logo{
   width:50%;
   height:50%;

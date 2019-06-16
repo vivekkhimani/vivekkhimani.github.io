@@ -1,3 +1,6 @@
+body {
+  background-color: black;
+}
 .button {
   background-color: #659dbd;
   border: none;
@@ -75,10 +78,10 @@
 }
 
 #sublogo1 {
-  display: inline-block;
+  display: inline;
 }
 #sublogo2 {
-  display: inline-block;
+  display: inline;
   margin-left: 40px;
   margin-right: 10px;
 }

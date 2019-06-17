@@ -1,5 +1,6 @@
 body {
   background-color: black;
+  margin-top: 6em;
 }
 .button {
   background-color: #659dbd;
@@ -79,6 +80,8 @@ body {
 
 #sublogo1 {
   display: inline;
+  height: 80%;
+  width: 70%;
 }
 #sublogo2 {
   display: inline;

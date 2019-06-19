@@ -1,3 +1,13 @@
+hr {
+  height: 1px;
+  width: 300px;
+  color: red;
+  background-color: red;
+  border: none;
+}
+.center {
+  margin: auto;
+}
 body {
   background-color: black;
   margin-top: 6em;

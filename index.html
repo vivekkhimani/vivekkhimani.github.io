@@ -30,28 +30,35 @@
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   </head>
 
   <body>
-    <!--
-      ------------------------------------------------
-      HOME SECTION------------------------------
-    -->
-    <!-- Home Intro Section -->
-
-    <!--
-      <div id="home_section" class="container-fluid padding">
-        <div class="row welcome text-center">
-          <div class="col-12" id="sublogos">
-            <img id="sublogo1" src="name_logo.png" />
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body"><p>Some text in the modal.</p></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              Close
+            </button>
           </div>
         </div>
       </div>
-    -->
+    </div>
 
-    <!-- Home Remaining Sections -->
+    <!--
+      ------------ HOME HEADER---------------
+      --------------
+    -->
     <div class="container-fluid padding">
       <div class="row text-center padding">
         <div class="col-xs-12 col-sm-6 col-md-4">
@@ -75,7 +82,7 @@
             <hr id="rule_1" />
             <div class="container-fluid padding">
               <div class="row text-center padding">
-                <div class="col-xs-12 col-md-4">
+                <div class="col-xs-12 col-md-3">
                   <a href="https://www.cs.drexel.edu/~vck29/008_VivekResume.pdf"
                     ><img
                       id="sublogo1"
@@ -90,7 +97,7 @@
                   </p>
                 </div>
 
-                <div class="col-xs-12 col-md-4">
+                <div class="col-xs-12 col-md-3">
                   <a href="experiences.html"
                     ><img
                       class="img-fluid"
@@ -105,7 +112,7 @@
                   </p>
                 </div>
 
-                <div class="col-xs-12 col-md-4">
+                <div class="col-xs-12 col-md-3">
                   <a href="projects.html"
                     ><img
                       class="img-fluid"
@@ -119,6 +126,21 @@
                     Projects and Research
                   </p>
                 </div>
+
+                <div class="col-xs-12 col-md-3">
+                  <a data-toggle="modal" data-target="#myModal"
+                    ><img
+                      class="img-fluid"
+                      src="skills_edited.png"
+                      style="width: 35%; height: 49%; margin-bottom: 10px;"
+                  /></a>
+                  <p
+                    class="lead"
+                    style="font-family: Arial Rounded MT Bold; color: white"
+                  >
+                    Skills
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -127,7 +149,72 @@
       <br />
       <br />
       <br />
-      <hr id="rule_2" />
+
+      <br />
+      <br />
+      <br />
+
+      <!-- - EXPERIENCES EXPERIMENT -->
+      <div class="card-deck">
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="DrexelADS.png"
+            style="height: 400px; width:fill;"
+          />
+          <div class="card-body">
+            <h5 class="card-title">
+              Drexel Algorithms and Data Structures Club
+            </h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+          </div>
+          <div class="card-footer">
+            <p class="lead">April 2019 - Present</p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="buskers.png"
+            style="height: 400px; width: fill;"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Buskers Philly Non-Profit Organization</h5>
+            <p class="card-text">
+              This card has supporting text below as a natural lead-in to
+              additional content.
+            </p>
+          </div>
+          <div class="card-footer">
+            <p class="lead">April 2019 - Present</p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="mcs.jpeg"
+            style="height: 400px; width: fill;"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Mathematics and Computer Science Society</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This card has even longer content
+              than the first to show that equal height action.
+            </p>
+          </div>
+          <div class="card-footer">
+            <p class="lead">September 2018 - Present</p>
+          </div>
+        </div>
+      </div>
+      <hr \ id="rule_2" />
+
+      <!-- ---------- CONTACT FOOTER SECTION ---- -->
       <div class="container-fluid padding">
         <div class="row text-center padding">
           <div class="col-xs-12 col-sm-6 col-md-4">
@@ -136,7 +223,7 @@
                 <tr>
                   <th>
                     <i
-                      class="fa fa-code"
+                      class="fa fa-graduation-cap"
                       style="font-size:48px;color:#127FED"
                     ></i>
                   </th>
@@ -145,7 +232,7 @@
                       class="lead"
                       style="font-family: Arial Rounded MT Bold; color: white; margin-top: 10px; float:left;"
                     >
-                      &nbsp&nbsp&nbsp&nbspComputer Science
+                      &nbsp&nbsp&nbsp&nbspDrexel University
                     </p>
                   </td>
                 </tr>
@@ -162,7 +249,7 @@
                       class="lead"
                       style="font-family: Arial Rounded MT Bold; color: white; margin-top: 10px;"
                     >
-                      &nbsp&nbsp&nbsp&nbspDrexel University
+                      &nbsp&nbsp&nbsp&nbsp223 N 34th St, PA 19104
                     </p>
                   </td>
                 </tr>

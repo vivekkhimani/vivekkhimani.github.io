@@ -1,3 +1,20 @@
+#skill_table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#skill_td,
+#skill_th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+#skill_tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
 #rule_1 {
   height: 1px;
   width: 300px;

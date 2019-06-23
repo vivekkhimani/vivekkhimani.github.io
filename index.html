@@ -33,6 +33,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/lepture/github-cards@latest/jsdelivr/widget.js"></script>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script src="index.js"></script>
   </head>
 
   <body>
@@ -222,6 +227,297 @@
         <br />
         <br />
         <br />
+
+        <!-- Programming Languages Modal -->
+        <div
+          class="modal fade"
+          id="Modal1"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="Modal1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Programming Languages</h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <table id="skill_table">
+                  <tr id="skill_tr">
+                    <th id="skill_th">Languages</th>
+                    <td id="skill_td">Experience (out of 5)</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">Python</th>
+                    <td id="skill_td">5</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">Java</th>
+                    <td id="skill_td">3</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">C/C++</th>
+                    <td id="skill_td">3</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">HTML5</th>
+                    <td id="skill_td">5</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">JavaScript</th>
+                    <td id="skill_td">5</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">CSS</th>
+                    <td id="skill_td">5</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">Racket (LISP)</th>
+                    <td id="skill_td">3</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">BASH</th>
+                    <td id="skill_td">4</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">LaTex</th>
+                    <td id="skill_td">5</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">XML</th>
+                    <td id="skill_td">4</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools Modal -->
+        <div
+          class="modal fade"
+          id="Modal2"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="Modal2"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Tools</h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <table id="skill_table">
+                  <tr id="skill_tr">
+                    <th id="skill_th">Tools</th>
+                    <td id="skill_td">Experience (out of 5)</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">Git (Version Control)</th>
+                    <td id="skill_td">5</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">Atom (IDE)</th>
+                    <td id="skill_td">5</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">Visual Studio (IDE)</th>
+                    <td id="skill_td">5</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">SQLite (DBMS)</th>
+                    <td id="skill_td">3</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">MongoDB (DBMS)</th>
+                    <td id="skill_td">3</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">Firebase (DBMS)</th>
+                    <td id="skill_td">4</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">Jupyter (IPython IDE)</th>
+                    <td id="skill_td">3</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frameworks Modal -->
+        <div
+          class="modal fade"
+          id="Modal3"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="Modal3"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Frameworks/Libraries</h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <table id="skill_table">
+                  <tr id="skill_tr">
+                    <th id="skill_th">Frameworks/Libraries</th>
+                    <td id="skill_td">Experience (out of 5)</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">Bootstrap4</th>
+                    <td id="skill_td">5</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">ReactJS</th>
+                    <td id="skill_td">4</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">Tensorflow</th>
+                    <td id="skill_td">3</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">NumPy</th>
+                    <td id="skill_td">3</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">Matplotlib</th>
+                    <td id="skill_td">3</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Applications Modal -->
+        <div
+          class="modal fade"
+          id="Modal4"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="Modal4"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Applications/Software</h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <table id="skill_table">
+                  <tr id="skill_tr">
+                    <th id="skill_th">Applications/Software</th>
+                    <td id="skill_td">Experience (out of 5)</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">MS Office</th>
+                    <td id="skill_td">5</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">GNU Image Manipulation (GIMP)</th>
+                    <td id="skill_td">3</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">MS Azure Machine Learning Studio</th>
+                    <td id="skill_td">2</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">Google Cloud Platform (API)</th>
+                    <td id="skill_td">4</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">Anaconda</th>
+                    <td id="skill_td">5</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- OS Modal -->
+        <div
+          class="modal fade"
+          id="Modal5"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="Modal5"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Operating Systems</h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <table id="skill_table">
+                  <tr id="skill_tr">
+                    <th id="skill_th">Operating Systems</th>
+                    <td id="skill_td">Experience (out of 5)</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">Windows</th>
+                    <td id="skill_td">5</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">Linux (Ubuntu)</th>
+                    <td id="skill_td">5</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">MacOS</th>
+                    <td id="skill_td">4</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="col-12" id="main_skills">
           <center>
             <h2
@@ -236,36 +532,45 @@
           <div class="col-12">
             <div
               class="col-xs-10 col-sm-6 col-md-2"
-              style="display: inline-block; margin-top: 10px;"
+              style="display: inline-block; margin-top: 20px;"
             >
-              <img
-                src="programming_languages.png"
-                style="height: 80px; width: 80px;"
-              />
+              <a data-toggle="modal" data-target="#Modal1"
+                ><img
+                  src="programming_languages.png"
+                  style="height: 80px; width: 80px;"
+              /></a>
             </div>
             <div
               class="col-xs-10 col-sm-6 col-md-2"
-              style="display: inline-block; margin-top: 10px;"
+              style="display: inline-block; margin-top: 20px;"
             >
-              <img src="tools.png" style="height: 80px; width: 80px;" />
+              <a data-toggle="modal" data-target="#Modal2"
+                ><img src="tools.png" style="height: 80px; width: 80px;"
+              /></a>
             </div>
             <div
               class="col-xs-10 col-sm-6 col-md-2"
-              style="display: inline-block; margin-top: 10px;"
+              style="display: inline-block; margin-top: 20px;"
             >
-              <img src="frameworks.png" style="height: 80px; width: 80px;" />
+              <a data-toggle="modal" data-target="#Modal3"
+                ><img src="frameworks.png" style="height: 80px; width: 80px;"
+              /></a>
             </div>
             <div
               class="col-xs-10 col-sm-6 col-md-2"
-              style="display: inline-block; margin-top: 10px;"
+              style="display: inline-block; margin-top: 20px;"
             >
-              <img src="applications.png" style="height: 80px; width: 80px;" />
+              <a data-toggle="modal" data-target="#Modal4"
+                ><img src="applications.png" style="height: 80px; width: 80px;"
+              /></a>
             </div>
             <div
               class="col-xs-10 col-sm-6 col-md-2"
-              style="display: inline-block; margin-top: 10px;"
+              style="display: inline-block; margin-top: 20px;"
             >
-              <img src="os.png" style="height: 80px; width: 80px;" />
+              <a data-toggle="modal" data-target="#Modal5"
+                ><img src="os.png" style="height: 80px; width: 80px;"
+              /></a>
             </div>
           </div>
         </center>

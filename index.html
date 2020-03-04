@@ -5,11 +5,13 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale = 1.0" />
     <meta
       name="description"
       content="This is a professional e-portfolio of Vivek Khimani, an undergraduate student pursuing a BS in Honors Computer Sci at Drexel University."
     />
+    <meta
+      name="HandheldFriendly" content="true"/>
     <meta name="author" content="Vivek Khimani" />
     <meta property="og:title" content="Welcome - Vivek Khimani" />
     <meta property="og:url" content="https://vivekkhimani.github.io" />
@@ -19,20 +21,16 @@
     />
     <meta property="og:image" content="https://gdURL.com/KMD7" />
     <title>Welcome - Vivek Khimani</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css_supp.css" />
     <link
       rel="stylesheet"
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/lepture/github-cards@latest/jsdelivr/widget.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script
       type="text/javascript"
       src="https://www.gstatic.com/charts/loader.js"
@@ -85,7 +83,7 @@
               data science, & blockchains.            </p>
             <hr id="rule_1" />
             <br />
-            <div class="container-fluid padding">
+            <div class="flex">
               <div class="row text-center padding">
                 <div class="col-xs-12 col-md-3">
                   <a href="https://www.cs.drexel.edu/~vck29/008_VivekResume.pdf"
@@ -99,6 +97,21 @@
                     style="font-family: Arial Rounded MT Bold; color: white"
                   >
                     Resume
+                  </p>
+                </div>
+
+                <div class="col-xs-12 col-md-3">
+                  <a href="#main_about"
+                    ><img
+                      id="sublogo1"
+                      src="about.png"
+                      style="width: 35%; height: 49%; margin-bottom: 10px;"
+                  /></a>
+                  <p
+                    class="lead"
+                    style="font-family: Arial Rounded MT Bold; color: white"
+                  >
+                    About
                   </p>
                 </div>
 
@@ -158,7 +171,7 @@
                     class="lead"
                     style="font-family: Arial Rounded MT Bold; color: white"
                   >
-                    Projects/Research
+                    Projects
                   </p>
                 </div>
 
@@ -222,6 +235,7 @@
                   </p>
                 </div>
 
+              <!--
                 <div class="col-xs-12 col-md-3">
                   <a href="#main_travel"
                     ><img
@@ -236,6 +250,7 @@
                     Travel
                   </p>
                 </div>
+              -->
 
                 <div class="col-xs-12 col-md-3">
                   <a href="#main_hobbies"
@@ -279,7 +294,35 @@
       <br />
       <br />
       <br />
+      <!---ABOUT SECTION--->
+      <div class="col-12" id="main_about">
+        <center>
+          <h2
+            class="display-4"
+            style="font-family: Arial Rounded MT Bold; color: white; margin-bottom: 40px;"
+          >
+            About
+          </h2>
+        </center>
+        <div class="jumbotron" style="background-color: #C0C0C0">
+          
+          <blockquote>
+          <p class="lead" style="color:black; font-style: Arial Rounded MT">Vivek is an undergraduate sophomore at Drexel University pursuing a BS in Computer Science with a prospected minors in Mathematics and Data Science. Vivek is extremely passionate about his interests in mathematics, data science, machine learning, and blockchains. As a result, he plans to pursue concentrations like - Artificial Intelligence, Computer Vision, Computer Networks and Security, Computing Systems (OS & Concurrent Programming), and Data Structures & Algorithms. He is also planning to pursue minors in Mathematics & Data Science.</p></blockquote>
+
+
+          <blockquote><p class="lead" style="color:black; font-style: Arial Rounded MT">
+          In addition to the solid academic record, Vivek has also been actively working as a researcher, campus organizations leader, teaching assistant, and part-time intern at on-campus startups. All the information about his projects, skills, experiences, and more can be found on his personal website (see below) and LinkedIn profile.</p></blockquote>
+
+          <blockquote><p class="lead" style="color:black; font-style: Arial Rounded MT">
+          Vivek recently attended an engineering exchange program at Hong Kong University of Science and Technology in Fall 2019. During his time there, he got involved in professional machine learning research with the professor(s) and PhD student(s). Since then, he has continued his research and is currently working on solving the data pollution threats associated with the federated machine learning systems. At Drexel, he is currently serving as a teaching assistant for the Advanced Programming Techniques (CS 265) class, and a vice-president for Data Structures & Algorithms Club. He is also a member of Drexel Data Science Group and Drexel Google Developers Student Club.</p></blockquote>
+        </div>
+        </div>
+
       <!-- - EDUCATION SECTION -->
+      <br />
+      <br />
+      <br />
+      <br />
       <div class="col-12" id="main_education">
         <center>
           <h2
@@ -302,9 +345,19 @@
             <div class="card-body">
               <ul class="card-text">
                 <li>BS in Computer Science</li>
-                <li>Founder's Scholarship</li>
-                <li>Drexel Grant</li>
+                <li>Awards: Founder's Scholarship, Drexel Grant</li>
                 <li>Dean's List (GPA - 3.90)</li>
+                <li><b>Clubs & Organizations:</b>
+                  <ul>
+                    <li>Drexel Algorithms & Data Structures(Vice-Pres)</li>
+                    <li>Data Science & Text Processing Working Group(Member)</li>
+                    <li>Drexel Google Developers Student Club(Member)</li>
+                  </ul>
+                  </li>
+                <li><b>Teaching Assitant:</b>
+                  <ul>
+                    <li>CS265(Advanced Programming Techniques) - Winter 2020</li>
+                  </ul>
                 <li>2018 - 2023</li>
               </ul>
             </div>
@@ -316,15 +369,14 @@
               style="font-family: Arial Rounded MT Bold; font-size: 30px;"
             >
               <img src="hkust.png" style="height:50px; width:50px;" /><b
-                >&nbsp&nbspHong Kong University of Sci. and Tech.
+                >&nbsp&nbspHong Kong Univ of Sci. and Tech.
               </b>
             </div>
             <div class="card-body">
               <ul class="card-text">
                 <li>Undergraduate Engineering Exchange and Research Program</li>
                 <li>
-                  <b>Courses:</b> Data Structures & Algorithms, Machine
-                  Learning, Systems Architecture, Discrete Math, Probability
+                  <b>Courses:</b> Systems Architecture, Discrete Math, Probability
                 </li>
                 <li>
                   <b>Research:</b> Privacy Preserving and Data Pollution Proof
@@ -334,6 +386,26 @@
                 <li>September 1, 2019 - January 3, 2020 (Fall Semester)</li>
               </ul>
             </div>
+          </div>
+
+          <div class="card text-white" style="background-color: #9F0730">
+            <div
+              class="card-header"
+              style="font-family: Arial Rounded MT Bold; font-size: 30px;"
+            >
+              <img src="stanford.png" style="height:50px; width:50px;" /><b
+                >&nbsp&nbspStanford University
+              </b>
+            </div>
+            <div class="card-body">
+              <ul class="card-text">
+                <li>Pre-Collegiate Summer Institutes</li>
+                <li>Course - Knot Theory</li>
+                <li>Full-Ride Scholar</li>
+                <li>June 18, 2016 -- July 8, 2016</li>
+              </ul>
+            </div>
+          </div>
           </div>
         </div>
 
@@ -462,12 +534,21 @@
                     <td id="skill_td">5</td>
                   </tr>
                   <tr id="skill_tr">
-                    <th id="skill_th">Visual Studio (IDE)</th>
+                    <th id="skill_th">Web Storm (IDE)</th>
                     <td id="skill_td">5</td>
                   </tr>
                   <tr id="skill_tr">
+                    <th id="skill_th">Android Studio </th>
+                    <td id="skill_td">2</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">MySQL (DBMS)</th>
+                    <td id="skill_td">4</td>
+                  </tr>
+
+                  <tr id="skill_tr">
                     <th id="skill_th">SQLite (DBMS)</th>
-                    <td id="skill_td">3</td>
+                    <td id="skill_td">4</td>
                   </tr>
                   <tr id="skill_tr">
                     <th id="skill_th">MongoDB (DBMS)</th>
@@ -544,11 +625,19 @@
                     <td id="skill_td">5</td>
                   </tr>
                   <tr id="skill_tr">
+                    <th id="skill_th">NodeJS</th>
+                    <td id="skill_td">5</td>
+                  </tr>
+                  <tr id="skill_tr">
                     <th id="skill_th">ReactJS</th>
                     <td id="skill_td">4</td>
                   </tr>
                   <tr id="skill_tr">
                     <th id="skill_th">Tensorflow</th>
+                    <td id="skill_td">3</td>
+                  </tr>
+                  <tr id="skill_tr">
+                    <th id="skill_th">PyTorch</th>
                     <td id="skill_td">3</td>
                   </tr>
                   <tr id="skill_tr">
@@ -581,7 +670,7 @@
                   </tr>
                   <tr id="skill_tr">
                     <th id="skill_th">keras</th>
-                    <td id="skill_td">2</td>
+                    <td id="skill_td">3</td>
                   </tr>
                 </table>
               </div>
@@ -630,7 +719,7 @@
                     <td id="skill_td">2</td>
                   </tr>
                   <tr id="skill_tr">
-                    <th id="skill_th">Google Cloud Platform (API)</th>
+                    <th id="skill_th">Google Cloud Platform</th>
                     <td id="skill_td">4</td>
                   </tr>
                   <tr id="skill_tr">
@@ -795,6 +884,78 @@
           <div class="card text" style="background-color: #696969">
             <div
               class="card-header"
+              style="background-color:  #C0C0C0; font-family: Arial Rounded MT Bold; font-size: 30px;"
+            >
+              <img src="Dragon_blue.png" style="height:50px; width:50px;" /><b
+                >&nbsp&nbspDrexel University
+              </b>
+            </div>
+            <div class="card-body" style="background-color: #DCDCDC">
+              <p class="card-text"><b>Teaching Assistant:</b></p>
+              <ul class="card-text">
+                <li>
+                  <b><a href="http://catalog.drexel.edu/search/?P=CS%20265">Advanced Programming Tools & Techniques(CS265):</a></b> Winter 2020 (Dr. Kurt Schmidt)
+                </li>
+              </ul>
+              <p class="card-text"><b>Clubs & Organizations:</b></p>
+              <ul class="card-text">
+                <li>
+                  <b>Drexel Algorithms & Data Structures</b>(Vice-President)
+                </li>
+                <li>
+                  <b>Drexel Data Science & Text Processing Working Group</b>(Member)
+                </li>
+                <li>
+                  <b>Drexel Google Students Deeloipers Club</b>(Member)
+                </li>
+            </div>
+            <div class="card-footer" style="background-color: #C0C0C0">
+              <p class="lead">January 2020 - Present</p>
+            </div>
+          </div>
+
+          <div class="card text" style="background-color: #696969">
+            <div
+              class="card-header"
+              style="background-color:  #C0C0C0; font-family: Arial Rounded MT Bold; font-size: 30px;"
+            >
+              <img src="hkust.png" style="height:50px; width:50px;" /><b
+                >&nbsp&nbspSystems & Media Lab @ HKUST
+              </b>
+            </div>
+            <div class="card-body" style="background-color: #DCDCDC">
+              <p class="card-text">
+                <b>Position:</b>&nbspUndergraduate Student Researcher<br/>
+                <b>Supervisor(s):</b>Dr. Pan Hui & Dr. Dimitris Chatzopoulos<br/>
+                <b>Visit: </b><a href="http://symlab.ust.hk/">SymLab Homepage</a>
+              </p>
+              <ul class="card-text">
+                <li>
+                  <b>Implemented</b> a federated learning system using Python, PyTorch, PySyft for the CIFAR-10 and MNIST dataset.
+                </li>
+                <li>
+                  <b>Programmed</b> various synthetic data pollution attacks to analyze the performance degradation in the system.
+                </li>
+                <li>
+                  <b>Built</b> a defence mechanism to protect the system from the previously launched data pollution attacks and analyzed the performance improvement.
+                </li>
+                <li>
+                  <b>Developed</b> multiple APIs on blockchains (smart contracts) and PyTorch that can be used by other researchers using the CLI.
+                </li>
+                <li>
+                  <b>Responsible</b> for the machine learning and blockchain engineering of the entire project being a sole engineer on the team.
+              </ul>
+            </div>
+            <div class="card-footer" style="background-color: #C0C0C0">
+              <p class="lead">Agust 2019 - Present</p>
+            </div>
+          </div>
+        </div>
+        <br/>
+        <div class="card-deck">
+          <div class="card text" style="background-color: #696969">
+            <div
+              class="card-header"
               style="background-color:	#C0C0C0; font-family: Arial Rounded MT Bold; font-size: 30px;"
             >
               <img src="winfo.png" style="height:50px; width:50px;" /><b
@@ -842,7 +1003,7 @@
                   connect and find opportunities in Philadelphia
                 </li>
                 <li>
-                  <b>Developing</b> a system with features like signup, login
+                  <b>Developed</b> a system with features like signup, login
                   authentication, buskers profile, infinites scroll, image
                   uploads, and payments.
                 </li>
@@ -879,36 +1040,141 @@
           </center>
         </div>
         <div class="card-deck">
+          <div class="card" style="background-color: #00FA9a">
+            <div class="card-body">
+              <h5 class="card-title" style="font-size: 25px;">
+                <b>What To-Do</b>
+              </h5>
+              <p class="card-text">
+                &nbsp<b>Role : </b> Full Stack Developer<br />
+                &nbsp<b>Location: </b>Drexel University (Class Project)<br/>
+                &nbsp<b>Duration : </b> March, 2020 - Present<br />
+                &nbsp<b>Skills : </b> Web Development, Google Cloud, MySQL, NodeJS<br />
+              </p>
+              <ul class="card-text">
+                <li>
+                  <b>Developing</b> a platform that allows users to track their tasks. Includes advanced features like priorities-based ranking, intuitive display, location tracking, and countdown mechanism
+                </li>
+                <li>
+                  <b>Hosted</b> a MySQL database on Google Cloud for collaborative usage by the team members
+                </li>
+                <li>
+                  <b>Implemented</b> login authentication (with password encryption and sessions support) using NodeJS and MySQL database
+                </li>
+                <li>
+                  <b>Working</b> with two other students from my class and the project is still in progress.
+                </li>
+              </ul>
+              <center>
+                <a
+                  href="https://github.com/vivekkhimani/What-ToDo-NodeJS"
+                  class="btn btn-primary"
+                  >View Project</a
+                >
+              </center>
+            </div>
+          </div>
+
+          <div class="card" style="background-color: #FFA07A">
+            <div class="card-body">
+              <h5 class="card-title" style="font-size: 25px;">
+                <b>Tweeting for Love</b>
+              </h5>
+              <p class="card-text">
+                &nbsp<b>Role : </b> Full-Stack Developer<br />
+                &nbsp<b>Location : </b> Drexel University (Hackathon Project)<br />
+                &nbsp<b>Duration: </b> March 2020 (24 hours)<br />
+                &nbsp<b>Skills: </b>Machine Learning, Backend Development, Android Studio, Java<br />
+              </p>
+              <ul class="card-text">
+                <li>
+                  <b>Developed</b> a Tinder-like platform that uses the social relationships (followers of followers) from Twitter to make match recommendations
+                </li>
+                <li>
+                  <b>Worked</b> with Twitter4J (Java wrapper for Twitter API) to enable Twitter login authentication and extract followers data from Twitter</b>
+                </li>
+                <li>
+                  <b>Implemented</b> a LSTM deep learning model to predict gender of the users based on names as Twitter didn't disclose that data
+                </li>
+              </ul>
+              <center>
+                <a
+                  href="https://devpost.com/software/tweeting-for-love"
+                  class="btn btn-primary"
+                  >View Project</a
+                >
+              </center>
+            </div>
+          </div>
+
+          <div class="card" style="background-color: #00bFFF">
+            <div class="card-body">
+              <h5 class="card-title" style="font-size: 25px;">
+                <b>Machine Learning Projects & Algorithms</b>
+              </h5>
+              <p class="card-text">
+                &nbsp<b>Role : </b> Individual Project<br />
+                &nbsp<b>Duration: </b> October, 2019 - Present<br />
+                &nbsp<b>Skills: </b>Machine Learning, Python, Mathematics, Multiple Python libraries, Git<br />
+              </p>
+              <ul class="card-text">
+                <li>
+                  <b>Participating</b> in various online competitions launched by Kaggle, DataCamp, DrivenData to hone my practical machine learning engineering skills
+                </li>
+                <li>
+                  <b>Performing</b> mathematical analysis, feature engineering, and developing various models using Python-based machine learning tools
+                </li>
+                <li>
+                  <b>Maintaining</b> an open-source Git repository to publish my mathematical intuition, thought process, code, and final results so it can be used by others
+                </li>
+              </ul>
+              <center>
+                <a
+                  href="https://github.com/vivekkhimani/MachineLearningPractice-Algorithms"
+                  class="btn btn-primary"
+                  >View Project</a
+                >
+              </center>            
+            </div>
+          </div>
+        </div>
+
+        <div class="card-deck" style="margin-top: 50px;">
           <div class="card" style="background-color: #FFE400">
             <div class="card-body">
               <h5 class="card-title" style="font-size: 25px;">
-                <b>Research : Privacy Preserving Machine Learning</b>
+                <b>HKUST Schedule Crawler</b>
               </h5>
               <p class="card-text">
                 &nbsp<b>Location : </b> Hong Kong Uni. Of Sci And Technology
                 (HKUST)<br />
-                &nbsp<b>Supervisor(s) : </b> Dr. Pan Hui & Dr. Dimitris
-                Chatzopoulos<br />
-                &nbsp<b>Duration : </b> August, 2019 - Present<br />
-                &nbsp<b>Skills : </b> Blockchain (structure and protocols),
-                Solidity, Ethereum, Machine Learning Theory, Data Science<br />
+                &nbsp<b>Duration : </b> August, 2019 (4 hours)<br />
+                &nbsp<b>Skills : </b> Python, Web Scraping, OOP, BeautifulSoup<br />
               </p>
               <ul class="card-text">
                 <li>
-                  <b>Implementing</b> a federated learning system in combination
-                  with blockchain and other ML alogirthm to ensure privacy of
-                  users and protection against data pollution attacks
+                  <b>Implemented</b> a web crawler in Python that takes term and class name as an input and outputs the details
                 </li>
                 <li>
-                  <b>Responsible</b> for programming the blockchain (smart
-                  contract) architecture and establish its connection with other
-                  machine learning algorithms implemented on the server
+                  <b>Used</b> BeautifulSoup for scraping the relevant data from HKUST course details page.
                 </li>
                 <li>
-                  <b>Co-authoring</b> the research paper which will be submitted
-                  to AAMAS (Autonomous and Multiagent Systems Conference) 2020
+                  <b>Handled</b> all the input errors and edge cases and asked various students to test it as well so the code is ready for production. 
+                </li>
+                <li>
+                  <b>Shared</b> the final code with HKUST official app development team to use it in production.
+                </li>
+                <li>
+                  <b>Completed</b> the final product (with edge case testing) in approximately 4 hours.
                 </li>
               </ul>
+              <center>
+                <a
+                  href="https://github.com/vivekkhimani/HKUST_Schedule_Crawler_Python"
+                  class="btn btn-primary"
+                  >View Project</a
+                >
+              </center>
             </div>
           </div>
 
@@ -1277,7 +1543,7 @@
             </ul>
           </div>
           <div class="card-footer" style="background-color:	#8AAAE5">
-            <p class="lead">September 2018 - Present</p>
+            <p class="lead">September 2018 - June 2019</p>
           </div>
         </div>
       </div>
@@ -1459,17 +1725,14 @@
 
       <div class="container-fluid padding">
       <div class="row text-center padding">
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <h5 class="display-6" style="font-family: Arial Rounded MT Bold; color: white; margin-bottom: 40px;">Year:&nbsp&nbsp&nbsp&nbspPre-Junior (Third)</h5>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <h5 class="display-6" style="font-family: Arial Rounded MT Bold; color: white; margin-bottom: 40px;">Year:&nbsp&nbsp&nbsp&nbspSophomore (Third)</h5>
       </div>
-      <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="col-xs-12 col-sm-6 col-md-4">
         <h5 class="display-6" style="font-family: Arial Rounded MT Bold; color: white; margin-bottom: 10px;">Major GPA:&nbsp&nbsp&nbsp&nbsp3.90</h5>
       </div>
-      <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="col-xs-12 col-sm-6 col-md-4">
         <h5 class="display-6" style="font-family: Arial Rounded MT Bold; color: white; margin-bottom: 40px;">Overall GPA:&nbsp&nbsp&nbsp&nbsp3.90</h5>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <h5 class="display-6" style="font-family: Arial Rounded MT Bold; color: white; margin-bottom: 40px;">Exp. Graduation:&nbsp&nbsp&nbsp&nbspDecember 2022</h5>
       </div>
     </div>
   </div>
@@ -1689,7 +1952,7 @@
         <td id="certi_td">Data Structures (CS 260)</td>
       <td id="certi_td">Drexel University</td>
       <td id="certi_td">3</td>
-      <td id="certi_td"><a href="https://drexel.edu/cci/about/directory/L/long-galen/">Dr. Galen Long</a></td>
+      <td id="certi_td"><a href="https://drexel.edu/cci/about/directory/L/long-galen/">Galen Long</a></td>
       <td id="certi_td"><a href="http://catalog.drexel.edu/coursedescriptions/quarter/undergrad/cs/">CS 260</a></td>
       </tr>
 
@@ -1709,14 +1972,6 @@
       <td id="certi_td"><a href="http://catalog.drexel.edu/coursedescriptions/quarter/undergrad/cs/">CS 375</a></td>
       </tr>
 
-      <tr>
-        <td id="certi_td">Introduction to Software Engineering (SE 181)</td>
-      <td id="certi_td">Drexel University</td>
-      <td id="certi_td">3</td>
-      <td id="certi_td"><a href="https://drexel.edu/cci/about/directory/V/Vokolos-Filippos/">Dr. Filippos Vokolos</a></td>
-      <td id="certi_td"><a href="http://catalog.drexel.edu/coursedescriptions/quarter/undergrad/se/">SE 181</a></td>
-      </tr>
-
 
       </table>
 
@@ -1729,7 +1984,8 @@
       <br />
 
 <!--- RECOMMENDATIONS SECTION BEGINS ---->
-        <div class="col-12" id="main_courses">
+<!--
+        <div class="col-12" id="main_recommendations">
         <center>
           <h2
             class="display-4"
@@ -1739,6 +1995,51 @@
           </h2>
         </center>
       </div>
+
+<div class="container-fluid padding" style="display:block; padding: 50; text-align: center">
+<div class="jumbotron-fluid" style="background: transparent !important">
+  <div class="row text-center padding" id="recommend">
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="card">
+      <div class="container">
+        <h5 style="text-align:center">Dr. William M. Mongan, PhD</h5>
+        <p class="title" style="text-align:center">Former Computer Science Department Head<br/>Drexel University<br/>Philadelphia, PA, USA</p>
+        <p>                <a
+                  href="https://flutracker-19cb9.firebaseapp.com/"
+                  class="btn btn-primary"
+                  >View Letter</a
+                ></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="card">
+      <div class="container">
+        <h5 style="text-align:center">Jason</h5>
+        <p class="title" style="text-align:center;">Developer</p>
+        <p><button class="button">
+        <a style = "color: white;" href="mailto:jn653@drexel.edu">Contact</a>
+      </button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="card">
+      <div class="container">
+        <h5 style="text-align:center">Ryan</h5>
+        <p class="title" style="text-align:center;">Developer</p>
+        <p><button class="button">
+        <a style = "color: white;" href="mailto:rpk52@drexel.edu">Contact</a>
+      </button></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+--->
 
       <hr \ id="rule_2" />
 
@@ -1847,6 +2148,9 @@
               ></a>
               <a href="https://stackoverflow.com/users/11372284/vivek-khimani"
                 ><i id="social-so" class="fa fa-stack-overflow fa-3x social" style="font-size:40px"></i
+              ></a>
+              <a href="https://www.quora.com/profile/Vivek-Khimani"
+                ><i id="social-so" class="fa fa-quora fa-3x social" style="font-size:40px"></i
               ></a>
               <a href="mailto:vivekkhimani07@gmail.com"
                 ><i id="social-gm" class="fa fa-google fa-3x social"></i

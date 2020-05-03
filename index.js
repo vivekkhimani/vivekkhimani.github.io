@@ -1,5 +1,7 @@
 google.charts.load("current", { packages: ["bar"] });
 google.charts.setOnLoadCallback(drawProgrammingLanguages);
+var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+
 
 function drawProgrammingLanguages() {
   var data = new google.visualization.arrayToDataTable([

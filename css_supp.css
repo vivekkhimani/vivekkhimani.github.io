@@ -9,12 +9,31 @@
     #primary { width:100%; }
     #secondary { width:100%; margin:0; border:none; }
 }
+#mapid { height: 180px; }
 
 .flex{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: column;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
 }
 
 #recommend{

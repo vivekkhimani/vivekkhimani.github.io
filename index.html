@@ -163,6 +163,10 @@
                   //Creating Markers
                   var philly = new L.marker([39.96, -75.16]).addTo(map);
                   var london = new L.marker([51.5072, -0.1276]).addTo(map);
+                  var yellowstone = new L.marker([44.42, -110.59]).addTo(map);
+                  var grand_teton = new L.marker([43.80, -100.68]).addTo(map);
+                  var slc = new L.marker([40.77, -111.89]).addTo(map);
+                  var lv = new L.marker([36.17, -115.14]).addTo(map);
                   var boston = new L.marker([42.3601, -71.0589]).addTo(map);
                   var coventry = new L.marker([54.1428, -1.51]).addTo(map);
                   var ambleside = new L.marker([54.43, -2.96]).addTo(map);
@@ -208,10 +212,14 @@
                   var surat = new L.marker([21.17, 72.83]).addTo(map);
 
                   //pop-up bindings
-                  sfo.bindPopup("<b>San Francisco Bay Area, United States</b><br>Software Engineering Intern at r2c.");
+                  sfo.bindPopup("<b>San Francisco Bay Area, United States</b><br>Software Engineer at Semgrep").openPopup();
+                  yellowstone.bindPopup("<b>Yellowstone National Park.</b><br>Vacation.");
+                  grand_teton.bindPopup("<b>Grand Teton National Park.</b><br>Vacation.");
+                  slc.bindPopup("<b>Salt Lake City.</b><br>Vacation.");
+                  lv.bindPopup("<b>Las Vegas, Nevada.</b>Vacation.");
                   menlopark.bindPopup("<b>Menlo Park</b><br>Software Engineering Intern at Meta.");
                   stanford.bindPopup("<b>Stanford University</b><br>Pre-Collegiate Summer Institutes.");
-                  philly.bindPopup("<b>Philadelphia, United States</b><br>Drexel University.").openPopup();
+                  philly.bindPopup("<b>Philadelphia, United States</b><br>Drexel University.");
                   london.bindPopup("<b>London, UK</b><br>Vacation.");
                   boston.bindPopup("<b>Boston, MA</b><br>Work trip.");
                   ambleside.bindPopup("<b>Ambleside, UK</b><br>Leisure trip to the Lake District.");

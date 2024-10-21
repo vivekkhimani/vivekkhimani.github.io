@@ -306,9 +306,72 @@
                 alt="Profile"
               />
             </div>
+            <div class="col-lg-8 pt-4 pt-lg-0 content">
+              <div class="row">
+                <div class="col-lg-12">
+                  <h3>My bookshelf</h3>
+                  <style>
+                    #customize-list {
+                      margin-left: 20px;
+                      list-style: none;
+                    }
+                    #gr_updates_widget {
+                      border-radius: 1px;
+                      background-color: #fff;
+                      border: solid #0563bb 2px;
+                      box-shadow: 0px 0px 4px 1px #0a0a0a,
+                        inset 0px 0px 0px 1px #d7c606;
+                      padding: 15px;
+                      width: 100%;
+                      height: auto;
+                      display: flex;
+                      flex-direction: column; /* Align children vertically */
+                      justify-content: center;
+                      align-items: center;
+                      border-radius: 10px;
+                    }
+                    #gr_footer {
+                      margin-top: 10px; /* Add some space between iframe and footer */
+                      height: auto; /* Allow footer to size based on content */
+                    }
+                    #gr_updates_widget p {
+                      padding: 0px;
+                      margin: 0;
+                      font-size: 30px;
+                    }
+                    #gr_footer img {
+                      width: 100px;
+                      display: block; /* Center the footer image */
+                      margin: 0 auto; /* Center the footer image */
+                    }
+                    .goodreads-iframe {
+                      width: 100%;
+                      height: 300px; /* Set a fixed height for the iframe */
+                    }
+                  </style>
+                  <div id="gr_updates_widget" style="height: auto">
+                    <iframe
+                      sandbox
+                      id="the_iframe"
+                      class="goodreads-iframe"
+                      src="https://goodreads.com/widgets/user_update_widget?num_updates=20&user=177773639"
+                      frameborder="1"
+                    ></iframe>
+                    <div id="gr_footer">
+                      <a href="https://www.goodreads.com/"
+                        ><img
+                          alt="Goodreads: Book reviews, recommendations, and discussion"
+                          src="https://s.gr-assets.com/images/layout/goodreads_logo_140.png"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
       <!-- End About Section -->
       <!-- ======= Facts Section ======= -->
       <section id="facts" class="facts">

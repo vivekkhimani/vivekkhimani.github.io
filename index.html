@@ -1,1142 +1,894 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Vivek Khimani</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150066007-1"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-150066007-1"
+    ></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || [];
 
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'UA-150066007-1');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-150066007-1");
     </script>
     <!-- Meta Data -->
-    <meta content="I am Vivek Khimani! An undergraduate computer science student at Drexel University." name="description">
-    <meta content="vivek khimani, vivek, khimani, drexel university, drexel, computer science, software, machine learning, data science, blockchain, mathematics, research, undergraduate" name="keywords">
+    <meta
+      content="I am Vivek Khimani! An undergraduate computer science student at Drexel University."
+      name="description"
+    />
+    <meta
+      content="vivek khimani, vivek, khimani, drexel university, drexel, computer science, software, machine learning, data science, blockchain, mathematics, research, undergraduate"
+      name="keywords"
+    />
     <meta name="author" content="Vivek Khimani" />
     <meta property="og:title" content="Welcome - Vivek Khimani" />
     <meta property="og:url" content="https://vivekkhimani.github.io" />
-    <meta property="og:image" content="./assets/img/Vivek.jpg" />
+    <meta property="og:image" content="./assets/img/Vivek2_min.jpg" />
     <!-- Favicons -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
-    <link href="assets/img/v_image.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
+    <link href="assets/img/v_image.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
     <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet" />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/owl.carousel/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
     <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet" />
     <!-- =======================================================
   * Template Name: MyResume - v2.1.0
   * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-</head>
+  </head>
 
-<body>
-    <!-- ======= Chatbot======= -->
-    <div id="botcopy-embedder-d7lcfheammjct" class="botcopy-embedder-d7lcfheammjct" data-botId="5ec0517fe08a2f0007f8afc5">
-        <script type="text/javascript">
-        var s = document.createElement('script');
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = 'https://widget.botcopy.com/js/injection.js';
-        document.getElementById('botcopy-embedder-d7lcfheammjct').appendChild(s);
-        </script>
-    </div>
+  <body>
     <!-- ======= Mobile nav toggle button ======= -->
-    <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+    <button type="button" class="mobile-nav-toggle d-xl-none">
+      <i class="icofont-navigation-menu"></i>
+    </button>
     <!-- ======= Header ======= -->
     <header id="header" class="d-flex flex-column justify-content-center">
-        <nav class="nav-menu">
-            <ul>
-                <li class="active"><a href="#hero"><i class="bx bx-home"></i> <span>Home</span></a></li>
-                <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
-                <li><a href="#facts"><i class="bx bx-globe"></i> <span>Travel</span></a></li>
-                <li><a href="#resume"><i class="bx bxs-school"></i> <span>Academic Background</span></a></li>
-                <!-- <li><a href="#portfolio"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li> -->
-                <!-- <li><a href="#services"><i class="bx bxs-certification"></i> <span>Certifications</span></a></li> -->
-                <li><a href="#footer"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-            </ul>
-        </nav><!-- .nav-menu -->
-    </header><!-- End Header -->
+      <nav class="nav-menu">
+        <ul>
+          <li class="active">
+            <a href="#hero"><i class="bx bx-home"></i> <span>Home</span></a>
+          </li>
+          <li>
+            <a href="#about"><i class="bx bx-user"></i> <span>About</span></a>
+          </li>
+          <li>
+            <a href="#facts"><i class="bx bx-globe"></i> <span>Travel</span></a>
+          </li>
+          <li>
+            <a href="#resume"
+              ><i class="bx bxs-school"></i> <span>Academic Background</span></a
+            >
+          </li>
+          <!-- <li><a href="#portfolio"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li> -->
+          <!-- <li><a href="#services"><i class="bx bxs-certification"></i> <span>Certifications</span></a></li> -->
+          <li>
+            <a href="#footer"
+              ><i class="bx bx-envelope"></i> <span>Contact</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+      <!-- .nav-menu -->
+    </header>
+    <!-- End Header -->
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex flex-column justify-content-center">
-        <div class="container" data-aos="zoom-in" data-aos-delay="100">
-            <h1>Vivek Khimani</h1>
-            <p>I'm a <span class="typed" data-typed-items="Software Engineer, ML Researcher"></span></p>
-            <div class="social-links">
-                <a href="https://calendly.com/vivekkhimani" target="_blank" class="calendar" data-toggle="tooltip" data-placement="top" title="Calendly"><i class="bx bx-calendar bx-tada-hover"></i> </a>
-                <a href="https://www.buymeacoffee.com/vivekkhimani" target="_blank" class="coffee" data-toggle="tooltip" data-placement="top" title="Buy Me A Coffee"><i class="bx bx-coffee bx-tada-hover"></i> </a>
-                <a href="https://www.cs.drexel.edu/~vck29/008_VivekResume.pdf" target="_blank" class="resume" data-toggle="tooltip" data-placement="top" title="Resume"><i class="bx bxs-file-blank bx-tada-hover"></i> </a>
-                <a href="mailto:vck29@drexel.edu" target="_blank" class="envelope"><i class="bx bxs-envelope" data-toggle="tooltip" data-placement="top" title="Drexel E-mail"></i> </a>
-                <a href="mailto:vivekkhimani07@gmail.com" target="_blank" class="google"><i class="bx bxl-google bx-tada-hover" data-toggle="tooltip" data-placement="top" title="Google E-mail"></i> </a>
-                <a href="https://scholar.google.com/citations?user=2CnfovoAAAAJ&hl=en" target="_blank" class="graduation"><i class="bx bxs-graduation bx-tada-hover" data-toggle="tooltip" data-placement="top" title="Google Scholar"></i> </a>
-                <a href="https://www.linkedin.com/in/vivek-khimani-4a4660146" target="_blank" class="linkedin" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="bx bxl-linkedin bx-tada-hover"></i></a>
-                <a href="https://github.com/vivekkhimani" target="_blank" class="github" data-toggle="tooltip" data-placement="top" title="GitHub"><i class="bx bxl-github bx-tada-hover"></i></a>
-                <a href="https://www.quora.com/profile/Vivek-Khimani" target="_blank" class="quora" data-toggle="tooltip" data-placement="top" title="Quora"><i class="bx bxl-quora bx-tada-hover"></i></a>
-                <a href="https://medium.com/@vivekkhimani07" target="_blank" class="medium" data-toggle="tooltip" data-placement="top" title="Medium"><i class="bx bxl-medium bx-tada-hover"></i></a>
-                <a href="https://stackoverflow.com/users/11372284/vivek-khimani" target="_blank" class="stack-overflow" data-toggle="tooltip" data-placement="top" title="Stack"><i class="bx bxl-stack-overflow bx-tada-hover"></i></a>
-                <a href="https://twitter.com/KhimaniVivek" target="_blank" class="twitter" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="bx bxl-twitter bx-tada-hover"></i></a>
-                <a href="https://www.facebook.com/vivek.khimani" target="_blank" class="facebook" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="bx bxl-facebook bx-tada-hover"></i></a>
-                <a href="https://www.instagram.com/vivekkhimani/" target="_blank" class="instagram" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="bx bxl-instagram bx-tada-hover"></i></a>
-                <a href="https://join.skype.com/invite/obA6JrCWtQo2" target="_blank" class="skype" data-toggle="tooltip" data-placement="top" title="Skype"><i class="bx bxl-skype bx-tada-hover"></i></a>
-            </div>
+      <div class="container" data-aos="zoom-in" data-aos-delay="100">
+        <h1>Vivek Khimani</h1>
+        <p>
+          I'm
+          <span
+            class="typed"
+            data-typed-items="a software engineer, an aspiring marathoner"
+          ></span>
+        </p>
+        <div class="social-links">
+          <a
+            href="https://calendly.com/vivekkhimani"
+            target="_blank"
+            class="calendar"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Calendly"
+            ><i class="bx bx-calendar bx-tada-hover"></i>
+          </a>
+          <a
+            href="https://www.buymeacoffee.com/vivekkhimani"
+            target="_blank"
+            class="coffee"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Buy Me A Coffee"
+            ><i class="bx bx-coffee bx-tada-hover"></i>
+          </a>
+          <!-- <a
+            href="https://www.cs.drexel.edu/~vck29/008_VivekResume.pdf"
+            target="_blank"
+            class="resume"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Resume"
+            ><i class="bx bxs-file-blank bx-tada-hover"></i>
+          </a> -->
+          <a href="mailto:vivek@semgrep.com" target="_blank" class="envelope"
+            ><i
+              class="bx bxs-envelope"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Work email"
+            ></i>
+          </a>
+          <a
+            href="mailto:vivekkhimani07@gmail.com"
+            target="_blank"
+            class="google"
+            ><i
+              class="bx bxl-google bx-tada-hover"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Google E-mail"
+            ></i>
+          </a>
+          <a
+            href="https://scholar.google.com/citations?user=2CnfovoAAAAJ&hl=en"
+            target="_blank"
+            class="graduation"
+            ><i
+              class="bx bxs-graduation bx-tada-hover"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Google Scholar"
+            ></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/vivek-khimani-4a4660146"
+            target="_blank"
+            class="linkedin"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="LinkedIn"
+            ><i class="bx bxl-linkedin bx-tada-hover"></i
+          ></a>
+          <a
+            href="https://github.com/vivekkhimani"
+            target="_blank"
+            class="github"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="GitHub"
+            ><i class="bx bxl-github bx-tada-hover"></i
+          ></a>
+          <a
+            href="https://www.quora.com/profile/Vivek-Khimani"
+            target="_blank"
+            class="quora"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Quora"
+            ><i class="bx bxl-quora bx-tada-hover"></i
+          ></a>
+          <a
+            href="https://medium.com/@vivekkhimani07"
+            target="_blank"
+            class="medium"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Medium"
+            ><i class="bx bxl-medium bx-tada-hover"></i
+          ></a>
+          <a
+            href="https://stackoverflow.com/users/11372284/vivek-khimani"
+            target="_blank"
+            class="stack-overflow"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Stack"
+            ><i class="bx bxl-stack-overflow bx-tada-hover"></i
+          ></a>
+          <a
+            href="https://twitter.com/KhimaniVivek"
+            target="_blank"
+            class="twitter"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Twitter"
+            ><i class="bx bxl-twitter bx-tada-hover"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/vivek.khimani"
+            target="_blank"
+            class="facebook"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Facebook"
+            ><i class="bx bxl-facebook bx-tada-hover"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/vivekkhimani/"
+            target="_blank"
+            class="instagram"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Instagram"
+            ><i class="bx bxl-instagram bx-tada-hover"></i
+          ></a>
+          <a
+            href="https://join.skype.com/invite/obA6JrCWtQo2"
+            target="_blank"
+            class="skype"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Skype"
+            ><i class="bx bxl-skype bx-tada-hover"></i
+          ></a>
         </div>
-    </section><!-- End Hero -->
+      </div>
+    </section>
+    <!-- End Hero -->
     <main id="main">
-        <!-- ======= About Section ======= -->
-        <section id="about" class="about">
-            <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                    <h2>About</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <p>Vivek is an undergraduate student at Drexel University pursuing a Bachelor of Science in Computer Science with minors in Mathematics and Data Science. Vivek is extremely passionate about his interests in backend engineering, mathematics, and data science. As a result, he is pursuing concentrations in artificial intelligence, computer networks, computer security, & systems engineering. Vivek is currently working as a software engineer at <a href="https://semgrep.dev" target="_blank">Semgrep</a>, a startup in San Francisco, and also working with Prof. Shahin Jabbari at Drexel University on his undergraduate research thesis in federated machine learning and privacy-preserving systems. He previously interned on the Ads ML Infra team at <a href="https://about.facebook.com/meta" target="_blank">Meta (Facebook)</a>, the core backend engineering team at <a href="https://semgrep.dev/" target="_blank">Semgrep</a>, a security startup in San Francisco, and on the Market Data Frameworks (MDF) team at <a href="https://www.sig.com/" target="_blank">Susquehanna International Group (SIG)</a>.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <img src="assets/img/Vivek.jpg" class="img-fluid" style="border-radius: 15px" alt="Profile">
-                    </div>
-                    <div class="col-lg-8 pt-4 pt-lg-0 content">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h5><b>Ongoing Projects:</b></h5>
-                                <ul>
-                                    <li><i class="icofont-rounded-right"></i> <a href="https://semgrep.dev" target="_blank"> <strong>Software Engineer (Semgrep Code)</strong></a><em> - Semgrep (San Francisco, CA)</em></li>
-                                    <li><i class="icofont-rounded-right"></i> <a href="https://github.com/vivekkhimani/torchfl" target="_blank"> <strong>TorchFL: Python Library for Federated Learning</strong></a><em> - Personal Open-source Project</em></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h5><b>Recently Completed:</b></h5>
-                                <ul>
-                                    <li><i class="icofont-rounded-right"></i> <a href="https://about.facebook.com/meta" target="_blank"> <strong>Software Engineering Intern (Ads ML Infra)</strong></a><em> - Meta (Menlo Park, CA)</em></li>
-                                    <li><i class="icofont-rounded-right"></i> <a href="https://semgrep.dev" target="_blank"> <strong>Software Engineering Intern (Core Backend Team)</strong></a><em> - Semgrep (San Francisco, CA)</em></li>
-                                    <li><i class="icofont-rounded-right"></i> <a href="https://sig.com/" target="_blank"> <strong>Software Engineering Intern (Market Data)</strong></a><em> - SIG (Philadelphia, PA)</em></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <!-- ======= About Section ======= -->
+      <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>About</h2>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <p>
+                Vivek is a software engineer at
+                <a href="https://semgrep.dev" target="_blank">Semgrep</a>, where
+                he works on the platforms team, having previously led the
+                development of the Semgrep Assistant. Before that, he
+                contributed to the core experiences team, focusing on the
+                findings workflow and optimizing database performance. Vivek
+                earned a Bachelor of Science in Computer Science from Drexel
+                University, with minors in Mathematics and Data Science. His
+                technical interests span backend engineering, computer
+                networking, machine learning, and cybersecurity. He has interned
+                at
+                <a href="https://about.facebook.com/meta" target="_blank"
+                  >Meta (Facebook)</a
+                >
+                on the Ads ML Infra team, and at
+                <a href="https://www.sig.com/" target="_blank"
+                  >Susquehanna International Group (SIG)</a
+                >
+                on the Market Data Frameworks (MDF) team. Outside of work, Vivek
+                enjoys spending time outdoors, solo traveling, running, playing
+                squash, reading fiction, exploring video games, and learning to
+                play guitar.
+              </p>
             </div>
-        </section><!-- End About Section -->
-        <!-- ======= Facts Section ======= -->
-        <section id="facts" class="facts">
-            <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                    <h2>Travel</h2>
-                    <p>The open pop-up represents the current location. Click on the respective markers for more information.</p>
-                </div>
-                <center>
-                    <div id="map" style="width: 1000px; height: 400px;"></div>
-                </center>
-                <br>
-                <script>
-                    // Creating map options
-                  var mapOptions = {
-                      center: [0.0, 0.0],
-                      zoom: 2
-                  }
+          </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <img
+                src="assets/img/Vivek2_min.jpg"
+                class="img-fluid"
+                style="border-radius: 15px"
+                alt="Profile"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End About Section -->
+      <!-- ======= Facts Section ======= -->
+      <section id="facts" class="facts">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Travel</h2>
+            <p>
+              The open pop-up represents the current location. Click on the
+              respective markers for more information.
+            </p>
+          </div>
+          <center>
+            <div id="map" style="width: 1000px; height: 400px"></div>
+          </center>
+          <br />
+          <script>
+            // Creating map options
+            var mapOptions = {
+              center: [0.0, 0.0],
+              zoom: 2,
+            };
 
-                  // Creating a map object
-                  var map = new L.map('map', mapOptions);
+            // Creating a map object
+            var map = new L.map("map", mapOptions);
 
-                  // Creating a Layer object
-                  var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+            // Creating a Layer object
+            var layer = new L.TileLayer(
+              "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            );
 
-                  //Creating Markers
-                  var philly = new L.marker([39.96, -75.16]).addTo(map);
-                  var london = new L.marker([51.5072, -0.1276]).addTo(map);
-                  var yellowstone = new L.marker([44.42, -110.59]).addTo(map);
-                  var grand_teton = new L.marker([43.80, -100.68]).addTo(map);
-                  var slc = new L.marker([40.77, -111.89]).addTo(map);
-                  var lv = new L.marker([36.17, -115.14]).addTo(map);
-                  var boston = new L.marker([42.3601, -71.0589]).addTo(map);
-                  var coventry = new L.marker([54.1428, -1.51]).addTo(map);
-                  var ambleside = new L.marker([54.43, -2.96]).addTo(map);
-                  var keswick = new L.marker([54.61, -3.15]).addTo(map);
-                  var newyork = new L.marker([40.72, -74.00]).addTo(map);
-                  var yosemite = new L.marker([37.87, -119.54]).addTo(map);
-                  var la = new L.marker([34.0522, -118.24]).addTo(map);
-                  var monterey = new L.marker([36.6, -121.89]).addTo(map);
-                  var pacifica = new L.marker([37.62, -122.48]).addTo(map);
-                  var capitola = new L.marker([36.97, -121.95]).addTo(map);
-                  var joshua = new L.marker([33.87, -115.90]).addTo(map);
-                  var menlopark = new L.marker([37.45, -122.18]).addTo(map);
-                  var lassen = new L.marker([40.4881, -121.51]).addTo(map);
-                  var shasta = new L.marker([41.31, -122.31]).addTo(map);
-                  var redding = new L.marker([40.59, -122.39]).addTo(map);
-                  var redbluff = new L.marker([40.18, -122.23]).addTo(map);
-                  var vina = new L.marker([39.94, -122.05]).addTo(map);
-                  var bakersfield = new L.marker([35.37, -119.08]).addTo(map);
-                  var sausalito = new L.marker([37.86, -122.49]).addTo(map);
-                  var seattle = new L.marker([47.61, -122.33]).addTo(map);
-                  var bellevue = new L.marker([47.61, -122.21]).addTo(map);
-                  var stanford = new L.marker([37.43, -122.16]).addTo(map);
-                  var nj = new L.marker([39.36, -74.42]).addTo(map);
-                  var dc = new L.marker([38.91, -77.03]).addTo(map);
-                  var dallas = new L.marker([32.78, -96.79]).addTo(map);
-                  var sfo = new L.marker([37.78, -122.42]).addTo(map);
-                  var rajkot = new L.marker([22.31, 70.81]).addTo(map);
-                  var hk = new L.marker([22.32, 114.17]).addTo(map);
-                  var mumbai = new L.marker([19.07, 72.88]).addTo(map);
-                  var bangalore = new L.marker([12.97, 77.59]).addTo(map);
-                  var goa = new L.marker([15.50, 73.91]).addTo(map);
-                  var delhi = new L.marker([28.70, 77.10]).addTo(map);
-                  var hyderabad = new L.marker([17.38, 78.49]).addTo(map);
-                  var tirupati = new L.marker([13.63, 79.41]).addTo(map);
-                  var chennai = new L.marker([13.08, 80.27]).addTo(map);
-                  var ahmedabad = new L.marker([23.02, 72.57]).addTo(map);
-                  var udaipur = new L.marker([24.58, 73.71]).addTo(map);
-                  var agra = new L.marker([27.17, 78.00]).addTo(map);
-                  var mpur = new L.marker([21.25, 69.96]).addTo(map);
-                  var nashik = new L.marker([19.99, 73.78]).addTo(map);
-                  var aurangabad = new L.marker([19.88, 75.34]).addTo(map);
-                  var vadodara = new L.marker([22.31, 73.18]).addTo(map);
-                  var surat = new L.marker([21.17, 72.83]).addTo(map);
+            //Creating Markers
+            var philly = new L.marker([39.96, -75.16]).addTo(map);
+            var london = new L.marker([51.5072, -0.1276]).addTo(map);
+            var yellowstone = new L.marker([44.42, -110.59]).addTo(map);
+            var grand_teton = new L.marker([43.8, -100.68]).addTo(map);
+            var slc = new L.marker([40.77, -111.89]).addTo(map);
+            var lv = new L.marker([36.17, -115.14]).addTo(map);
+            var boston = new L.marker([42.3601, -71.0589]).addTo(map);
+            var coventry = new L.marker([54.1428, -1.51]).addTo(map);
+            var ambleside = new L.marker([54.43, -2.96]).addTo(map);
+            var keswick = new L.marker([54.61, -3.15]).addTo(map);
+            var newyork = new L.marker([40.72, -74.0]).addTo(map);
+            var yosemite = new L.marker([37.87, -119.54]).addTo(map);
+            var la = new L.marker([34.0522, -118.24]).addTo(map);
+            var monterey = new L.marker([36.6, -121.89]).addTo(map);
+            var pacifica = new L.marker([37.62, -122.48]).addTo(map);
+            var capitola = new L.marker([36.97, -121.95]).addTo(map);
+            var joshua = new L.marker([33.87, -115.9]).addTo(map);
+            var menlopark = new L.marker([37.45, -122.18]).addTo(map);
+            var lassen = new L.marker([40.4881, -121.51]).addTo(map);
+            var shasta = new L.marker([41.31, -122.31]).addTo(map);
+            var redding = new L.marker([40.59, -122.39]).addTo(map);
+            var redbluff = new L.marker([40.18, -122.23]).addTo(map);
+            var vina = new L.marker([39.94, -122.05]).addTo(map);
+            var bakersfield = new L.marker([35.37, -119.08]).addTo(map);
+            var sausalito = new L.marker([37.86, -122.49]).addTo(map);
+            var seattle = new L.marker([47.61, -122.33]).addTo(map);
+            var bellevue = new L.marker([47.61, -122.21]).addTo(map);
+            var stanford = new L.marker([37.43, -122.16]).addTo(map);
+            var nj = new L.marker([39.36, -74.42]).addTo(map);
+            var dc = new L.marker([38.91, -77.03]).addTo(map);
+            var dallas = new L.marker([32.78, -96.79]).addTo(map);
+            var sfo = new L.marker([37.78, -122.42]).addTo(map);
+            var rajkot = new L.marker([22.31, 70.81]).addTo(map);
+            var hk = new L.marker([22.32, 114.17]).addTo(map);
+            var mumbai = new L.marker([19.07, 72.88]).addTo(map);
+            var bangalore = new L.marker([12.97, 77.59]).addTo(map);
+            var goa = new L.marker([15.5, 73.91]).addTo(map);
+            var delhi = new L.marker([28.7, 77.1]).addTo(map);
+            var hyderabad = new L.marker([17.38, 78.49]).addTo(map);
+            var tirupati = new L.marker([13.63, 79.41]).addTo(map);
+            var chennai = new L.marker([13.08, 80.27]).addTo(map);
+            var ahmedabad = new L.marker([23.02, 72.57]).addTo(map);
+            var udaipur = new L.marker([24.58, 73.71]).addTo(map);
+            var agra = new L.marker([27.17, 78.0]).addTo(map);
+            var mpur = new L.marker([21.25, 69.96]).addTo(map);
+            var nashik = new L.marker([19.99, 73.78]).addTo(map);
+            var aurangabad = new L.marker([19.88, 75.34]).addTo(map);
+            var vadodara = new L.marker([22.31, 73.18]).addTo(map);
+            var surat = new L.marker([21.17, 72.83]).addTo(map);
+            var phoenix = new L.marker([33.45, -112.07]).addTo(map);
+            var flagstaff = new L.marker([35.2, -111.65]).addTo(map);
+            var sedona = new L.marker([34.87, -111.76]).addTo(map);
+            var grandcanyon = new L.marker([36.06, -112.14]).addTo(map);
 
-                  //pop-up bindings
-                  sfo.bindPopup("<b>San Francisco Bay Area, United States</b><br>Software Engineer at Semgrep").openPopup();
-                  yellowstone.bindPopup("<b>Yellowstone National Park.</b><br>Vacation.");
-                  grand_teton.bindPopup("<b>Grand Teton National Park.</b><br>Vacation.");
-                  slc.bindPopup("<b>Salt Lake City.</b><br>Vacation.");
-                  lv.bindPopup("<b>Las Vegas, Nevada.</b>Vacation.");
-                  menlopark.bindPopup("<b>Menlo Park</b><br>Software Engineering Intern at Meta.");
-                  stanford.bindPopup("<b>Stanford University</b><br>Pre-Collegiate Summer Institutes.");
-                  philly.bindPopup("<b>Philadelphia, United States</b><br>Drexel University.");
-                  london.bindPopup("<b>London, UK</b><br>Vacation.");
-                  boston.bindPopup("<b>Boston, MA</b><br>Work trip.");
-                  ambleside.bindPopup("<b>Ambleside, UK</b><br>Leisure trip to the Lake District.");
-                  keswick.bindPopup("<b>Keswick, UK</b><br>Leisure trip to the Lake Ditrict<br>");
-                  coventry.bindPopup("<b>Coventry, UK</b><br>Conference presentation at University of Warwick.");
-                  newyork.bindPopup("<b>New York City, United States</b><br>Leisure & Work Trips.");
-                  nj.bindPopup("<b>Atlantic City, United States</b><br>Leisure Trips.");
-                  hk.bindPopup("<b>Kowloon, Hong Kong</b><br>Machine Learning Researcher @ HKUST.");
-                  dc.bindPopup("<b>Washington DC, United States</b><br>Leisure & Work Trips.");
-                  dallas.bindPopup("<b>Dallas, United States</b><br>Airport Visit.");
-                  mumbai.bindPopup("<b>Mumbai, India</b><br>Leisure and Work trips.");
-                  bangalore.bindPopup("<b>Bangalore, India</b><br>Work Trip.");
-                  goa.bindPopup("<b>Goa, India</b><br>Leisure Trip.");
-                  hyderabad.bindPopup("<b>Hyderabad, India</b><br>Machine Learning Researcher @ IIIT Hyderabad.");
-                  rajkot.bindPopup("<b>Rajkot, India</b><br>Home.");
-                  yosemite.bindPopup("<b>Yosemite National Park</b><br>Clouds Rest Hike @ 10000 ft.");
-                  la.bindPopup("<b>Los Angeles</b><br>Long weekend trip to Hollywood, DTLA, Santa Monica, and more.");
-                  joshua.bindPopup("<b>Joshua Tree National Park</b><br>Day trip to Joshua Tree National Park.<br>Hiked Ryan Mountain, star-gazed, and spent a night in an AirStream!");
-                  monterey.bindPopup("<b>Monterey</b><br>Day trip to Monterey Bay Acquarium.");
-                  pacifica.bindPopup("<b>Pacifica</b><br>Road trip!");
-                  capitola.bindPopup("<b>Capitola Beach</b>Day trip!");
-                  lassen.bindPopup("<b>Lassen Volcanic National Park</b><br>Mt. Lassen Hike @ 10457 Feet.");
-                  shasta.bindPopup("<b>Mount Shasta</b><br>Lake Siskiyou View Point.");
-                  redding.bindPopup("<b>Redding, CA</b><br>Brunch stop at Trendy's. (Highly recommend the fresh orange juice!)");
-                  redbluff.bindPopup("<b>Red Bluff, CA</b><br>Brunch stop!");
-                  vina.bindPopup("<b>Vina, CA</b><br>AirBnb on the farm!");
-                  bakersfield.bindPopup("<b>Bakerfield, CA</b><br>Low-key the best Indian meal @ Punjabi Dhaba!");
-                  sausalito.bindPopup("<b>Sausalito, CA</b><br>Day trip!");
-                  seattle.bindPopup("<b>Seattle, WA</b><br>Work + Leisure trip for a week!");
-                  bellevue.bindPopup("<b>Bellevue, WA</b><br>Work + Leisure trip for a week!");
+            //pop-up bindings
+            sfo
+              .bindPopup(
+                "<b>San Francisco Bay Area, United States</b><br>Software Engineer at Semgrep"
+              )
+              .openPopup();
+            yellowstone.bindPopup(
+              "<b>Yellowstone National Park.</b><br>Vacation."
+            );
+            grand_teton.bindPopup(
+              "<b>Grand Teton National Park.</b><br>Vacation."
+            );
+            slc.bindPopup("<b>Salt Lake City.</b><br>Vacation.");
+            lv.bindPopup("<b>Las Vegas, Nevada.</b>Vacation.");
+            menlopark.bindPopup(
+              "<b>Menlo Park</b><br>Software Engineering Intern at Meta."
+            );
+            stanford.bindPopup(
+              "<b>Stanford University</b><br>Pre-Collegiate Summer Institutes."
+            );
+            philly.bindPopup(
+              "<b>Philadelphia, United States</b><br>Drexel University."
+            );
+            london.bindPopup("<b>London, UK</b><br>Vacation.");
+            boston.bindPopup("<b>Boston, MA</b><br>Work trip.");
+            ambleside.bindPopup(
+              "<b>Ambleside, UK</b><br>Leisure trip to the Lake District."
+            );
+            keswick.bindPopup(
+              "<b>Keswick, UK</b><br>Leisure trip to the Lake Ditrict<br>"
+            );
+            coventry.bindPopup(
+              "<b>Coventry, UK</b><br>Conference presentation at University of Warwick."
+            );
+            newyork.bindPopup(
+              "<b>New York City, United States</b><br>Leisure & Work Trips."
+            );
+            nj.bindPopup(
+              "<b>Atlantic City, United States</b><br>Leisure Trips."
+            );
+            hk.bindPopup(
+              "<b>Kowloon, Hong Kong</b><br>Machine Learning Researcher @ HKUST."
+            );
+            dc.bindPopup(
+              "<b>Washington DC, United States</b><br>Leisure & Work Trips."
+            );
+            dallas.bindPopup("<b>Dallas, United States</b><br>Airport Visit.");
+            mumbai.bindPopup("<b>Mumbai, India</b><br>Leisure and Work trips.");
+            bangalore.bindPopup("<b>Bangalore, India</b><br>Work Trip.");
+            goa.bindPopup("<b>Goa, India</b><br>Leisure Trip.");
+            hyderabad.bindPopup(
+              "<b>Hyderabad, India</b><br>Machine Learning Researcher @ IIIT Hyderabad."
+            );
+            rajkot.bindPopup("<b>Rajkot, India</b><br>Home.");
+            yosemite.bindPopup(
+              "<b>Yosemite National Park</b><br>Clouds Rest Hike @ 10000 ft."
+            );
+            la.bindPopup(
+              "<b>Los Angeles</b><br>Long weekend trip to Hollywood, DTLA, Santa Monica, and more."
+            );
+            joshua.bindPopup(
+              "<b>Joshua Tree National Park</b><br>Day trip to Joshua Tree National Park.<br>Hiked Ryan Mountain, star-gazed, and spent a night in an AirStream!"
+            );
+            monterey.bindPopup(
+              "<b>Monterey</b><br>Day trip to Monterey Bay Acquarium."
+            );
+            pacifica.bindPopup("<b>Pacifica</b><br>Road trip!");
+            capitola.bindPopup("<b>Capitola Beach</b>Day trip!");
+            lassen.bindPopup(
+              "<b>Lassen Volcanic National Park</b><br>Mt. Lassen Hike @ 10457 Feet."
+            );
+            shasta.bindPopup(
+              "<b>Mount Shasta</b><br>Lake Siskiyou View Point."
+            );
+            redding.bindPopup(
+              "<b>Redding, CA</b><br>Brunch stop at Trendy's. (Highly recommend the fresh orange juice!)"
+            );
+            redbluff.bindPopup("<b>Red Bluff, CA</b><br>Brunch stop!");
+            vina.bindPopup("<b>Vina, CA</b><br>AirBnb on the farm!");
+            bakersfield.bindPopup(
+              "<b>Bakerfield, CA</b><br>Low-key the best Indian meal @ Punjabi Dhaba!"
+            );
+            sausalito.bindPopup("<b>Sausalito, CA</b><br>Day trip!");
+            seattle.bindPopup(
+              "<b>Seattle, WA</b><br>Work + Leisure trip for a week!"
+            );
+            bellevue.bindPopup(
+              "<b>Bellevue, WA</b><br>Work + Leisure trip for a week!"
+            );
+            phoenix.bindPopup("<b>Phoenix, AZ</b><br>Solo road trip!");
+            flagstaff.bindPopup(
+              "<b>Flagstaff, AZ</b><br>Day trip from Phoenix!"
+            );
+            sedona.bindPopup("<b>Sedona, AZ</b><br>Solo Hiking trip!");
+            grandcanyon.bindPopup(
+              "<b>Grand Canyon, AZ</b><br>Solo Hiking trip!"
+            );
 
-
-                  // Adding layer to the map
-                  map.addLayer(layer);
-                  </script>
+            // Adding layer to the map
+            map.addLayer(layer);
+          </script>
+        </div>
+      </section>
+      <!-- ======= Resume Section ======= -->
+      <section id="resume" class="resume">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Academic Background</h2>
+            <p>
+              <em
+                >Please note that this is <b>not</b> my resume. It's just a
+                summary of courses and activities I have been doing in college.
+                <!-- My resume can be found
+                <a
+                  href="https://www.cs.drexel.edu/~vck29/008_VivekResume.pdf"
+                  target="_blank"
+                  >here</a
+                >. -->
+              </em>
+            </p>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <h3 class="resume-title">Summary</h3>
+              <div class="resume-item pb-0">
+                <h4>Vivek Khimani</h4>
+                <ul>
+                  <li><b>GPA:</b> 3.93/4.00</li>
+                  <li><b>Major:</b> Computer Science</li>
+                  <li><b>Minor(s):</b> Mathematics & Data Science</li>
+                  <li>
+                    <b>Concentration(s):</b> Artificial Intelligence, Computer
+                    Networks & Security, Systems Engineering
+                  </li>
+                </ul>
+              </div>
+              <h3 class="resume-title">Education</h3>
+              <div class="resume-item">
+                <h4>Bachelor of Science, Computer Science</h4>
+                <h5>2018 - Present</h5>
+                <p><em>Drexel University</em></p>
+                <p>
+                  <b><em>Award(s):</em></b> Undergraduate Student Teaching
+                  Excellence Award, Isaac L. Auerbach Innovation Award, Dean's
+                  List, Founder's Scholarship, Drexel Grant, Dragons Abroad
+                  Scholarship
+                </p>
+                <p>
+                  <b><em>Engagement:</em></b> Drexel Algorithms & Data
+                  Structures (President), Drexel CS Theory Reading Group
+                  (Member)
+                </p>
+              </div>
+              <div class="resume-item">
+                <h4>Engineering Exchange & Research Program</h4>
+                <h5>Fall 2019</h5>
+                <p>
+                  <em>Hong Kong University of Science & Technology (HKUST)</em>
+                </p>
+                <p>
+                  <b><em>Project: </em></b>FedClean: A Decentralized Defense
+                  Mechanism Against Parameter Poisoning Attacks in Federated
+                  Learning Systems
+                </p>
+                <p>
+                  <b><em>Collaborators(s): </em></b>Dr. Pan Hui & Dr. Dimitris
+                  Chatzopoulos
+                </p>
+              </div>
+              <div class="resume-item">
+                <h4>Pre-Collegiate Summer Institute</h4>
+                <h5>Summer 2016</h5>
+                <p><em>Stanford University</em></p>
+                <p>
+                  <b><em>Topic:</em></b> Knot Theory (Mathematics)
+                </p>
+                <p>
+                  <b><em>Award:</em></b> Full-Ride Scholar (including housing)
+                </p>
+              </div>
+              <h3 class="resume-title">Internship</h3>
+              <div class="resume-item">
+                <h4>Software Engineering Intern</h4>
+                <p><em>Meta (Facebook)</em></p>
+                <p>
+                  <b><em>Team:</em></b> Ads ML Infra
+                </p>
+                <p>
+                  <b><em>Duration: </em></b>June 2022 - September 2022
+                </p>
+                <p>
+                  <b><em>Major Tools:</em></b> C++, PHP (Hack), Python, Thrift,
+                  Docker, Kubernetes, Linux
+                </p>
+              </div>
+              <div class="resume-item">
+                <h4>Software Engineering Intern</h4>
+                <p><em>Semgrep</em></p>
+                <p>
+                  <b><em>Team:</em></b> Core Enterprise Backend Engineering
+                </p>
+                <p>
+                  <b><em>Duration: </em></b>March 2022 - June 2022
+                </p>
+                <p>
+                  <b><em>Major Tools:</em></b> Python, Flask, React, Docker,
+                  Kubernetes, AWS, Linux
+                </p>
+              </div>
+              <div class="resume-item">
+                <h4>Software Engineering Intern</h4>
+                <p><em>Susquehanna International Group (SIG)</em></p>
+                <p>
+                  <b><em>Team:</em></b> Market Data Frameworks (MDF)
+                </p>
+                <p>
+                  <b><em>Duration:</em></b> March 2021 - September 2021
+                </p>
+                <p>
+                  <b><em>Major Tools:</em></b> C++, Python, Django, Docker,
+                  Kubernetes, Linux
+                </p>
+              </div>
+              <div class="resume-item">
+                <h4>Software Engineering Intern</h4>
+                <p><em>Olak</em></p>
+                <p>
+                  <b><em>Team:</em></b> Machine Learning Engineering (Autofill)
+                </p>
+                <p>
+                  <b><em>Duration:</em></b> March 2020 - June 2020
+                </p>
+                <p>
+                  <b><em>Major Tools:</em></b> Python, Typescript, PyTorch,
+                  Tensorflow, ONNX, Angular, Docker, Kubernetes, Linux
+                </p>
+              </div>
             </div>
-        </section><!-- End Facts Section -->
-        <!-- ======= Skills Section ======= -->
-        <!-- <section id="skills" class="skills section-bg">
-            <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                    <h2>Skills</h2>
-                    <div class="row skills-content">
-                        <div class="col-lg-3">
-                            <div class="progress">
-                                <span class="skill">Programming Languages <i class="val"></i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="progress">
-                                <span class="skill">Tools <i class="val"></i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="background-color: #bb5d05"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="progress">
-                                <span class="skill">Frameworks <i class="val"></i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="background-color: #05bbb8"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="progress">
-                                <span class="skill">Operating Systems <i class="val"></i></span>
-                                <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="background-color: #bb0563"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row skills-content" style="border: thin solid">
-                    <div class="col-lg-3">
-                        <div class="progress">
-                            <span class="skill">C/C++ <i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">Java <i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">Python <i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">JavaScript <i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">TypeScript <i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">LaTex <i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">HTML5 <i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">Solidity <i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">BASH <i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">CSS <i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">Scheme <i class="val">70%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">Haskell <i class="val">70%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="progress">
-                            <span class="skill">Google Cloud<i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="background-color: #bb5d05"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">Git<i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="background-color: #bb5d05"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">Firebase<i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="background-color: #bb5d05"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">WordPress<i class="val">90%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="background-color: #bb5d05"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">SQL (MySQL/SQLite)<i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="background-color: #bb5d05"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">NoSQL (Mongo/Realm)<i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="background-color: #bb5d05"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">Git CI/CD<i class="val">70%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="background-color: #bb5d05"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">Docker<i class="val">70%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="background-color: #bb5d05"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">Kubernetes<i class="val">70%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="background-color: #bb5d05"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">Truffle<i class="val">70%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="background-color: #bb5d05"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">GIMP<i class="val">70%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="background-color: #bb5d05"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">Amazon Web Services<i class="val">60%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="background-color: #bb5d05"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="progress">
-                            <span class="skill">Tensorflow <i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="background-color: #05bbb8"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">PyTorch <i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="background-color: #05bbb8"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">Scikit-Learn <i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="background-color: #05bbb8"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">Node.js <i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="background-color: #05bbb8"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">Django<i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="background-color: #05bbb8"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">Flask<i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="background-color: #05bbb8"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">React-Native <i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="background-color: #05bbb8"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">Bootstrap<i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="background-color: #05bbb8"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">Angular.js<i class="val">60%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="background-color: #05bbb8"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="progress">
-                            <span class="skill">Ubuntu 18.04<i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="background-color: #bb0563"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">CentOS 8<i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="background-color: #bb0563"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">MacOS<i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="background-color: #bb0563"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">Windows<i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="background-color: #bb0563"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-lg-6">
+              <h3 class="resume-title">Publications</h3>
+              <div class="resume-item">
+                <h4>
+                  TorchFL: A Performant Library for Bootstrapping Federated
+                  Learning Experiments
+                </h4>
+                <p>
+                  <b><em>Venue:</em></b>
+                  <a href="https://arxiv.org/abs/2211.00735" target="_blank"
+                    >arXiv Pre-Print (Machine Learning)</a
+                  >
+                </p>
+                <p>
+                  <b><em>Authors:</em></b> <b>V Khimani</b>, S Jabbari
+                </p>
+              </div>
+              <div class="resume-item">
+                <h4>
+                  FedClean: A Defense Mechanism Against Parameter Poisoning
+                  Attacks in Federated Learning
+                </h4>
+                <p>
+                  <b><em>Venue:</em></b>
+                  <a
+                    href="https://ieeexplore.ieee.org/document/9747497"
+                    target="_blank"
+                    >IEEE ICASSP 2022</a
+                  >
+                </p>
+                <p>
+                  <b><em>Authors:</em></b> A Kumar, <b>V Khimani</b>, D
+                  Chatzopoulos, P Hui
+                </p>
+              </div>
+              <div class="resume-item">
+                <h4>
+                  SplitEasy: A Practical Approach for Training ML models on
+                  Mobile Devices
+                </h4>
+                <p>
+                  <b><em>Venue:</em></b>
+                  <a
+                    href="https://dl.acm.org/doi/10.1145/3446382.3448362"
+                    target="_blank"
+                    >ACM HotMobile 2021, SLDML 2021</a
+                  >
+                </p>
+                <p>
+                  <b><em>Authors:</em></b> K Palanisamy, <b>V Khimani</b>, MH
+                  Moti, D Chatzopoulos
+                </p>
+              </div>
+              <h3 class="resume-title">Relevant Coursework</h3>
+              <div class="resume-item">
+                <h4>College of Computing</h4>
+                <p><em>Drexel University</em></p>
+                <ul>
+                  <li>Advanced Programming Techniques</li>
+                  <li>Mathematical Foundations of Computer Science</li>
+                  <li>Systems Architecture</li>
+                  <li>Systems Programming</li>
+                  <li>Concurrent Programming</li>
+                  <li>Operating Systems</li>
+                  <li>Web & Mobile App Development</li>
+                  <li>Data Mining Applications in Machine Learning</li>
+                  <li>Data Structures & Algorithms I, II</li>
+                  <li>Artificial Intelligence</li>
+                  <li>Machine Learning (Honors)</li>
+                  <li>Deep Learning (Graduate)</li>
+                  <li>Functional Programming (Graduate)</li>
+                  <li>Computer Networks: Theory, Concepts, Applications</li>
+                  <li>Advanced Software Security</li>
+                  <li>Advanced Software Design & Development</li>
+                </ul>
+              </div>
+              <div class="resume-item">
+                <h4>Department of Mathematics</h4>
+                <p><em>Drexel University</em></p>
+                <ul>
+                  <li>Calculus I, II, III</li>
+                  <li>Multivariate Calculus</li>
+                  <li>Linear Algebra</li>
+                  <li>Discrete Mathematics</li>
+                  <li>Probability & Statistics I, II</li>
+                </ul>
+              </div>
+              <h3 class="resume-title">Teaching Assistant</h3>
+              <div class="resume-item">
+                <h4>College of Computing</h4>
+                <p><em>Drexel University</em></p>
+                <ul>
+                  <li><b>CS 615 - </b>Graduate Deep Learning</li>
+                  <li><b>CS 613 - </b>Graduate Machine Learning</li>
+                  <li><b>CS 510 - </b>Graduate Artificial Intelligence</li>
+                  <li><b>CS 472 - </b>Computer Networks</li>
+                  <li><b>CS 283 - </b>Systems Programming</li>
+                  <li><b>CS 265 - </b>Advanced Programming Techniques</li>
+                  <li><b>CS 260 - </b>Data Structures & Algorithms</li>
+                  <li><b>CS 172 - </b>Computer Programming II</li>
+                </ul>
+              </div>
             </div>
-        </section> -->
-        <!-- End Skills Section -->
-        <!-- ======= Resume Section ======= -->
-        <section id="resume" class="resume">
-            <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                    <h2>Academic Background</h2>
-                    <p><em>Please note that this is <b>not</b> my resume. It's just a summary of courses and activities I have been doing in college. My resume can be found <a href="https://www.cs.drexel.edu/~vck29/008_VivekResume.pdf" target="_blank">here</a>.</em></p>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <h3 class="resume-title">Summary</h3>
-                        <div class="resume-item pb-0">
-                            <h4>Vivek Khimani</h4>
-                            <ul>
-                                <li><b>GPA:</b> 3.93/4.00</li>
-                                <li><b>Major:</b> Computer Science</li>
-                                <li><b>Minor(s):</b> Mathematics & Data Science</li>
-                                <li><b>Concentration(s):</b> Artificial Intelligence, Computer Networks & Security, Systems Engineering</li>
-                            </ul>
-                        </div>
-                        <h3 class="resume-title">Education</h3>
-                        <div class="resume-item">
-                            <h4>Bachelor of Science, Computer Science</h4>
-                            <h5>2018 - Present</h5>
-                            <p><em>Drexel University</em></p>
-                            <p><b><em>Award(s):</em></b> Undergraduate Student Teaching Excellence Award, Isaac L. Auerbach Innovation Award, Dean's List, Founder's Scholarship, Drexel Grant, Dragons Abroad Scholarship</p>
-                            <p><b><em>Engagement:</em></b> Drexel Algorithms & Data Structures (President), Drexel CS Theory Reading Group (Member)</p>
-                        </div>
-                        <div class="resume-item">
-                            <h4>Engineering Exchange & Research Program</h4>
-                            <h5>Fall 2019</h5>
-                            <p><em>Hong Kong University of Science & Technology (HKUST)</em></p>
-                            <p><b><em>Project: </em></b>FedClean: A Decentralized Defense Mechanism Against Parameter Poisoning Attacks in Federated Learning Systems</p>
-                            <p><b><em>Collaborators(s): </em></b>Dr. Pan Hui & Dr. Dimitris Chatzopoulos</p>
-                        </div>
-                        <div class="resume-item">
-                            <h4>Pre-Collegiate Summer Institute</h4>
-                            <h5>Summer 2016</h5>
-                            <p><em>Stanford University</em></p>
-                            <p><b><em>Topic:</em></b> Knot Theory (Mathematics)</p>
-                            <p><b><em>Award:</em></b> Full-Ride Scholar (including housing)</p>
-                        </div>
-                        <h3 class="resume-title">Internship</h3>
-                        <div class="resume-item">
-                            <h4>Software Engineering Intern</h4>
-                            <p><em>Meta (Facebook)</em></p>
-                            <p><b><em>Team:</em></b> Ads ML Infra</p>
-                            <p><b><em>Duration: </em></b>June 2022 - September 2022</p>
-                            <p><b><em>Major Tools:</em></b> C++, PHP (Hack), Python, Thrift, Docker, Kubernetes, Linux</p>
-                        </div>
-                        <div class="resume-item">
-                            <h4>Software Engineering Intern</h4>
-                            <p><em>Semgrep</em></p>
-                            <p><b><em>Team:</em></b> Core Enterprise Backend Engineering</p>
-                            <p><b><em>Duration: </em></b>March 2022 - June 2022</p>
-                            <p><b><em>Major Tools:</em></b> Python, Flask, React, Docker, Kubernetes, AWS, Linux</p>
-                        </div>
-                        <div class="resume-item">
-                            <h4>Software Engineering Intern</h4>
-                            <p><em>Susquehanna International Group (SIG)</em></p>
-                            <p><b><em>Team:</em></b> Market Data Frameworks (MDF)</p>
-                            <p><b><em>Duration:</em></b> March 2021 - September 2021</p>
-                            <p><b><em>Major Tools:</em></b> C++, Python, Django, Docker, Kubernetes, Linux</p>
-                        </div>
-                        <div class="resume-item">
-                            <h4>Software Engineering Intern</h4>
-                            <p><em>Olak</em></p>
-                            <p><b><em>Team:</em></b> Machine Learning Engineering (Autofill)</p>
-                            <p><b><em>Duration:</em></b> March 2020 - June 2020</p>
-                            <p><b><em>Major Tools:</em></b> Python, Typescript, PyTorch, Tensorflow, ONNX, Angular, Docker, Kubernetes, Linux</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <h3 class="resume-title">Publications</h3>
-                        <div class="resume-item">
-                            <h4>TorchFL: A Performant Library for Bootstrapping Federated Learning Experiments</h4>
-                            <p><b><em>Venue:</em></b> <a href="https://arxiv.org/abs/2211.00735" target="_blank">arXiv Pre-Print (Machine Learning)</a></p>
-                            <p><b><em>Authors:</em></b> <b>V Khimani</b>, S Jabbari</p>
-                        </div>
-                        <div class="resume-item">
-                            <h4>FedClean: A Defense Mechanism Against Parameter Poisoning Attacks in Federated Learning</h4>
-                            <p><b><em>Venue:</em></b> <a href="https://ieeexplore.ieee.org/document/9747497" target="_blank">IEEE ICASSP 2022</a></p>
-                            <p><b><em>Authors:</em></b> A Kumar, <b>V Khimani</b>, D Chatzopoulos, P Hui</p>
-                        </div>
-                        <div class="resume-item">
-                            <h4>SplitEasy: A Practical Approach for Training ML models on Mobile Devices</h4>
-                            <p><b><em>Venue:</em></b> <a href="https://dl.acm.org/doi/10.1145/3446382.3448362" target="_blank">ACM HotMobile 2021, SLDML 2021</a></p>
-                            <p><b><em>Authors:</em></b> K Palanisamy, <b>V Khimani</b>, MH Moti, D Chatzopoulos</p>
-                        </div>
-                        <h3 class="resume-title">Relevant Coursework</h3>
-                        <div class="resume-item">
-                            <h4>College of Computing</h4>
-                            <p><em>Drexel University</em></p>
-                            <ul>
-                                <li>Advanced Programming Techniques</li>
-                                <li>Mathematical Foundations of Computer Science</li>
-                                <li>Systems Architecture</li>
-                                <li>Systems Programming</li>
-                                <li>Concurrent Programming</li>
-                                <li>Operating Systems</li>
-                                <li>Web & Mobile App Development</li>
-                                <li>Data Mining Applications in Machine Learning</li>
-                                <li>Data Structures & Algorithms I, II</li>
-                                <li>Artificial Intelligence</li>
-                                <li>Machine Learning (Honors)</li>
-                                <li>Deep Learning (Graduate)</li>
-                                <li>Functional Programming (Graduate)</li>
-                                <li>Computer Networks: Theory, Concepts, Applications</li>
-                                <li>Advanced Software Security</li>
-                                <li>Advanced Software Design & Development</li>
-                            </ul>
-                        </div>
-                        <div class="resume-item">
-                            <h4>Department of Mathematics</h4>
-                            <p><em>Drexel University</em></p>
-                            <ul>
-                                <li>Calculus I, II, III</li>
-                                <li>Multivariate Calculus</li>
-                                <li>Linear Algebra</li>
-                                <li>Discrete Mathematics</li>
-                                <li>Probability & Statistics I, II</li>
-                            </ul>
-                        </div>
-                        <h3 class="resume-title">Teaching Assistant</h3>
-                        <div class="resume-item">
-                            <h4>College of Computing</h4>
-                            <p><em>Drexel University</em></p>
-                            <ul>
-                                <li><b>CS 615 - </b>Graduate Deep Learning</li>
-                                <li><b>CS 613 - </b>Graduate Machine Learning</li>
-                                <li><b>CS 510 - </b>Graduate Artificial Intelligence</li>
-                            	<li><b>CS 472 - </b>Computer Networks</li>
-                                <li><b>CS 283 - </b>Systems Programming</li>
-                                <li><b>CS 265 - </b>Advanced Programming Techniques</li>
-                                <li><b>CS 260 - </b>Data Structures & Algorithms</li>
-                                <li><b>CS 172 - </b>Computer Programming II</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section><!-- End Resume Section -->
-        <!-- ======= Portfolio Section ======= -->
-        <!-- <section id="portfolio" class="portfolio section-bg">
-            <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                    <h2>Portfolio</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-                        <ul id="portfolio-flters">
-                            <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-current">Ongoing</li>
-                            <li data-filter=".filter-research">Research</li>
-                            <li data-filter=".filter-industry">Experiences</li>
-                            <li data-filter=".filter-hackathon">Hackathons</li>
-                            <li data-filter=".filter-fun">Fun</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-research filter-current">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-1.png" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>FedPay</h4>
-                                <p>Research Project</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-1.png" data-gall="portfolioGallery" class="venobox" title="App 1"><i class="bx bx-plus"></i></a>
-                                    <a href="./portfolio-details/portfolio-details-1.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-research">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-2.png" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>SplitEasy</h4>
-                                <p>Research Project</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-2.png" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                    <a href="./portfolio-details/portfolio-details-2.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-industry filter-current">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-3.png" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>PowerPlay</h4>
-                                <p>Mobile App</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-3.png" data-gall="portfolioGallery" class="venobox" title="App 2"><i class="bx bx-plus"></i></a>
-                                    <a href="./portfolio-details/portfolio-details-3.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-industry">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-4.png" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Autofill Engine</h4>
-                                <p>ML Software</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-4.png" data-gall="portfolioGallery" class="venobox" title="Card 2"><i class="bx bx-plus"></i></a>
-                                    <a href="./portfolio-details/portfolio-details-4.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-research">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-5.png" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>FedClean</h4>
-                                <p>Research Project</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-5.png" data-gall="portfolioGallery" class="venobox" title="Web 2"><i class="bx bx-plus"></i></a>
-                                    <a href="./portfolio-details/portfolio-details-5.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-hackathon">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-17.png" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Groove</h4>
-                                <p>Web Interface</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-6.png" data-gall="portfolioGallery" class="venobox" title="App 3"><i class="bx bx-plus"></i></a>
-                                    <a href="./portfolio-details/portfolio-details-17.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-hackathon">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-7.png" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Tweeting For Love</h4>
-                                <p>Mobile App</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-7.png" data-gall="portfolioGallery" class="venobox" title="Card 1"><i class="bx bx-plus"></i></a>
-                                    <a href="./portfolio-details/portfolio-details-7.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-fun">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-8.png" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>HKUST Crawler</h4>
-                                <p>Enterprise</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-8.png" data-gall="portfolioGallery" class="venobox" title="Card 3"><i class="bx bx-plus"></i></a>
-                                    <a href="./portfolio-details/portfolio-details-8.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-fun">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-6.png" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>What To-Do</h4>
-                                <p>Web Interface</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-6.png" data-gall="portfolioGallery" class="venobox" title="App 3"><i class="bx bx-plus"></i></a>
-                                    <a href="./portfolio-details/portfolio-details-6.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-fun">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-9.png" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>ML Competitions</h4>
-                                <p>Raw Code</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-9.png" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                    <a href="./portfolio-details/portfolio-details-9.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-hackathon">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-11.png" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Retrocade</h4>
-                                <p>Hardware Product</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-11.png" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                    <a href="./portfolio-details/portfolio-details-11.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-fun">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-10.png" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Flu-Finder</h4>
-                                <p>Web-Interface</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-10.png" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                    <a href="./portfolio-details/portfolio-details-10.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-fun">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-12.png" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Lunar Lander</h4>
-                                <p>Web-Interface</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-12.png" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                    <a href="./portfolio-details/portfolio-details-12.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-industry">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-13.png" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>CurbStyle Inc.</h4>
-                                <p>Startup</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-13.png" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                    <a href="./portfolio-details/portfolio-details-13.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-industry">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-14.png" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Winfo Solutions</h4>
-                                <p>Internship</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-14.png" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                    <a href="./portfolio-details/portfolio-details-14.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-fun">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-15.png" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>AGC</h4>
-                                <p>Project</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-15.png" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                    <a href="./portfolio-details/portfolio-details-15.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-fun">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-16.png" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Railway Management</h4>
-                                <p>Project</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-16.png" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                    <a href="./portfolio-details/portfolio-details-16.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!-- End Portfolio Section -->
-        <!-- ======= Services Section ======= -->
-        <!-- <section id="services" class="services">
-            <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                    <h2>Certifications</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="icon-box iconbox-blue">
-                            <h3><a href="https://www.honorsociety.org/">Upsilon Pi Epsilon</a></h3>
-                            <h4>Honor Society</h4>
-                            <p><em><b>Invited</b> to be a member in the Drexel Chapter of Upsilon Pi Epsilon, an International Honors Society for computing and information disciplines. Selected based upon outstanding academic achievement and high scholarship rating.</em></p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="icon-box iconbox-orange ">
-                            <h3><a href="https://www.ibcol.org/">IBCOL, Hong Kong</a></h3>
-                            <h4>Blockchain Workshop</h4>
-                            <p><em>IBCOL expands to <strong>International Blockchain Olympiad</strong> Attended an in-person workshop, <strong>Blockchain 101: Blockchains & Cryptography </strong>held at Hong Kong University of Science & Technology on October 30, 2019.</em></p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="icon-box iconbox-pink">
-                            <h3><a href="https://iittp.ac.in/">IIT-T, India</a></h3>
-                            <h4>AI/ML Summer School</h4>
-                            <p><em>Attended a week long summer school at <strong>Indian Institute of Technology, Tirupati, India.</strong> The summer school was held in July 2019 and covered basic theory of artificial intelligence & machine learning accompanied by coding sessions.</em></p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="icon-box iconbox-yellow">
-                            <h3><a href="https://www.iima.ac.in/">IIM-A, India</a></h3>
-                            <h4>ML Bootcamp</h4>
-                            <p><em>Attended an invitation-based <strong>machine learning</strong> bootcamp organized by <strong>Google Developers</strong> community. It was a two-day event held at <strong>Indian Institute of Management, Ahmedabad, India</strong></em></p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="icon-box iconbox-yellow">
-                            <h3><a href="https://www.coursera.org/">Coursera</a></h3>
-                            <h4>Online Courses</h4>
-                            <p><em>Finished specializations and online courses like <strong>Machine Learning (Stanford University)</strong>, <strong>Python Specialization</strong>, <strong>Blockchain Specialization</strong>, <strong>Deep Learning Specialization</strong>.</em></p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="icon-box iconbox-teal">
-                            <h3><a href="https://summerinstitutes.spcs.stanford.edu/">Stanford University</a></h3>
-                            <h4>Summer School</h4>
-                            <p><em>Attended <strong>Stanford Pre-Collegiate Summer Institutes</strong> in Summer 2016. Finished a course in <strong>knot theorey</strong> and awarded a <strong>full-ride scholarship (tuition and housing)</strong></em></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>End Services Section -->
-        <!-- ======= Testimonials Section ======= -->
-        <!-- <section id="testimonials" class="testimonials section-bg">
-            <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                    <h2>Testimonials</h2>
-                </div>
-                <div class="owl-carousel testimonials-carousel" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="testimonial-item">
-                        <img src="assets/img/testimonials/meta_logo.png" class="testimonial-img" alt="Meta Platforms Inc.">
-                        <h3>Sumanth Gurram, BS</h3>
-                        <h4>Ping Pong Player, <b>Meta Platforms Inc.</b></h4>
-                        <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            I played table tennis with Vivek during my brief tenure at Meta Platforms. Vivek is one of the most consistent and competent players I have encountered during my time at Meta. Vivek's ability to place his returns in the deep, left regions of the opponent's side of the table is borderline terrifying. He can keep a rally going longer than it takes Meta to give return offers. He is a force of nature.
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                        </p>
-                        <a href="https://www.linkedin.com/in/vivek-khimani-4a4660146/details/recommendations/" class="btn btn-primary" style="background-color: #0563bb" target="_blank">View</a>
-                    </div>
-                    <div class="testimonial-item">
-                        <img src="assets/img/testimonials/meta_logo.png" class="testimonial-img" alt="Meta Platforms Inc.">
-                        <h3>Eric Marnadi, BS</h3>
-                        <h4>Roomie, Climber, <b>Meta Platforms Inc.</b></h4>
-                        <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            My relationship with Vivek started in the Orange House, San Francisco. My roommates and I came to know him as a wholesome and calming presence. Wiwek was the opposite of a calming presence. He was a juggernaut of trouble. He was a motorcycle-riding fiend. We are all lucky that Vivek chose to trade in his motorcycle for a Mac, his torn shirts for tech-bro Patagonias, and his trouble-making demeanor for his singular devotion to the Grind.
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                        </p>
-                        <a href="https://www.linkedin.com/in/vivek-khimani-4a4660146/details/recommendations/" class="btn btn-primary" style="background-color: #0563bb" target="_blank">View</a>
-                    </div>
-                    <div class="testimonial-item">
-                        <img src="assets/img/testimonials/r2c.png" class="testimonial-img" alt="R2c">
-                        <h3>Clara McCreery, MS</h3>
-                        <h4>Technical Mentor, <b>r2c (Semgrep)</b></h4>
-                        <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            I was Vivek's mentor at r2c and he completely blew me away. Vivek is an incredibly hard-working person, excited to tackle challenging problems, and dedicated to seeing projects through to the end. He was very independent and quickly became self-sufficient as a member of our team, which is certainly not my expectation of interns but it's wonderful when it happens.
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                        </p>
-                        <a href="https://www.linkedin.com/in/vivek-khimani-4a4660146/details/recommendations/" class="btn btn-primary" style="background-color: #0563bb" target="_blank">View</a>
-                    </div>
-                    <div class="testimonial-item">
-                        <img src="assets/img/testimonials/google_logo.webp" class="testimonial-img" alt="R2c">
-                        <h3>Brahmnoor Chawla, BS</h3>
-                        <h4>Homie, Software Engineer <b>Google</b></h4>
-                        <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            Vivek is one of the smartest software engineers that I have seen and have had a chance to work with. Having previously worked on infrastructure built in C++ and Python, his knowledge in software engineering and design is unparalleled.
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                        </p>
-                        <a href="https://www.linkedin.com/in/vivek-khimani-4a4660146/details/recommendations/" class="btn btn-primary" style="background-color: #0563bb" target="_blank">View</a>
-                    </div>
-                    <div class="testimonial-item">
-                        <img src="assets/img/testimonials/olak_logo.png" class="testimonial-img" alt="Olak Inc.">
-                        <h3>Jay Pavagadhi, MS</h3>
-                        <h4>CEO, <b>Olak Inc.</b></h4>
-                        <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            In the span of three months at Olak, Vivek has worked on building a complete pipeline for our Autofill engine to replace the rule-based system with novel deep learning techniques.
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                        </p>
-                        <a href="https://www.cs.drexel.edu/~vck29/olak_recomm.pdf" class="btn btn-primary" style="background-color: #0563bb" target="_blank">View</a>
-                    </div>
-                    <div class="testimonial-item">
-                        <img src="assets/img/testimonials/Dragon_blue.png" class="testimonial-img" alt="Drexel" style="height:70px">
-                        <h3>Dr. William Mongan, Ph.D.</h3>
-                        <h4>Former Associate Dept. Head, <b>Drexel University</b></h4>
-                        <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            Vivek brings extensive experience in coordinating student and community engagement; he serves as the Vice President of the Drexel Algorithms and Data Structures club, where he hosts biweekly workshops in preparation for technical interviews.
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                        </p>
-                        <a href="https://www.cs.drexel.edu/~vck29/Mongan_Recommendation.pdf" class="btn btn-primary" style="background-color: #0563bb" target="_blank">View</a>
-                    </div>
-                </div>
-            </div>
-        </section> --><!-- End Testimonials Section -->
-        <!-- ======= Contact Section ======= -->
-        <!--<section id="contact" class="contact">
-            <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                    <h2>Contact</h2>
-                </div>
-                <div class="row mt-1">
-                    <div class="col-lg-4">
-                        <div class="info">
-                            <div class="address">
-                                <i class="icofont-google-map"></i>
-                                <h4>Location:</h4>
-                                <p>Philadelphia, PA, USA</p>
-                            </div>
-                            <div class="email">
-                                <i class="icofont-envelope"></i>
-                                <h4>Email:</h4>
-                                <p>vck29@drexel.edu</p>
-                                <p>vivekkhimani07@gmail.com</p>
-                            </div>
-                            <div class="phone">
-                                <i class="icofont-phone"></i>
-                                <h4>Call:</h4>
-                                <p>+1 (267)-530-9712</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-8 mt-5 mt-lg-0">
-                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                            <div class="form-row">
-                                <div class="col-md-6 form-group">
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                    <div class="validate"></div>
-                                </div>
-                                <div class="col-md-6 form-group">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                                    <div class="validate"></div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                <div class="validate"></div>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                                <div class="validate"></div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="loading">Loading</div>
-                                <div class="error-message"></div>
-                                <div class="sent-message">Your message has been sent. Thank you!</div>
-                            </div>
-                            <div class="text-center"><button type="submit" name="submit">Send Message</button></div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section> --><!-- End Contact Section -->
-    </main><!-- End #main -->
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- End #main -->
     <!-- ======= Footer ======= -->
     <footer id="footer">
-        <div class="container">
-            <h3>Vivek Khimani</h3>
-            <div class="social-links">
-                <a href="https://calendly.com/vivekkhimani" target="_blank" class="calendar" data-toggle="tooltip" data-placement="top" title="Calendly"><i class="bx bx-calendar bx-tada-hover"></i> </a>
-                <a href="https://www.buymeacoffee.com/vivekkhimani" target="_blank" class="coffee" data-toggle="tooltip" data-placement="top" title="Buy Me A Coffee"><i class="bx bx-coffee bx-tada-hover"></i> </a>
-                <a href="https://www.cs.drexel.edu/~vck29/008_VivekResume.pdf" target="_blank" class="resume" data-toggle="tooltip" data-placement="top" title="Resume"><i class="bx bxs-file-blank bx-tada-hover"></i> </a>
-                <a href="mailto:vck29@drexel.edu" target="_blank" class="envelope"><i class="bx bxs-envelope" data-toggle="tooltip" data-placement="top" title="Drexel E-mail"></i> </a>
-                <a href="mailto:vivekkhimani07@gmail.com" target="_blank" class="google"><i class="bx bxl-google bx-tada-hover" data-toggle="tooltip" data-placement="top" title="Google E-mail"></i> </a>
-                <a href="https://scholar.google.com/citations?user=2CnfovoAAAAJ&hl=en" target="_blank" class="graduation"><i class="bx bxs-graduation bx-tada-hover" data-toggle="tooltip" data-placement="top" title="Google Scholar"></i> </a>
-                <a href="https://www.linkedin.com/in/vivek-khimani-4a4660146" target="_blank" class="linkedin" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="bx bxl-linkedin bx-tada-hover"></i></a>
-                <a href="https://github.com/vivekkhimani" target="_blank" class="github" data-toggle="tooltip" data-placement="top" title="GitHub"><i class="bx bxl-github bx-tada-hover"></i></a>
-                <a href="https://www.quora.com/profile/Vivek-Khimani" target="_blank" class="quora" data-toggle="tooltip" data-placement="top" title="Quora"><i class="bx bxl-quora bx-tada-hover"></i></a>
-                <a href="https://medium.com/@vivekkhimani07" target="_blank" class="medium" data-toggle="tooltip" data-placement="top" title="Medium"><i class="bx bxl-medium bx-tada-hover"></i></a>
-                <a href="https://stackoverflow.com/users/11372284/vivek-khimani" target="_blank" class="stack-overflow" data-toggle="tooltip" data-placement="top" title="Stack"><i class="bx bxl-stack-overflow bx-tada-hover"></i></a>
-                <a href="https://twitter.com/KhimaniVivek" target="_blank" class="twitter" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="bx bxl-twitter bx-tada-hover"></i></a>
-                <a href="https://www.facebook.com/vivek.khimani" target="_blank" class="facebook" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="bx bxl-facebook bx-tada-hover"></i></a>
-                <a href="https://www.instagram.com/vivekkhimani/" target="_blank" class="instagram" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="bx bxl-instagram bx-tada-hover"></i></a>
-                <a href="https://join.skype.com/invite/obA6JrCWtQo2" target="_blank" class="skype" data-toggle="tooltip" data-placement="top" title="Skype"><i class="bx bxl-skype bx-tada-hover"></i></a>
-            </div>
-            <div class="copyright">
-                &copy; Copyright 2020 <strong><span>Vivek Khimani</span></strong>. All Rights Reserved
-            </div>
-            <div class="credits">
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you purchased the pro version. -->
-                <!-- Licensing information: [license-url] -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-            </div>
+      <div class="container">
+        <h3>Vivek Khimani</h3>
+        <div class="social-links">
+          <a
+            href="https://calendly.com/vivekkhimani"
+            target="_blank"
+            class="calendar"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Calendly"
+            ><i class="bx bx-calendar bx-tada-hover"></i>
+          </a>
+          <a
+            href="https://www.buymeacoffee.com/vivekkhimani"
+            target="_blank"
+            class="coffee"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Buy Me A Coffee"
+            ><i class="bx bx-coffee bx-tada-hover"></i>
+          </a>
+          <a href="mailto:vivek@semgrep.com" target="_blank" class="envelope"
+            ><i
+              class="bx bxs-envelope"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Work email"
+            ></i>
+          </a>
+          <a
+            href="mailto:vivekkhimani07@gmail.com"
+            target="_blank"
+            class="google"
+            ><i
+              class="bx bxl-google bx-tada-hover"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Google E-mail"
+            ></i>
+          </a>
+          <a
+            href="https://scholar.google.com/citations?user=2CnfovoAAAAJ&hl=en"
+            target="_blank"
+            class="graduation"
+            ><i
+              class="bx bxs-graduation bx-tada-hover"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Google Scholar"
+            ></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/vivek-khimani-4a4660146"
+            target="_blank"
+            class="linkedin"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="LinkedIn"
+            ><i class="bx bxl-linkedin bx-tada-hover"></i
+          ></a>
+          <a
+            href="https://github.com/vivekkhimani"
+            target="_blank"
+            class="github"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="GitHub"
+            ><i class="bx bxl-github bx-tada-hover"></i
+          ></a>
+          <a
+            href="https://www.quora.com/profile/Vivek-Khimani"
+            target="_blank"
+            class="quora"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Quora"
+            ><i class="bx bxl-quora bx-tada-hover"></i
+          ></a>
+          <a
+            href="https://medium.com/@vivekkhimani07"
+            target="_blank"
+            class="medium"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Medium"
+            ><i class="bx bxl-medium bx-tada-hover"></i
+          ></a>
+          <a
+            href="https://stackoverflow.com/users/11372284/vivek-khimani"
+            target="_blank"
+            class="stack-overflow"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Stack"
+            ><i class="bx bxl-stack-overflow bx-tada-hover"></i
+          ></a>
+          <a
+            href="https://twitter.com/KhimaniVivek"
+            target="_blank"
+            class="twitter"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Twitter"
+            ><i class="bx bxl-twitter bx-tada-hover"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/vivek.khimani"
+            target="_blank"
+            class="facebook"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Facebook"
+            ><i class="bx bxl-facebook bx-tada-hover"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/vivekkhimani/"
+            target="_blank"
+            class="instagram"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Instagram"
+            ><i class="bx bxl-instagram bx-tada-hover"></i
+          ></a>
+          <a
+            href="https://join.skype.com/invite/obA6JrCWtQo2"
+            target="_blank"
+            class="skype"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Skype"
+            ><i class="bx bxl-skype bx-tada-hover"></i
+          ></a>
         </div>
-    </footer><!-- End Footer -->
+        <div class="copyright">
+          &copy; Copyright 2020 <strong><span>Vivek Khimani</span></strong
+          >. All Rights Reserved.
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: [license-url] -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
     <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
     <div id="preloader"></div>
     <!-- Vendor JS Files -->
@@ -1153,6 +905,5 @@
     <script src="assets/vendor/aos/aos.js"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-</body>
-
+  </body>
 </html>

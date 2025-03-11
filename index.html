@@ -456,6 +456,7 @@
             var flagstaff = new L.marker([35.2, -111.65]).addTo(map);
             var sedona = new L.marker([34.87, -111.76]).addTo(map);
             var grandcanyon = new L.marker([36.06, -112.14]).addTo(map);
+            var denver = new L.marker([39.7392, -104.9903]).addTo(map);
 
             //pop-up bindings
             sfo
@@ -554,6 +555,7 @@
             grandcanyon.bindPopup(
               "<b>Grand Canyon, AZ</b><br>Solo Hiking trip!"
             );
+            denver.bindPopup("<b>Denver, CO</b><br>Work + Leisure trip!");
 
             // Adding layer to the map
             map.addLayer(layer);

@@ -457,6 +457,7 @@
             var sedona = new L.marker([34.87, -111.76]).addTo(map);
             var grandcanyon = new L.marker([36.06, -112.14]).addTo(map);
             var denver = new L.marker([39.7392, -104.9903]).addTo(map);
+            var boulder = new L.marker([40.0190, -105.2747]).addTo(map);
 
             //pop-up bindings
             sfo
@@ -556,6 +557,7 @@
               "<b>Grand Canyon, AZ</b><br>Solo Hiking trip!"
             );
             denver.bindPopup("<b>Denver, CO</b><br>Work + Leisure trip!");
+            boulder.bindPopup("<b>Boulder, CO</b><br>Leisure trip!");
 
             // Adding layer to the map
             map.addLayer(layer);

@@ -458,6 +458,9 @@
             var grandcanyon = new L.marker([36.06, -112.14]).addTo(map);
             var denver = new L.marker([39.7392, -104.9903]).addTo(map);
             var boulder = new L.marker([40.0190, -105.2747]).addTo(map);
+            var fresno = new L.marker([36.7378, -119.7871]).addTo(map);
+            var snp = new L.marker([36.4864,-118.5658]).addTo(map);
+            var kcnp = new L.marker([36.53,-118.33]).addTo(map);
 
             //pop-up bindings
             sfo
@@ -558,6 +561,11 @@
             );
             denver.bindPopup("<b>Denver, CO</b><br>Work + Leisure trip!");
             boulder.bindPopup("<b>Boulder, CO</b><br>Leisure trip!");
+            fresno.bindPopup("<b>Fresno, CA</b><br>Pit stop during a road trip!");
+            snp.bindPopup("<b>Sequoia National Park, CA</b><br>Road trip with roomie!");
+            kcnp.bindPopup("<b>Kings Canyon National Park, CA</b><br>Road trip with roomie!");
+            
+            
 
             // Adding layer to the map
             map.addLayer(layer);

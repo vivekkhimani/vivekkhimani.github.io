@@ -49,8 +49,8 @@
   // Three states, largest first: where he lives, places with something to say,
   // and everywhere else.
   function style(place) {
-    var accent = token("--accent", "#3d6b4c");
-    var paper = token("--paper", "#f4f5f1");
+    var accent = token("--accent", "#3f5b70");
+    var paper = token("--paper", "#ffffff");
     if (place.here) {
       return { radius: 7, color: paper, weight: 2.5, fillColor: accent, fillOpacity: 1 };
     }

@@ -6,16 +6,16 @@
 
 /* Tokens ------------------------------------------------------------------ */
 :root {
-  --paper:      #f4f5f1;
-  --raise:      #fafbf7;
-  --sunk:       #eceee6;
-  --ink:        #191c19;
-  --muted:      #697068;
-  --faint:      #8d938b;
-  --rule:       #dbded4;
-  --accent:     #3d6b4c;
-  --accent-ink: #2b5036;
-  --accent-wash:#e5ece4;
+  --paper:      #ffffff;
+  --raise:      #fbfcfd;
+  --sunk:       #f1f3f6;
+  --ink:        #16181c;
+  --muted:      #5f6672;
+  --faint:      #767e8c;
+  --rule:       #e3e6ea;
+  --accent:     #3f5b70;
+  --accent-ink: #2c4457;
+  --accent-wash:#e9eef2;
 
   --serif: "Newsreader", Georgia, "Times New Roman", serif;
   --mono:  "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -27,16 +27,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper:      #121410;
-    --raise:      #1a1d17;
-    --sunk:       #0d0f0c;
-    --ink:        #e6e9e0;
-    --muted:      #98a094;
-    --faint:      #767d73;
-    --rule:       #2a2e26;
-    --accent:     #8cba97;
-    --accent-ink: #abd3b4;
-    --accent-wash:#1b2a1e;
+    --paper:      #101215;
+    --raise:      #171a1f;
+    --sunk:       #0b0d10;
+    --ink:        #e3e7ec;
+    --muted:      #98a1ae;
+    --faint:      #79828f;
+    --rule:       #262b32;
+    --accent:     #8fb3cc;
+    --accent-ink: #a9c7db;
+    --accent-wash:#1a232b;
   }
 }
 
@@ -419,19 +419,19 @@ details.queue > summary:hover { color: var(--ink); }
    Rouge tokens, kept deliberately quiet: comments recede, strings and keywords
    pick up the page accent, everything else stays body ink. Both themes. */
 :root {
-  --hl-comment: #8d938b;
-  --hl-keyword: #3d6b4c;
-  --hl-string:  #6b5a2b;
-  --hl-number:  #7a4a3a;
-  --hl-name:    #2f4756;
+  --hl-comment: #767e8c;
+  --hl-keyword: #3f5b70;
+  --hl-string:  #6f5636;
+  --hl-number:  #7d4f43;
+  --hl-name:    #2f5a52;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --hl-comment: #6f766c;
-    --hl-keyword: #8cba97;
-    --hl-string:  #c8b077;
-    --hl-number:  #d09a7f;
-    --hl-name:    #8fb4c9;
+    --hl-comment: #79828f;
+    --hl-keyword: #8fb3cc;
+    --hl-string:  #c9ab7c;
+    --hl-number:  #d1998a;
+    --hl-name:    #86b8ad;
   }
 }
 .highlight { background: none; }

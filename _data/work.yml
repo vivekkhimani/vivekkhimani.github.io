@@ -8,8 +8,10 @@
   when: 2022 to now
   now: true
   points:
-    - Founding engineer and tech lead on Semgrep Assistant and Semgrep Agentic Workflows.
-    - "Platforms and infrastructure: database scaling and performance for findings and scans."
+    - Tech lead and founding engineer on Semgrep Agentic Workflows.
+    - "Earlier: founding engineer and tech lead on Semgrep Assistant."
+    - "Before that, platforms and infrastructure: database scaling and performance
+      for findings and scans."
 
 - company: Meta
   url: https://about.meta.com

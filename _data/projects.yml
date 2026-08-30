@@ -1,0 +1,32 @@
+# Things worth pointing at that are not papers or jobs.
+# `url` is optional; without it the name renders as plain text.
+
+- name: agentic-fs
+  what: >-
+    Filesystem-style access to documents, so an agent can browse and read them
+    the way it would a directory tree.
+  url: https://github.com/vivekkhimani/agentic-fs
+
+- name: TorchFL
+  what: >-
+    A PyTorch library for bootstrapping federated learning experiments without
+    rebuilding the scaffolding every time.
+  url: https://github.com/torchfl-org/torchfl
+
+# No link: the repository is private and powerplayapp.online no longer resolves.
+- name: PowerPlay
+  what: >-
+    A social network and scoring app for the non-professional cricket community
+    in India. Co-founded it in 2020.
+
+- name: LifeNest
+  what: >-
+    A Django interface for matching COVID-19 resource requests to the people who
+    could fill them, built during India's second wave.
+  url: https://github.com/vivekkhimani/LifeNest
+
+- name: Groove
+  what: >-
+    Music recommendation that works without touching other users' data, rather
+    than the usual collaborative filtering.
+  url: https://github.com/vivekkhimani/Groove

@@ -1,0 +1,31 @@
+---
+layout: page
+title: Writing
+section: writing
+eyebrow: Writing
+heading: Writing
+intro: Notes and longer pieces. Mostly engineering, occasionally not.
+---
+{%- if site.posts.size > 0 %}
+<ul class="posts">
+  {%- for post in site.posts %}
+  <li>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+    <div>
+      <div class="t"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></div>
+      {%- if post.summary %}<p class="s">{{ post.summary }}</p>{% endif %}
+      {%- if post.tags and post.tags != empty %}
+      <div class="tags">{% for t in post.tags %}<span>{{ t }}</span>{% endfor %}</div>
+      {%- endif %}
+    </div>
+  </li>
+  {%- endfor %}
+</ul>
+<p class="stale"><a href="{{ '/writing/feed.xml' | relative_url }}">RSS</a></p>
+{%- else %}
+<div class="empty">
+  <p>Nothing here yet.</p>
+  <p>In the meantime, there is a shelf of
+    <a href="{{ '/reading/' | relative_url }}">what I have been reading</a>.</p>
+</div>
+{%- endif %}

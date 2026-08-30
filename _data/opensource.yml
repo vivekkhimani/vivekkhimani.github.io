@@ -1,0 +1,24 @@
+# Merged contributions to projects other people maintain.
+# `count` is merged pull requests; the link filters that repo to them.
+# Semgrep's own repositories are deliberately not here: that is the day job,
+# and the work section already says so.
+
+- repo: astral-sh/ruff
+  what: Python linter and formatter, written in Rust.
+  count: 2
+  url: https://github.com/astral-sh/ruff/pulls?q=is%3Apr+author%3Avivekkhimani+is%3Amerged
+
+- repo: Netflix/metaflow
+  what: Framework for building and running real-life ML and data science workflows.
+  count: 4
+  url: https://github.com/Netflix/metaflow/pulls?q=is%3Apr+author%3Avivekkhimani+is%3Amerged
+
+- repo: workos/workos-python
+  what: WorkOS Python SDK.
+  count: 2
+  url: https://github.com/workos/workos-python/pulls?q=is%3Apr+author%3Avivekkhimani+is%3Amerged
+
+- repo: skypilot-org/skypilot
+  what: Runs ML and batch jobs across any cloud.
+  count: 1
+  url: https://github.com/skypilot-org/skypilot/pulls?q=is%3Apr+author%3Avivekkhimani+is%3Amerged

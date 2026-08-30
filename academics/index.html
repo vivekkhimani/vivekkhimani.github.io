@@ -1,0 +1,77 @@
+---
+layout: page
+title: Academics
+section: academics
+eyebrow: Academics
+heading: The college record
+intro: >-
+  Degree, coursework, the courses I taught, and the papers. Work history lives on
+  the home page.
+---
+{%- assign ed = site.data.education -%}
+<div class="cv-grid">
+  <div>
+    <section class="section">
+      <h2>Degree</h2>
+      <ul class="facts">
+        <li><span class="k">School</span><span>{{ ed.degree.school }}</span></li>
+        <li><span class="k">Award</span><span>{{ ed.degree.award }}</span></li>
+        <li><span class="k">Minors</span><span>{{ ed.degree.minors | join: ", " }}</span></li>
+        <li><span class="k">Focus</span><span>{{ ed.degree.concentrations | join: ", " }}</span></li>
+        <li><span class="k">Years</span><span class="mono">{{ ed.degree.years }}</span></li>
+        <li><span class="k">GPA</span><span class="mono">{{ ed.degree.gpa }}</span></li>
+      </ul>
+      <div class="entry">
+        <h4>Awards</h4>
+        <p>{{ ed.degree.awards | join: ", " }}.</p>
+        <h4>Engagement</h4>
+        <p>{{ ed.degree.engagement | join: ", " }}.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Elsewhere</h2>
+      {%- for e in ed.elsewhere %}
+      <div class="entry">
+        <h4>{{ e.what }}</h4>
+        <p class="sub">{{ e.school }} &middot; {{ e.when }}</p>
+        <p>{{ e.detail }}</p>
+      </div>
+      {%- endfor %}
+    </section>
+
+    <section class="section">
+      <h2>Publications</h2>
+      {%- for pub in site.data.publications %}
+      <div class="entry">
+        <h4><a href="{{ pub.url }}">{{ pub.title }}</a></h4>
+        <p class="sub">
+          {% for a in pub.authors %}{% if a == 'V Khimani' %}<b>{{ a }}</b>{% else %}{{ a }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}
+          &middot; {{ pub.venue }} {{ pub.year }}
+        </p>
+      </div>
+      {%- endfor %}
+    </section>
+  </div>
+
+  <div>
+    <section class="section">
+      <h2>Taught</h2>
+      <p class="muted" style="font-size:.94rem">{{ ed.teaching.where }}</p>
+      <ul class="plain">
+        {%- for c in ed.teaching.courses %}
+        <li><b>{{ c.code }}</b>{{ c.name }}{% if c.level %} <span class="muted">({{ c.level }})</span>{% endif %}</li>
+        {%- endfor %}
+      </ul>
+    </section>
+
+    {%- for group in ed.coursework %}
+    <section class="section">
+      <h2>{{ group.group }} coursework</h2>
+      <ul class="plain">
+        {%- for item in group.items %}<li>{{ item }}</li>{% endfor %}
+      </ul>
+    </section>
+    {%- endfor %}
+  </div>
+</div>

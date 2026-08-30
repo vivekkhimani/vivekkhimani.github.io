@@ -1,0 +1,119 @@
+---
+layout: page
+title: Reading
+section: reading
+eyebrow: Reading
+heading: Reading
+intro: Pulled from Goodreads once a day. Ratings and notes are mine, not the community's.
+---
+{%- assign books = site.data.books -%}
+{%- assign now   = books.shelves.reading -%}
+{%- assign read  = books.shelves.read -%}
+{%- assign queue = books.shelves.queue -%}
+{%- assign five  = read | where: "rating", 5 -%}
+{%- comment -%} Split the shelf: books he wrote about, and the rest. {%- endcomment -%}
+{%- assign noted = "" | split: "" -%}
+{%- assign plain = "" | split: "" -%}
+{%- for b in read -%}
+  {%- if b.review and b.review.size > 0 -%}
+    {%- assign noted = noted | push: b -%}
+  {%- else -%}
+    {%- assign plain = plain | push: b -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<div class="shelf-stats">
+  <div><b>{{ read | size }}</b><span class="label">finished</span></div>
+  <div><b>{{ now | size }}</b><span class="label">reading now</span></div>
+  <div><b>{{ noted | size }}</b><span class="label">written about</span></div>
+  <div><b>{{ five | size }}</b><span class="label">five star</span></div>
+  <div><b>{{ queue | size }}</b><span class="label">queued</span></div>
+</div>
+
+{%- if now and now.size > 0 %}
+<section class="section">
+  <h2>Reading now</h2>
+  <div class="now-reading">
+    {%- for b in now %}
+    <article>
+      <a href="{{ b.link }}">
+        <img class="book-cover" src="{{ b.cover }}" alt="" loading="lazy">
+        <span class="t">{{ b.title | split: " (" | first }}</span>
+      </a>
+      <span class="a">{{ b.author }}</span>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+{%- endif %}
+
+{%- if noted.size > 0 %}
+<section class="section">
+  <h2>Notes</h2>
+  {%- for b in noted %}
+  <article class="note">
+    <a class="note-cover" href="{{ b.link }}">
+      <img class="book-cover" src="{{ b.coverSmall | default: b.cover }}" alt="" loading="lazy">
+    </a>
+    <div class="note-body">
+      <h3>{{ b.title | split: " (" | first }}</h3>
+      <p class="note-meta">
+        {{ b.author }}
+        {%- if b.published %} &middot; {{ b.published }}{% endif %}
+        &middot; <span class="stars" aria-label="{{ b.rating }} out of 5">{% for i in (1..b.rating) %}&#9733;{% endfor %}</span>
+        {%- if b.readAt %} &middot; read {{ b.readAt | date: "%b %Y" }}{% endif %}
+      </p>
+      {%- if b.review.size > 2 %}
+      <details class="note-text">
+        <summary><span>{{ b.review[0] }}</span></summary>
+        {%- for para in b.review offset: 1 %}
+        <p>{{ para }}</p>
+        {%- endfor %}
+      </details>
+      {%- else %}
+      <div class="note-text">
+        {%- for para in b.review %}
+        <p>{{ para }}</p>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+    </div>
+  </article>
+  {%- endfor %}
+</section>
+{%- endif %}
+
+{%- if plain.size > 0 %}
+<section class="section">
+  <h2>{% if noted.size > 0 %}Also read{% else %}Finished{% endif %}</h2>
+  <div class="shelf">
+    {%- for b in plain %}
+    <a href="{{ b.link }}">
+      <img class="book-cover" src="{{ b.coverSmall | default: b.cover }}" alt="" loading="lazy">
+      <span class="meta">
+        <span class="stars" aria-label="{{ b.rating }} out of 5">{% for i in (1..b.rating) %}&#9733;{% endfor %}</span>
+        <span>{{ b.readAt | date: "%Y" }}</span>
+      </span>
+      <span class="t">{{ b.title | split: " (" | first }}</span>
+    </a>
+    {%- endfor %}
+  </div>
+</section>
+{%- endif %}
+
+{%- if queue and queue.size > 0 %}
+<section class="section">
+  <h2>Queue</h2>
+  <details class="queue">
+    <summary>{{ queue | size }} books I mean to get to</summary>
+    <ul class="queue-list">
+      {%- for b in queue %}
+      <li>{{ b.title | split: " (" | first }}<span class="a">{{ b.author }}</span></li>
+      {%- endfor %}
+    </ul>
+  </details>
+</section>
+{%- endif %}
+
+<p class="stale">Synced {{ books.generated | date: "%-d %B %Y" }} from
+  <a href="{{ books.profile }}">Goodreads</a>.</p>

@@ -1,0 +1,34 @@
+# Roles, newest first. `now: true` marks the current one.
+# `when` is shown verbatim, so write it however reads best.
+# `points` are the specifics; keep them concrete and short.
+
+- company: Semgrep
+  url: https://semgrep.dev
+  role: Software Engineer
+  when: 2022 to now
+  now: true
+  points:
+    - Tech lead and founding engineer on Semgrep Agentic Workflows.
+    - "Earlier: founding engineer and tech lead on Semgrep Assistant."
+    - "Before that, platforms and infrastructure: database scaling and performance
+      for findings and scans."
+
+- company: Meta
+  url: https://about.meta.com
+  role: Software Engineering Intern
+  team: Ads ML Infra
+  when: Jun to Sep 2022
+  stack: [C++, Hack, Python, Thrift, Kubernetes]
+
+- company: Susquehanna International Group
+  url: https://www.sig.com
+  role: Software Engineering Intern
+  team: Market Data Frameworks
+  when: Mar to Sep 2021
+  stack: [C++, Python, Django, Kubernetes]
+
+- company: Olak
+  role: Software Engineering Intern
+  team: Machine Learning Engineering
+  when: Mar to Jun 2020
+  stack: [Python, PyTorch, TensorFlow, ONNX, TypeScript]

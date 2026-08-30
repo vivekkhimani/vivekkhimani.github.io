@@ -1,0 +1,68 @@
+degree:
+  school: Drexel University
+  award: Bachelor of Science, Computer Science
+  minors: [Mathematics, Data Science]
+  concentrations: [Artificial Intelligence, Computer Networks & Security, Systems Engineering]
+  years: 2018 - 2022
+  gpa: 3.93 / 4.00
+  awards:
+    - Undergraduate Student Teaching Excellence Award
+    - Isaac L. Auerbach Innovation Award
+    - Dean's List
+    - Founder's Scholarship
+    - Drexel Grant
+    - Dragons Abroad Scholarship
+  engagement:
+    - Drexel Algorithms & Data Structures (President)
+    - Drexel CS Theory Reading Group (Member)
+
+elsewhere:
+  - school: Hong Kong University of Science & Technology
+    what: Engineering Exchange & Research Program
+    when: Fall 2019
+    detail: >-
+      FedClean: a decentralized defense against parameter poisoning attacks in
+      federated learning systems. With Dr. Pan Hui and Dr. Dimitris Chatzopoulos.
+  - school: Stanford University
+    what: Pre-Collegiate Summer Institute
+    when: Summer 2016
+    detail: Knot theory. Full-ride scholarship including housing.
+
+teaching:
+  where: Drexel University, College of Computing
+  courses:
+    - {code: CS 615, name: Deep Learning, level: Graduate}
+    - {code: CS 613, name: Machine Learning, level: Graduate}
+    - {code: CS 510, name: Artificial Intelligence, level: Graduate}
+    - {code: CS 472, name: Computer Networks}
+    - {code: CS 283, name: Systems Programming}
+    - {code: CS 265, name: Advanced Programming Techniques}
+    - {code: CS 260, name: Data Structures & Algorithms}
+    - {code: CS 172, name: Computer Programming II}
+
+coursework:
+  - group: Computing
+    items:
+      - Advanced Programming Techniques
+      - Mathematical Foundations of Computer Science
+      - Systems Architecture
+      - Systems Programming
+      - Concurrent Programming
+      - Operating Systems
+      - Web & Mobile App Development
+      - Data Mining Applications in Machine Learning
+      - Data Structures & Algorithms I, II
+      - Artificial Intelligence
+      - Machine Learning (Honors)
+      - Deep Learning (Graduate)
+      - Functional Programming (Graduate)
+      - Computer Networks
+      - Advanced Software Security
+      - Advanced Software Design & Development
+  - group: Mathematics
+    items:
+      - Calculus I, II, III
+      - Multivariate Calculus
+      - Linear Algebra
+      - Discrete Mathematics
+      - Probability & Statistics I, II

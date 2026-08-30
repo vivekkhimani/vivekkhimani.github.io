@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>{% include head.html %}</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="wrap">
+    {% include nav.html %}
+    <main id="main">
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </div>
+  {%- if page.leaflet %}
+  <script src="{{ '/assets/vendor-lite/leaflet/leaflet.js' | relative_url }}"></script>
+  {%- endif %}
+  {%- for src in page.js %}
+  <script src="{{ src | relative_url }}"></script>
+  {%- endfor %}
+</body>
+</html>

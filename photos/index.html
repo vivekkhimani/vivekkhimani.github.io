@@ -1,0 +1,32 @@
+---
+layout: page
+title: Photos
+section: photos
+eyebrow: Photos
+heading: Photographs
+intro: Grouped by place. Mostly national parks and whatever was in front of me.
+js: [/assets/js/gallery.js]
+---
+{%- assign albums = site.albums | sort: "date" | reverse -%}
+{%- if albums.size > 0 %}
+  {%- for album in albums %}
+  {%- assign place = site.data.places | where: "id", album.place | first %}
+  <section class="album">
+    <div class="album-head">
+      <h2><a href="{{ album.url | relative_url }}">{{ album.title }}</a></h2>
+      <span class="m">
+        {{ album.date | date: "%B %Y" }} &middot; {{ album.photos | size }} photos
+        {%- if place %} &middot; <a href="{{ '/travel/' | relative_url }}#{{ place.id }}">map</a>{% endif %}
+      </span>
+    </div>
+    {%- if album.note %}<p class="note">{{ album.note }}</p>{% endif %}
+    {% include gallery.html album=album %}
+  </section>
+  {%- endfor %}
+{%- else %}
+<div class="empty">
+  <p>No albums yet.</p>
+  <p>The places they will come from are
+    <a href="{{ '/travel/' | relative_url }}">on the map</a>.</p>
+</div>
+{%- endif %}

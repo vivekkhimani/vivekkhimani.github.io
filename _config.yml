@@ -1,0 +1,70 @@
+title: Vivek Khimani
+tagline: Software engineer
+description: >-
+  Vivek Khimani is a software engineer at Semgrep, working on platforms and
+  infrastructure. Computer networking, machine learning and security.
+url: https://vivekkhimani.github.io
+baseurl: ""
+lang: en
+
+author:
+  name: Vivek Khimani
+  email: vivekkhimani07@gmail.com
+
+# Shown in the footer and on /contact. Order is the order they render in.
+links:
+  email:    mailto:vivekkhimani07@gmail.com
+  github:   https://github.com/vivekkhimani
+  linkedin: https://www.linkedin.com/in/vivek-khimani-4a4660146/
+  scholar:  https://scholar.google.com/citations?user=2CnfovoAAAAJ&hl=en
+  calendar: https://calendar.app.google/mJfsgyW5f4hC4Ezx5
+
+goodreads_user: "177773639"
+
+collections:
+  albums:
+    output: true
+    permalink: /photos/:name/
+
+defaults:
+  - scope: {path: "", type: posts}
+    values: {layout: post}
+  - scope: {path: "", type: albums}
+    values: {layout: album, js: [/assets/js/gallery.js]}
+
+permalink: /writing/:title/
+timezone: America/Los_Angeles
+# GitHub Pages defaults to the primer theme when none is named. This site has
+# its own layouts and does not want primer's stylesheet in the output.
+theme: null
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts: {block: {line_numbers: false}}
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: /writing/feed.xml
+  collections:
+    posts: {path: /writing/feed.xml}
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - tools
+  - README.md
+  - .gitignore
+  - CLAUDE.md
+
+# v1/ carries no front matter, so Jekyll copies it through byte for byte.

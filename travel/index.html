@@ -9,10 +9,7 @@ leaflet: true
 js: [/assets/js/map.js]
 ---
 {%- assign albums = site.albums -%}
-{%- comment -%}
-  Places worth reading about: anything carrying a reflection or a photo album.
-  The map is the index; these are the entries.
-{%- endcomment -%}
+{%- assign groups = site.data.places | group_by: "region" | sort: "size" | reverse -%}
 {%- assign told = "" | split: "" -%}
 {%- for p in site.data.places -%}
   {%- assign album = albums | where: "place", p.id | first -%}
@@ -21,11 +18,7 @@ js: [/assets/js/map.js]
 
 <div id="map" role="application" aria-label="Map of places visited">
   <noscript>
-    <ul class="plain" style="padding:1rem">
-      {%- for p in site.data.places %}
-      <li><b>{{ p.name }}</b>{{ p.note }}</li>
-      {%- endfor %}
-    </ul>
+    <p class="map-fallback">The map needs JavaScript. Every place is listed below.</p>
   </noscript>
 </div>
 
@@ -33,12 +26,29 @@ js: [/assets/js/map.js]
   <span class="key"><i class="dot dot-here"></i> where I live now</span>
   <span class="key"><i class="dot dot-told"></i> has a note or photos</span>
   <span class="key"><i class="dot"></i> been there</span>
-  <span class="key nums">{{ site.data.places | size }} places</span>
 </p>
+
+<section class="section" id="places">
+  <h2>{{ site.data.places | size }} places</h2>
+  {%- for group in groups %}
+  <div class="region">
+    <h3>{{ group.name }} <span class="m nums">{{ group.items | size }}</span></h3>
+    <ul class="place-list">
+      {%- for p in group.items %}
+      {%- assign album = albums | where: "place", p.id | first %}
+      <li>
+        <a href="#{{ p.id }}" data-place="{{ p.id }}">{{ p.name | split: "," | first }}</a>
+        {%- if p.reflection or album %} <i class="has" title="has a note or photos"></i>{% endif %}
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+  {%- endfor %}
+</section>
 
 {%- if told.size > 0 %}
 <section class="section" id="notes">
-  <h2>Notes from some of them</h2>
+  <h2>Notes</h2>
   {%- for p in told %}
   {%- assign album = albums | where: "place", p.id | first %}
   <article class="place" id="note-{{ p.id }}">
@@ -52,7 +62,7 @@ js: [/assets/js/map.js]
     </div>
     {%- if p.reflection %}<p>{{ p.reflection }}</p>{% elsif p.note %}<p>{{ p.note }}</p>{% endif %}
     <p class="place-links">
-      <a href="#{{ p.id }}" data-focus="{{ p.id }}">Show on the map</a>
+      <a href="#{{ p.id }}" data-place="{{ p.id }}">Show on the map</a>
       {%- if album %} <a href="{{ album.url | relative_url }}">Photos</a>{% endif %}
     </p>
   </article>

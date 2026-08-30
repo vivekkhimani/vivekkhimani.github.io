@@ -6,16 +6,16 @@
 
 /* Tokens ------------------------------------------------------------------ */
 :root {
-  --paper:      #f4f5f1;
-  --raise:      #fafbf7;
-  --sunk:       #eceee6;
-  --ink:        #191c19;
-  --muted:      #697068;
-  --faint:      #8d938b;
-  --rule:       #dbded4;
-  --accent:     #3d6b4c;
-  --accent-ink: #2b5036;
-  --accent-wash:#e5ece4;
+  --paper:      #ffffff;
+  --raise:      #fbfcfd;
+  --sunk:       #f1f3f6;
+  --ink:        #16181c;
+  --muted:      #5f6672;
+  --faint:      #767e8c;
+  --rule:       #e3e6ea;
+  --accent:     #3f5b70;
+  --accent-ink: #2c4457;
+  --accent-wash:#e9eef2;
 
   --serif: "Newsreader", Georgia, "Times New Roman", serif;
   --mono:  "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -27,16 +27,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper:      #121410;
-    --raise:      #1a1d17;
-    --sunk:       #0d0f0c;
-    --ink:        #e6e9e0;
-    --muted:      #98a094;
-    --faint:      #767d73;
-    --rule:       #2a2e26;
-    --accent:     #8cba97;
-    --accent-ink: #abd3b4;
-    --accent-wash:#1b2a1e;
+    --paper:      #101215;
+    --raise:      #171a1f;
+    --sunk:       #0b0d10;
+    --ink:        #e3e7ec;
+    --muted:      #98a1ae;
+    --faint:      #79828f;
+    --rule:       #262b32;
+    --accent:     #8fb3cc;
+    --accent-ink: #a9c7db;
+    --accent-wash:#1a232b;
   }
 }
 
@@ -87,6 +87,7 @@ pre code { background: none; padding: 0; font-size: inherit; }
 .mono { font-family: var(--mono); }
 .muted { color: var(--muted); }
 .nums { font-variant-numeric: tabular-nums; }
+.nowrap { white-space: nowrap; }
 
 .skip {
   position: absolute; left: -9999px; top: 0; background: var(--raise);
@@ -117,6 +118,11 @@ pre code { background: none; padding: 0; font-size: inherit; }
 }
 
 main { display: block; }
+
+@media (max-width: 600px) {
+  .site-head { gap: 0.75rem 1rem; padding: 1.6rem 0 1.1rem; margin-bottom: 2.2rem; }
+  .site-head nav { margin-left: 0; width: 100%; gap: 0.2rem 0.95rem; }
+}
 
 .site-foot {
   margin-top: 5rem; padding: 1.5rem 0 3.5rem; border-top: 1px solid var(--rule);
@@ -258,15 +264,17 @@ figure { margin: 0; }
 .shelf .t { font-size: 0.79rem; line-height: 1.28;
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 
-/* Reading: a book he wrote about ----------------------------------------- */
-.note { display: grid; gap: 0.9rem 1.4rem; padding-bottom: 2rem; margin-bottom: 2rem;
+/* Reading: a book he wrote about -----------------------------------------
+   Named book-note, not note: .note already belongs to the album description
+   on /photos, and a bare .note here put that paragraph in a 5.5rem column. */
+.book-note { display: grid; gap: 0.9rem 1.4rem; padding-bottom: 2rem; margin-bottom: 2rem;
   border-bottom: 1px solid var(--rule); }
-.note:last-child { border-bottom: 0; padding-bottom: 0; margin-bottom: 0; }
-@media (min-width: 620px) { .note { grid-template-columns: 5.5rem minmax(0, 1fr); } }
+.book-note:last-child { border-bottom: 0; padding-bottom: 0; margin-bottom: 0; }
+@media (min-width: 620px) { .book-note { grid-template-columns: 5.5rem minmax(0, 1fr); } }
 .note-cover { display: block; }
 .note-cover .book-cover { width: 5.5rem; }
 @media (max-width: 619px) { .note-cover .book-cover { width: 4.5rem; } }
-.note h3 { font-size: 1.08rem; font-weight: 600; margin: 0; line-height: 1.3; }
+.book-note h3 { font-size: 1.08rem; font-weight: 600; margin: 0; line-height: 1.3; }
 .note-meta { font-family: var(--mono); font-size: 0.72rem; color: var(--faint);
   margin: 0.25rem 0 0.8rem; }
 .note-meta .stars { color: var(--accent); letter-spacing: 0.04em; }
@@ -411,19 +419,19 @@ details.queue > summary:hover { color: var(--ink); }
    Rouge tokens, kept deliberately quiet: comments recede, strings and keywords
    pick up the page accent, everything else stays body ink. Both themes. */
 :root {
-  --hl-comment: #8d938b;
-  --hl-keyword: #3d6b4c;
-  --hl-string:  #6b5a2b;
-  --hl-number:  #7a4a3a;
-  --hl-name:    #2f4756;
+  --hl-comment: #767e8c;
+  --hl-keyword: #3f5b70;
+  --hl-string:  #6f5636;
+  --hl-number:  #7d4f43;
+  --hl-name:    #2f5a52;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --hl-comment: #6f766c;
-    --hl-keyword: #8cba97;
-    --hl-string:  #c8b077;
-    --hl-number:  #d09a7f;
-    --hl-name:    #8fb4c9;
+    --hl-comment: #79828f;
+    --hl-keyword: #8fb3cc;
+    --hl-string:  #c9ab7c;
+    --hl-number:  #d1998a;
+    --hl-name:    #86b8ad;
   }
 }
 .highlight { background: none; }
@@ -446,3 +454,24 @@ details.queue > summary:hover { color: var(--ink); }
 .essay { max-width: var(--measure); }
 .essay p { font-size: 1.02rem; }
 .essay p:first-of-type { font-size: 1.12rem; }.essay p:last-child { margin-bottom: 0; }
+
+/* Travel: browsing the places ---------------------------------------------- */
+.region { margin-bottom: 2rem; }
+.region:last-child { margin-bottom: 0; }
+.region h3 { font-size: 0.95rem; font-weight: 600; margin: 0 0 0.6rem;
+  padding-bottom: 0.45rem; border-bottom: 1px solid var(--rule);
+  display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.region h3 .m { font-family: var(--mono); font-size: 0.72rem; font-weight: 400; color: var(--faint); }
+.place-list { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 2rem; }
+@media (min-width: 640px) { .place-list { columns: 3; } }
+.place-list li { break-inside: avoid; margin-bottom: 0.28rem; font-size: 0.9rem; line-height: 1.4; }
+.place-list a { text-decoration: none; }
+.place-list a:hover { text-decoration: underline; text-decoration-color: var(--accent); }
+.place-list .has { display: inline-block; width: 5px; height: 5px; border-radius: 50%;
+  background: var(--accent); vertical-align: 0.22em; margin-left: 0.15rem; }
+
+.leaflet-tooltip { background: var(--ink); color: var(--paper); border: 0; border-radius: 3px;
+  font-family: var(--mono); font-size: 0.7rem; padding: 0.22rem 0.45rem; box-shadow: none;
+  white-space: nowrap; }
+.leaflet-tooltip-top::before { border-top-color: var(--ink); }
+.map-fallback { padding: 1.2rem; color: var(--muted); font-size: 0.92rem; }

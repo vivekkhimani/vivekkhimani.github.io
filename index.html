@@ -41,74 +41,8 @@ section: home
     guitar. I like being somewhere unfamiliar and figuring things out as I go. I also like
     having a few things in my life that don't need to lead anywhere.</p>
   </div>
+  <p class="more"><a href="{{ '/work/' | relative_url }}">Roles, projects and papers</a></p>
 </div>
-
-<section class="section">
-  <h2>Work</h2>
-  <ol class="roles">
-    {%- for job in site.data.work %}
-    <li>
-      <span class="when">{{ job.when }}</span>
-      <div>
-        <div class="who">
-          {{ job.role }} <span class="at">at</span>
-          {% if job.url %}<a href="{{ job.url }}">{{ job.company }}</a>{% else %}{{ job.company }}{% endif %}
-          {%- if job.team %} <span class="at">&middot; {{ job.team }}</span>{% endif %}
-          {%- if job.now %}<span class="now-dot" aria-label="current role"></span>{% endif %}
-        </div>
-        {%- if job.points %}
-        <ul>{% for p in job.points %}<li>{{ p }}</li>{% endfor %}</ul>
-        {%- endif %}
-        {%- if job.stack %}
-        <div class="stack">{% for t in job.stack %}<span>{{ t }}</span>{% endfor %}</div>
-        {%- endif %}
-      </div>
-    </li>
-    {%- endfor %}
-  </ol>
-</section>
-
-<section class="section">
-  <h2>Things I made</h2>
-  <ul class="made">
-    {%- for p in site.data.projects %}
-    <li>
-      <div class="t">
-        {%- if p.url %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif -%}
-      </div>
-      <p class="d">{{ p.what }}</p>
-    </li>
-    {%- endfor %}
-  </ul>
-</section>
-
-<section class="section">
-  <h2>Open source</h2>
-  <ul class="made">
-    {%- for c in site.data.opensource %}
-    <li>
-      <div class="t"><a href="{{ c.url }}">{{ c.repo }}</a></div>
-      <p class="d">{{ c.what }}</p>
-      <p class="cite">{{ c.count }} merged pull request{% unless c.count == 1 %}s{% endunless %}</p>
-    </li>
-    {%- endfor %}
-  </ul>
-</section>
-
-<section class="section">
-  <h2>Papers</h2>
-  <ul class="made">
-    {%- for pub in site.data.publications %}
-    <li>
-      <div class="t"><a href="{{ pub.url }}">{{ pub.title }}</a></div>
-      <p class="cite">
-        {% for a in pub.authors %}{% if a == 'V Khimani' %}<b>{{ a }}</b>{% else %}{{ a }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}
-        &middot; {{ pub.venue }} {{ pub.year }}
-      </p>
-    </li>
-    {%- endfor %}
-  </ul>
-</section>
 
 <section class="section">
   <h2>Recently</h2>

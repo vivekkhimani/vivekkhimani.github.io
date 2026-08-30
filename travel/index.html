@@ -16,10 +16,12 @@ js: [/assets/js/map.js]
   {%- if p.reflection or album -%}{%- assign told = told | push: p -%}{%- endif -%}
 {%- endfor -%}
 
+<div class="map-wide">
 <div id="map" role="application" aria-label="Map of places visited">
   <noscript>
     <p class="map-fallback">The map needs JavaScript. Every place is listed below.</p>
   </noscript>
+</div>
 </div>
 
 <p class="map-note">

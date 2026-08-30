@@ -1,0 +1,14 @@
+{%- assign show_writing = false -%}
+{%- if site.posts.size >= site.writing_nav_threshold -%}{%- assign show_writing = true -%}{%- endif -%}
+<header class="site-head">
+  <a class="home" href="{{ '/' | relative_url }}">Vivek Khimani</a>
+  <nav aria-label="Sections">
+    {%- if show_writing %}
+    <a href="{{ '/writing/' | relative_url }}"{% if page.section == 'writing' %} aria-current="page"{% endif %}>Writing</a>
+    {%- endif %}
+    <a href="{{ '/reading/' | relative_url }}"{% if page.section == 'reading' %} aria-current="page"{% endif %}>Reading</a>
+    <a href="{{ '/photos/' | relative_url }}"{% if page.section == 'photos' %} aria-current="page"{% endif %}>Photos</a>
+    <a href="{{ '/travel/' | relative_url }}"{% if page.section == 'travel' %} aria-current="page"{% endif %}>Travel</a>
+    <a href="{{ '/cv/' | relative_url }}"{% if page.section == 'cv' %} aria-current="page"{% endif %}>CV</a>
+  </nav>
+</header>

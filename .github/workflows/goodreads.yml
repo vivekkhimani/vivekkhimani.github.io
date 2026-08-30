@@ -1,0 +1,40 @@
+name: Sync Goodreads
+
+# Goodreads has no API any more, but per-shelf RSS still works without a key.
+# Pulling it here rather than in the browser keeps the page free of a CORS proxy.
+on:
+  schedule:
+    - cron: "17 9 * * *"   # 09:17 UTC daily, off the hour so it is not queued with everything else
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: goodreads
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch shelves
+        run: python tools/goodreads.py
+
+      - name: Commit if anything changed
+        run: |
+          if git diff --quiet -- _data/books.json; then
+            echo "shelves unchanged"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _data/books.json
+          git commit -m "Sync Goodreads shelves"
+          git push

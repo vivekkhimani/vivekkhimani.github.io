@@ -1,0 +1,20 @@
+---
+layout: base
+---
+{%- assign place = site.data.places | where: "id", page.place | first -%}
+<div class="page-head">
+  <span class="label"><a href="{{ '/photos/' | relative_url }}">Photos</a></span>
+  <h1>{{ page.title }}</h1>
+  <p class="intro">
+    <span class="mono">{{ page.date | date: "%B %Y" }} &middot; {{ page.photos | size }} photos</span>
+    {%- if place %} &middot; <a href="{{ '/travel/' | relative_url }}#{{ place.id }}">on the map</a>{% endif %}
+  </p>
+</div>
+
+{%- if content != "" %}
+<div class="post-body measure">{{ content }}</div>
+{%- endif %}
+
+{% include gallery.html album=page %}
+
+<p class="post-nav"><a href="{{ '/photos/' | relative_url }}">&larr; All albums</a></p>

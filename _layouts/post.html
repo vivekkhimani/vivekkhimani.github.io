@@ -1,0 +1,24 @@
+---
+layout: base
+---
+<article class="post">
+  <header>
+    <span class="label">Writing</span>
+    <h1>{{ page.title }}</h1>
+    <p class="byline">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+      {%- if page.tags and page.tags != empty %} &middot; {{ page.tags | join: ", " }}{% endif -%}
+    </p>
+  </header>
+
+  <div class="post-body">
+    {{ content }}
+  </div>
+
+  <nav class="post-nav">
+    {%- if page.previous %}<a href="{{ page.previous.url | relative_url }}">&larr; {{ page.previous.title }}</a>{% endif %}
+    {%- if page.next %}<a href="{{ page.next.url | relative_url }}">{{ page.next.title }} &rarr;</a>{% endif %}
+    <a href="{{ '/writing/' | relative_url }}">All writing</a>
+    <a href="{{ site.links.email }}?subject={{ page.title | uri_escape }}">Reply by email</a>
+  </nav>
+</article>

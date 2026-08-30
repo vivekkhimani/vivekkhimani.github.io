@@ -6,3 +6,13 @@
 **/chatbot_training_and_implementation/train.to
 **/chatbot_training_and_implementation/training_data.zip
 **/chatbot_training_and_implementation/testing_data.zip
+
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+.bundle/
+
+# macOS
+.DS_Store

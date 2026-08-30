@@ -1,0 +1,30 @@
+---
+layout: page
+title: Travel
+section: travel
+eyebrow: Travel
+heading: Places
+intro: Everywhere I have spent time, for work or otherwise. The open marker is where I live now.
+leaflet: true
+js: [/assets/js/map.js]
+---
+{%- assign albums = site.albums -%}
+<div id="map" role="application" aria-label="Map of places visited">
+  <noscript>
+    <ul class="plain" style="padding:1rem">
+      {%- for p in site.data.places %}
+      <li><b>{{ p.name }}</b>{{ p.note }}</li>
+      {%- endfor %}
+    </ul>
+  </noscript>
+</div>
+<p class="map-note">{{ site.data.places | size }} places. Click a marker for the story.</p>
+
+<script id="places-data" type="application/json">
+[
+{%- for p in site.data.places -%}
+{%- assign album = albums | where: "place", p.id | first -%}
+{"id":{{ p.id | jsonify }},"name":{{ p.name | jsonify }},"note":{{ p.note | default: "" | jsonify }},"lat":{{ p.lat }},"lng":{{ p.lng }}{% if p.here %},"here":true{% endif %}{% if album %},"album":{{ album.url | relative_url | jsonify }},"albumTitle":{{ album.title | jsonify }}{% endif %}}{%- unless forloop.last -%},{%- endunless -%}
+{%- endfor -%}
+]
+</script>

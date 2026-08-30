@@ -1,0 +1,30 @@
+{%- comment -%}
+  Renders one album. Server side this is a plain responsive grid that works with
+  no JavaScript; gallery.js then regroups it into justified rows.
+  Expects `include.album` with front matter: dir, photos: [{f, w, h, s, src}].
+  `s` lists the widths that actually exist, so no srcset descriptor lies.
+{%- endcomment -%}
+{%- assign dir = include.album.dir | default: include.album.slug -%}
+<div class="gallery" data-target="240" data-gap="6">
+  {%- for p in include.album.photos -%}
+  {%- assign ratio = p.w | times: 1.0 | divided_by: p.h -%}
+  {%- assign base = '/photos/' | append: dir | append: '/' -%}
+  {%- assign caption = p.cap | default: include.album.title -%}
+  {%- capture webpset %}{% for s in p.s %}{{ base | append: s | append: '/' | append: p.f | append: '.webp' | relative_url }} {{ s }}w{% unless forloop.last %}, {% endunless %}{% endfor %}{% endcapture -%}
+  {%- capture jpegset %}{% for s in p.s %}{{ base | append: s | append: '/' | append: p.f | append: '.jpg' | relative_url }} {{ s }}w{% unless forloop.last %}, {% endunless %}{% endfor %}{% endcapture -%}
+  <figure style="--r: {{ ratio }}">
+    <button class="shot" type="button"
+            data-full="{{ base | append: p.s.last | append: '/' | append: p.f | append: '.jpg' | relative_url }}"
+            data-cap="{{ caption | escape }}">
+      <picture>
+        <source type="image/webp" sizes="(max-width: 700px) 100vw, 45vw" srcset="{{ webpset }}">
+        <img src="{{ base | append: p.src | append: '/' | append: p.f | append: '.jpg' | relative_url }}"
+             sizes="(max-width: 700px) 100vw, 45vw" srcset="{{ jpegset }}"
+             width="{{ p.w }}" height="{{ p.h }}" loading="lazy" decoding="async"
+             alt="{{ caption | escape }}">
+      </picture>
+    </button>
+    {%- if p.cap %}<figcaption>{{ p.cap }}</figcaption>{% endif %}
+  </figure>
+  {%- endfor -%}
+</div>

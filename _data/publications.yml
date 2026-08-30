@@ -1,0 +1,19 @@
+# Papers, newest first. Bold your own name by matching `me` in the template.
+
+- title: "TorchFL: A Performant Library for Bootstrapping Federated Learning Experiments"
+  authors: [V Khimani, S Jabbari]
+  venue: arXiv pre-print
+  year: 2022
+  url: https://arxiv.org/abs/2211.00735
+
+- title: "FedClean: A Defense Mechanism Against Parameter Poisoning Attacks in Federated Learning"
+  authors: [A Kumar, V Khimani, D Chatzopoulos, P Hui]
+  venue: IEEE ICASSP
+  year: 2022
+  url: https://ieeexplore.ieee.org/document/9747497
+
+- title: "SplitEasy: A Practical Approach for Training ML Models on Mobile Devices"
+  authors: [K Palanisamy, V Khimani, MH Moti, D Chatzopoulos]
+  venue: ACM HotMobile
+  year: 2021
+  url: https://dl.acm.org/doi/10.1145/3446382.3448362

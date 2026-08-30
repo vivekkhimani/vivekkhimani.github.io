@@ -1,989 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Vivek Khimani</title>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-150066007-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
+---
+layout: base
+title: Vivek Khimani
+section: home
+---
+{%- assign latest_post  = site.posts.first -%}
+{%- assign latest_album = site.albums | sort: "date" | reverse | first -%}
+{%- assign reading      = site.data.books.shelves.reading -%}
 
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "UA-150066007-1");
-    </script>
-    <!-- Meta Data -->
-    <meta
-      content="I am Vivek, a software engineer at Semgrep."
-      name="description"
-    />
-    <meta
-      content="vivek khimani, vivek, khimani, drexel university, drexel, computer science, software, machine learning, data science, blockchain, mathematics, research, undergraduate"
-      name="keywords"
-    />
-    <meta name="author" content="Vivek Khimani" />
-    <meta property="og:title" content="Welcome - Vivek Khimani" />
-    <meta property="og:url" content="https://vivekkhimani.github.io" />
-    <meta property="og:image" content="./assets/img/Vivek2_min.jpg" />
-    <!-- Favicons -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-      crossorigin=""
-    />
-    <script
-      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-      crossorigin=""
-    ></script>
-    <link href="assets/img/v_image.png" rel="icon" />
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-      rel="stylesheet"
-    />
-    <!-- Vendor CSS Files -->
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet" />
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
-    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/owl.carousel/assets/owl.carousel.min.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet" />
-    <!-- =======================================================
-  * Template Name: MyResume - v2.1.0
-  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-  </head>
+<div class="intro-grid">
+  <div>
+    <h1>Vivek Khimani</h1>
+    <p class="lede">
+      Software engineer at <a href="https://semgrep.dev">Semgrep</a>, on the platforms team.
+      I work on backend systems, and I am most interested in the places where networking,
+      machine learning and security overlap.
+    </p>
+    <p class="bio">
+      Before Semgrep I interned at <a href="https://about.meta.com">Meta</a> on Ads ML Infra
+      and at <a href="https://www.sig.com">SIG</a> on market data frameworks. I studied
+      computer science at Drexel, with minors in mathematics and data science, and spent a
+      term researching federated learning at HKUST. Outside work I am usually outdoors,
+      running, playing squash, cooking something vegetarian, or losing an argument with a guitar.
+    </p>
+  </div>
+  <figure class="portrait">
+    <picture>
+      <source type="image/webp" sizes="(max-width: 780px) 100vw, 15rem"
+              srcset="{{ '/assets/img/portrait/400.webp' | relative_url }} 400w,
+                      {{ '/assets/img/portrait/800.webp' | relative_url }} 800w">
+      <img src="{{ '/assets/img/portrait/400.jpg' | relative_url }}"
+           sizes="(max-width: 780px) 100vw, 15rem"
+           srcset="{{ '/assets/img/portrait/400.jpg' | relative_url }} 400w,
+                   {{ '/assets/img/portrait/800.jpg' | relative_url }} 800w"
+           alt="Vivek Khimani" width="400" height="500">
+    </picture>
+  </figure>
+</div>
 
-  <body>
-    <!-- ======= Mobile nav toggle button ======= -->
-    <button type="button" class="mobile-nav-toggle d-xl-none">
-      <i class="icofont-navigation-menu"></i>
-    </button>
-    <!-- ======= Header ======= -->
-    <header id="header" class="d-flex flex-column justify-content-center">
-      <nav class="nav-menu">
-        <ul>
-          <li class="active">
-            <a href="#hero"><i class="bx bx-home"></i> <span>Home</span></a>
-          </li>
-          <li>
-            <a href="#about"><i class="bx bx-user"></i> <span>About</span></a>
-          </li>
-          <li>
-            <a href="#facts"><i class="bx bx-globe"></i> <span>Travel</span></a>
-          </li>
-          <li>
-            <a href="#resume"
-              ><i class="bx bxs-school"></i> <span>Academic Background</span></a
-            >
-          </li>
-          <!-- <li><a href="#portfolio"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li> -->
-          <!-- <li><a href="#services"><i class="bx bxs-certification"></i> <span>Certifications</span></a></li> -->
-          <li>
-            <a href="#footer"
-              ><i class="bx bx-envelope"></i> <span>Contact</span></a
-            >
-          </li>
-        </ul>
-      </nav>
-      <!-- .nav-menu -->
-    </header>
-    <!-- End Header -->
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex flex-column justify-content-center">
-      <div class="container" data-aos="zoom-in" data-aos-delay="100">
-        <h1>Vivek Khimani</h1>
-        <p>
-          I'm
-          <span
-            class="typed"
-            data-typed-items="a software engineer, an aspiring marathoner, a squash enthusiast, a sucker for the sun, a guitar noob"
-          ></span>
-        </p>
-        <div class="social-links">
-          <a
-            href="https://calendar.app.google/mJfsgyW5f4hC4Ezx5"
-            target="_blank"
-            class="calendar"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="Calendar"
-            ><i class="bx bx-calendar bx-tada-hover"></i>
-          </a>
-          <a
-            href="https://www.buymeacoffee.com/vivekkhimani"
-            target="_blank"
-            class="coffee"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="Buy Me A Coffee"
-            ><i class="bx bx-coffee bx-tada-hover"></i>
-          </a>
-          <!-- <a
-            href="https://www.cs.drexel.edu/~vck29/008_VivekResume.pdf"
-            target="_blank"
-            class="resume"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="Resume"
-            ><i class="bx bxs-file-blank bx-tada-hover"></i>
-          </a> -->
-          <a href="mailto:vivek@semgrep.com" target="_blank" class="envelope"
-            ><i
-              class="bx bxs-envelope"
-              data-toggle="tooltip"
-              data-placement="top"
-              title="Work email"
-            ></i>
-          </a>
-          <a
-            href="mailto:vivekkhimani07@gmail.com"
-            target="_blank"
-            class="google"
-            ><i
-              class="bx bxl-google bx-tada-hover"
-              data-toggle="tooltip"
-              data-placement="top"
-              title="Google E-mail"
-            ></i>
-          </a>
-          <a
-            href="https://scholar.google.com/citations?user=2CnfovoAAAAJ&hl=en"
-            target="_blank"
-            class="graduation"
-            ><i
-              class="bx bxs-graduation bx-tada-hover"
-              data-toggle="tooltip"
-              data-placement="top"
-              title="Google Scholar"
-            ></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/vivek-khimani-4a4660146/"
-            target="_blank"
-            class="linkedin"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="LinkedIn"
-            ><i class="bx bxl-linkedin bx-tada-hover"></i
-          ></a>
-          <a
-            href="https://github.com/vivekkhimani"
-            target="_blank"
-            class="github"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="GitHub"
-            ><i class="bx bxl-github bx-tada-hover"></i
-          ></a>
-          <a
-            href="https://www.quora.com/profile/Vivek-Khimani"
-            target="_blank"
-            class="quora"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="Quora"
-            ><i class="bx bxl-quora bx-tada-hover"></i
-          ></a>
-          <a
-            href="https://medium.com/@vivekkhimani07"
-            target="_blank"
-            class="medium"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="Medium"
-            ><i class="bx bxl-medium bx-tada-hover"></i
-          ></a>
-          <a
-            href="https://stackoverflow.com/users/11372284/vivek-khimani"
-            target="_blank"
-            class="stack-overflow"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="Stack"
-            ><i class="bx bxl-stack-overflow bx-tada-hover"></i
-          ></a>
-          <a
-            href="https://twitter.com/KhimaniVivek"
-            target="_blank"
-            class="twitter"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="Twitter"
-            ><i class="bx bxl-twitter bx-tada-hover"></i
-          ></a>
-          <a
-            href="https://www.facebook.com/vivek.khimani"
-            target="_blank"
-            class="facebook"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="Facebook"
-            ><i class="bx bxl-facebook bx-tada-hover"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/vivekkhimani/"
-            target="_blank"
-            class="instagram"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="Instagram"
-            ><i class="bx bxl-instagram bx-tada-hover"></i
-          ></a>
-          <a
-            href="https://join.skype.com/invite/obA6JrCWtQo2"
-            target="_blank"
-            class="skype"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="Skype"
-            ><i class="bx bxl-skype bx-tada-hover"></i
-          ></a>
+<section class="section">
+  <h2>Work</h2>
+  <ol class="roles">
+    {%- for job in site.data.work %}
+    <li>
+      <span class="when">{{ job.when }}</span>
+      <div>
+        <div class="who">
+          {{ job.role }} <span class="at">at</span>
+          {% if job.url %}<a href="{{ job.url }}">{{ job.company }}</a>{% else %}{{ job.company }}{% endif %}
+          {%- if job.team %} <span class="at">&middot; {{ job.team }}</span>{% endif %}
+          {%- if job.now %}<span class="now-dot" aria-label="current role"></span>{% endif %}
         </div>
+        {%- if job.points %}
+        <ul>{% for p in job.points %}<li>{{ p }}</li>{% endfor %}</ul>
+        {%- endif %}
+        {%- if job.stack %}
+        <div class="stack">{% for t in job.stack %}<span>{{ t }}</span>{% endfor %}</div>
+        {%- endif %}
       </div>
-    </section>
-    <!-- End Hero -->
-    <main id="main">
-      <!-- ======= About Section ======= -->
-      <section id="about" class="about">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>About</h2>
-          </div>
-          <div class="row">
-            <div class="col-lg-12">
-              <p>
-                Vivek is a software engineer at
-                <a href="https://semgrep.dev" target="_blank">Semgrep</a>, where
-                he works on the platforms team, having previously led the
-                development of the Semgrep Assistant. Before that, he
-                contributed to the core experiences team, focusing on the
-                findings workflow and optimizing database performance. Vivek
-                earned a Bachelor of Science in Computer Science from Drexel
-                University, with minors in Mathematics and Data Science. His
-                technical interests span backend engineering, computer
-                networking, machine learning, and cybersecurity. He has interned
-                at
-                <a href="https://about.facebook.com/meta" target="_blank"
-                  >Meta (Facebook)</a
-                >
-                on the Ads ML Infra team, and at
-                <a href="https://www.sig.com/" target="_blank"
-                  >Susquehanna International Group (SIG)</a
-                >
-                on the Market Data Frameworks (MDF) team. Outside of work, Vivek
-                enjoys spending time outdoors, solo traveling, running, playing
-                squash, cooking vegetarian food, reading fiction, exploring
-                video games, and learning to play guitar.
-              </p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-4">
-              <img
-                src="assets/img/Vivek2_min.jpg"
-                class="img-fluid"
-                style="border-radius: 15px"
-                alt="Profile"
-              />
-            </div>
-            <div class="col-lg-8 pt-4 pt-lg-0 content">
-              <div class="row">
-                <div class="col-lg-12">
-                  <h3>My bookshelf</h3>
-                  <style>
-                    #customize-list {
-                      margin-left: 20px;
-                      list-style: none;
-                    }
-                    #gr_updates_widget {
-                      border-radius: 1px;
-                      background-color: #fff;
-                      border: solid #0563bb 2px;
-                      box-shadow: 0px 0px 4px 1px #0a0a0a,
-                        inset 0px 0px 0px 1px #d7c606;
-                      padding: 15px;
-                      width: 100%;
-                      height: auto;
-                      display: flex;
-                      flex-direction: column; /* Align children vertically */
-                      justify-content: center;
-                      align-items: center;
-                      border-radius: 10px;
-                    }
-                    #gr_footer {
-                      margin-top: 10px; /* Add some space between iframe and footer */
-                      height: auto; /* Allow footer to size based on content */
-                    }
-                    #gr_updates_widget p {
-                      padding: 0px;
-                      margin: 0;
-                      font-size: 30px;
-                    }
-                    #gr_footer img {
-                      width: 100px;
-                      display: block; /* Center the footer image */
-                      margin: 0 auto; /* Center the footer image */
-                    }
-                    .goodreads-iframe {
-                      width: 100%;
-                      height: 300px; /* Set a fixed height for the iframe */
-                    }
-                  </style>
-                  <div id="gr_updates_widget" style="height: auto">
-                    <iframe
-                      sandbox
-                      id="the_iframe"
-                      class="goodreads-iframe"
-                      src="https://goodreads.com/widgets/user_update_widget?num_updates=20&user=177773639"
-                      frameborder="1"
-                    ></iframe>
-                    <div id="gr_footer">
-                      <a href="https://www.goodreads.com/"
-                        ><img
-                          alt="Goodreads: Book reviews, recommendations, and discussion"
-                          src="https://s.gr-assets.com/images/layout/goodreads_logo_140.png"
-                      /></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    </li>
+    {%- endfor %}
+  </ol>
+</section>
 
-      <!-- End About Section -->
-      <!-- ======= Facts Section ======= -->
-      <section id="facts" class="facts">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Travel</h2>
-            <p>
-              The open pop-up represents the current location. Click on the
-              respective markers for more information.
-            </p>
-          </div>
-          <center>
-            <div id="map" style="width: 1000px; height: 400px"></div>
-          </center>
-          <br />
-          <script>
-            // Creating map options
-            var mapOptions = {
-              center: [0.0, 0.0],
-              zoom: 2,
-            };
+<section class="section">
+  <h2>Things I made</h2>
+  <ul class="made">
+    {%- for p in site.data.projects %}
+    <li>
+      <div class="t"><a href="{{ p.url }}">{{ p.name }}</a></div>
+      <p class="d">{{ p.what }}</p>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
 
-            // Creating a map object
-            var map = new L.map("map", mapOptions);
+<section class="section">
+  <h2>Papers</h2>
+  <ul class="made">
+    {%- for pub in site.data.publications %}
+    <li>
+      <div class="t"><a href="{{ pub.url }}">{{ pub.title }}</a></div>
+      <p class="cite">
+        {% for a in pub.authors %}{% if a == 'V Khimani' %}<b>{{ a }}</b>{% else %}{{ a }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}
+        &middot; {{ pub.venue }} {{ pub.year }}
+      </p>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
 
-            // Creating a Layer object
-            var layer = new L.TileLayer(
-              "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            );
-
-            //Creating Markers
-            var philly = new L.marker([39.96, -75.16]).addTo(map);
-            var london = new L.marker([51.5072, -0.1276]).addTo(map);
-            var yellowstone = new L.marker([44.42, -110.59]).addTo(map);
-            var grand_teton = new L.marker([43.8, -100.68]).addTo(map);
-            var slc = new L.marker([40.77, -111.89]).addTo(map);
-            var lv = new L.marker([36.17, -115.14]).addTo(map);
-            var boston = new L.marker([42.3601, -71.0589]).addTo(map);
-            var coventry = new L.marker([54.1428, -1.51]).addTo(map);
-            var ambleside = new L.marker([54.43, -2.96]).addTo(map);
-            var keswick = new L.marker([54.61, -3.15]).addTo(map);
-            var newyork = new L.marker([40.72, -74.0]).addTo(map);
-            var yosemite = new L.marker([37.87, -119.54]).addTo(map);
-            var la = new L.marker([34.0522, -118.24]).addTo(map);
-            var monterey = new L.marker([36.6, -121.89]).addTo(map);
-            var pacifica = new L.marker([37.62, -122.48]).addTo(map);
-            var capitola = new L.marker([36.97, -121.95]).addTo(map);
-            var joshua = new L.marker([33.87, -115.9]).addTo(map);
-            var menlopark = new L.marker([37.45, -122.18]).addTo(map);
-            var lassen = new L.marker([40.4881, -121.51]).addTo(map);
-            var shasta = new L.marker([41.31, -122.31]).addTo(map);
-            var redding = new L.marker([40.59, -122.39]).addTo(map);
-            var redbluff = new L.marker([40.18, -122.23]).addTo(map);
-            var vina = new L.marker([39.94, -122.05]).addTo(map);
-            var bakersfield = new L.marker([35.37, -119.08]).addTo(map);
-            var sausalito = new L.marker([37.86, -122.49]).addTo(map);
-            var seattle = new L.marker([47.61, -122.33]).addTo(map);
-            var bellevue = new L.marker([47.61, -122.21]).addTo(map);
-            var stanford = new L.marker([37.43, -122.16]).addTo(map);
-            var nj = new L.marker([39.36, -74.42]).addTo(map);
-            var dc = new L.marker([38.91, -77.03]).addTo(map);
-            var dallas = new L.marker([32.78, -96.79]).addTo(map);
-            var sfo = new L.marker([37.78, -122.42]).addTo(map);
-            var rajkot = new L.marker([22.31, 70.81]).addTo(map);
-            var hk = new L.marker([22.32, 114.17]).addTo(map);
-            var mumbai = new L.marker([19.07, 72.88]).addTo(map);
-            var bangalore = new L.marker([12.97, 77.59]).addTo(map);
-            var goa = new L.marker([15.5, 73.91]).addTo(map);
-            var delhi = new L.marker([28.7, 77.1]).addTo(map);
-            var hyderabad = new L.marker([17.38, 78.49]).addTo(map);
-            var tirupati = new L.marker([13.63, 79.41]).addTo(map);
-            var chennai = new L.marker([13.08, 80.27]).addTo(map);
-            var ahmedabad = new L.marker([23.02, 72.57]).addTo(map);
-            var udaipur = new L.marker([24.58, 73.71]).addTo(map);
-            var agra = new L.marker([27.17, 78.0]).addTo(map);
-            var mpur = new L.marker([21.25, 69.96]).addTo(map);
-            var nashik = new L.marker([19.99, 73.78]).addTo(map);
-            var aurangabad = new L.marker([19.88, 75.34]).addTo(map);
-            var vadodara = new L.marker([22.31, 73.18]).addTo(map);
-            var surat = new L.marker([21.17, 72.83]).addTo(map);
-            var phoenix = new L.marker([33.45, -112.07]).addTo(map);
-            var flagstaff = new L.marker([35.2, -111.65]).addTo(map);
-            var sedona = new L.marker([34.87, -111.76]).addTo(map);
-            var grandcanyon = new L.marker([36.06, -112.14]).addTo(map);
-            var denver = new L.marker([39.7392, -104.9903]).addTo(map);
-            var boulder = new L.marker([40.0190, -105.2747]).addTo(map);
-            var fresno = new L.marker([36.7378, -119.7871]).addTo(map);
-            var snp = new L.marker([36.4864,-118.5658]).addTo(map);
-            var kcnp = new L.marker([36.53,-118.33]).addTo(map);
-            var singapore = new L.marker([1.3521, 103.8198]).addTo(map);
-
-            //pop-up bindings
-            sfo
-              .bindPopup(
-                "<b>San Francisco Bay Area, United States</b><br>Software Engineer at Semgrep"
-              )
-              .openPopup();
-            yellowstone.bindPopup(
-              "<b>Yellowstone National Park.</b><br>Vacation."
-            );
-            grand_teton.bindPopup(
-              "<b>Grand Teton National Park.</b><br>Vacation."
-            );
-            slc.bindPopup("<b>Salt Lake City.</b><br>Vacation.");
-            lv.bindPopup("<b>Las Vegas, Nevada.</b>Vacation.");
-            menlopark.bindPopup(
-              "<b>Menlo Park</b><br>Software Engineering Intern at Meta."
-            );
-            stanford.bindPopup(
-              "<b>Stanford University</b><br>Pre-Collegiate Summer Institutes."
-            );
-            philly.bindPopup(
-              "<b>Philadelphia, United States</b><br>Drexel University."
-            );
-            london.bindPopup("<b>London, UK</b><br>Vacation.");
-            boston.bindPopup("<b>Boston, MA</b><br>Work trip.");
-            ambleside.bindPopup(
-              "<b>Ambleside, UK</b><br>Leisure trip to the Lake District."
-            );
-            keswick.bindPopup(
-              "<b>Keswick, UK</b><br>Leisure trip to the Lake Ditrict<br>"
-            );
-            coventry.bindPopup(
-              "<b>Coventry, UK</b><br>Conference presentation at University of Warwick."
-            );
-            newyork.bindPopup(
-              "<b>New York City, United States</b><br>Leisure & Work Trips."
-            );
-            nj.bindPopup(
-              "<b>Atlantic City, United States</b><br>Leisure Trips."
-            );
-            hk.bindPopup(
-              "<b>Kowloon, Hong Kong</b><br>Machine Learning Researcher @ HKUST."
-            );
-            dc.bindPopup(
-              "<b>Washington DC, United States</b><br>Leisure & Work Trips."
-            );
-            dallas.bindPopup("<b>Dallas, United States</b><br>Airport Visit.");
-            mumbai.bindPopup("<b>Mumbai, India</b><br>Leisure and Work trips.");
-            bangalore.bindPopup("<b>Bangalore, India</b><br>Work Trip.");
-            goa.bindPopup("<b>Goa, India</b><br>Leisure Trip.");
-            hyderabad.bindPopup(
-              "<b>Hyderabad, India</b><br>Machine Learning Researcher @ IIIT Hyderabad."
-            );
-            rajkot.bindPopup("<b>Rajkot, India</b><br>Home.");
-            yosemite.bindPopup(
-              "<b>Yosemite National Park</b><br>Clouds Rest Hike @ 10000 ft."
-            );
-            la.bindPopup(
-              "<b>Los Angeles</b><br>Long weekend trip to Hollywood, DTLA, Santa Monica, and more."
-            );
-            joshua.bindPopup(
-              "<b>Joshua Tree National Park</b><br>Day trip to Joshua Tree National Park.<br>Hiked Ryan Mountain, star-gazed, and spent a night in an AirStream!"
-            );
-            monterey.bindPopup(
-              "<b>Monterey</b><br>Day trip to Monterey Bay Acquarium."
-            );
-            pacifica.bindPopup("<b>Pacifica</b><br>Road trip!");
-            capitola.bindPopup("<b>Capitola Beach</b>Day trip!");
-            lassen.bindPopup(
-              "<b>Lassen Volcanic National Park</b><br>Mt. Lassen Hike @ 10457 Feet."
-            );
-            shasta.bindPopup(
-              "<b>Mount Shasta</b><br>Lake Siskiyou View Point."
-            );
-            redding.bindPopup(
-              "<b>Redding, CA</b><br>Brunch stop at Trendy's. (Highly recommend the fresh orange juice!)"
-            );
-            redbluff.bindPopup("<b>Red Bluff, CA</b><br>Brunch stop!");
-            vina.bindPopup("<b>Vina, CA</b><br>AirBnb on the farm!");
-            bakersfield.bindPopup(
-              "<b>Bakerfield, CA</b><br>Low-key the best Indian meal @ Punjabi Dhaba!"
-            );
-            sausalito.bindPopup("<b>Sausalito, CA</b><br>Day trip!");
-            seattle.bindPopup(
-              "<b>Seattle, WA</b><br>Work + Leisure trip for a week!"
-            );
-            bellevue.bindPopup(
-              "<b>Bellevue, WA</b><br>Work + Leisure trip for a week!"
-            );
-            phoenix.bindPopup("<b>Phoenix, AZ</b><br>Solo road trip!");
-            flagstaff.bindPopup(
-              "<b>Flagstaff, AZ</b><br>Day trip from Phoenix!"
-            );
-            sedona.bindPopup("<b>Sedona, AZ</b><br>Solo Hiking trip!");
-            grandcanyon.bindPopup(
-              "<b>Grand Canyon, AZ</b><br>Solo Hiking trip!"
-            );
-            denver.bindPopup("<b>Denver, CO</b><br>Work + Leisure trip!");
-            boulder.bindPopup("<b>Boulder, CO</b><br>Leisure trip!");
-            fresno.bindPopup("<b>Fresno, CA</b><br>Pit stop during a road trip!");
-            snp.bindPopup("<b>Sequoia National Park, CA</b><br>Road trip with roomie!");
-            kcnp.bindPopup("<b>Kings Canyon National Park, CA</b><br>Road trip with roomie!");
-            singapore.bindPopup("<b>Singapore</b><br>Vacation!");
-            
-            
-
-            // Adding layer to the map
-            map.addLayer(layer);
-          </script>
-        </div>
-      </section>
-      <!-- ======= Resume Section ======= -->
-      <section id="resume" class="resume">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Academic Background</h2>
-            <p>
-              <em
-                >Please note that this is <b>not</b> my resume. It's just a
-                summary of courses and activities I have been doing in college.
-                <!-- My resume can be found
-                <a
-                  href="https://www.cs.drexel.edu/~vck29/008_VivekResume.pdf"
-                  target="_blank"
-                  >here</a
-                >. -->
-              </em>
-            </p>
-          </div>
-          <div class="row">
-            <div class="col-lg-6">
-              <h3 class="resume-title">Summary</h3>
-              <div class="resume-item pb-0">
-                <h4>Vivek Khimani</h4>
-                <ul>
-                  <li><b>GPA:</b> 3.93/4.00</li>
-                  <li><b>Major:</b> Computer Science</li>
-                  <li><b>Minor(s):</b> Mathematics & Data Science</li>
-                  <li>
-                    <b>Concentration(s):</b> Artificial Intelligence, Computer
-                    Networks & Security, Systems Engineering
-                  </li>
-                </ul>
-              </div>
-              <h3 class="resume-title">Education</h3>
-              <div class="resume-item">
-                <h4>Bachelor of Science, Computer Science</h4>
-                <h5>2018 - Present</h5>
-                <p><em>Drexel University</em></p>
-                <p>
-                  <b><em>Award(s):</em></b> Undergraduate Student Teaching
-                  Excellence Award, Isaac L. Auerbach Innovation Award, Dean's
-                  List, Founder's Scholarship, Drexel Grant, Dragons Abroad
-                  Scholarship
-                </p>
-                <p>
-                  <b><em>Engagement:</em></b> Drexel Algorithms & Data
-                  Structures (President), Drexel CS Theory Reading Group
-                  (Member)
-                </p>
-              </div>
-              <div class="resume-item">
-                <h4>Engineering Exchange & Research Program</h4>
-                <h5>Fall 2019</h5>
-                <p>
-                  <em>Hong Kong University of Science & Technology (HKUST)</em>
-                </p>
-                <p>
-                  <b><em>Project: </em></b>FedClean: A Decentralized Defense
-                  Mechanism Against Parameter Poisoning Attacks in Federated
-                  Learning Systems
-                </p>
-                <p>
-                  <b><em>Collaborators(s): </em></b>Dr. Pan Hui & Dr. Dimitris
-                  Chatzopoulos
-                </p>
-              </div>
-              <div class="resume-item">
-                <h4>Pre-Collegiate Summer Institute</h4>
-                <h5>Summer 2016</h5>
-                <p><em>Stanford University</em></p>
-                <p>
-                  <b><em>Topic:</em></b> Knot Theory (Mathematics)
-                </p>
-                <p>
-                  <b><em>Award:</em></b> Full-Ride Scholar (including housing)
-                </p>
-              </div>
-              <h3 class="resume-title">Internship</h3>
-              <div class="resume-item">
-                <h4>Software Engineering Intern</h4>
-                <p><em>Meta (Facebook)</em></p>
-                <p>
-                  <b><em>Team:</em></b> Ads ML Infra
-                </p>
-                <p>
-                  <b><em>Duration: </em></b>June 2022 - September 2022
-                </p>
-                <p>
-                  <b><em>Major Tools:</em></b> C++, PHP (Hack), Python, Thrift,
-                  Docker, Kubernetes, Linux
-                </p>
-              </div>
-              <div class="resume-item">
-                <h4>Software Engineering Intern</h4>
-                <p><em>Semgrep</em></p>
-                <p>
-                  <b><em>Team:</em></b> Core Enterprise Backend Engineering
-                </p>
-                <p>
-                  <b><em>Duration: </em></b>March 2022 - June 2022
-                </p>
-                <p>
-                  <b><em>Major Tools:</em></b> Python, Flask, React, Docker,
-                  Kubernetes, AWS, Linux
-                </p>
-              </div>
-              <div class="resume-item">
-                <h4>Software Engineering Intern</h4>
-                <p><em>Susquehanna International Group (SIG)</em></p>
-                <p>
-                  <b><em>Team:</em></b> Market Data Frameworks (MDF)
-                </p>
-                <p>
-                  <b><em>Duration:</em></b> March 2021 - September 2021
-                </p>
-                <p>
-                  <b><em>Major Tools:</em></b> C++, Python, Django, Docker,
-                  Kubernetes, Linux
-                </p>
-              </div>
-              <div class="resume-item">
-                <h4>Software Engineering Intern</h4>
-                <p><em>Olak</em></p>
-                <p>
-                  <b><em>Team:</em></b> Machine Learning Engineering (Autofill)
-                </p>
-                <p>
-                  <b><em>Duration:</em></b> March 2020 - June 2020
-                </p>
-                <p>
-                  <b><em>Major Tools:</em></b> Python, Typescript, PyTorch,
-                  Tensorflow, ONNX, Angular, Docker, Kubernetes, Linux
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <h3 class="resume-title">Publications</h3>
-              <div class="resume-item">
-                <h4>
-                  TorchFL: A Performant Library for Bootstrapping Federated
-                  Learning Experiments
-                </h4>
-                <p>
-                  <b><em>Venue:</em></b>
-                  <a href="https://arxiv.org/abs/2211.00735" target="_blank"
-                    >arXiv Pre-Print (Machine Learning)</a
-                  >
-                </p>
-                <p>
-                  <b><em>Authors:</em></b> <b>V Khimani</b>, S Jabbari
-                </p>
-              </div>
-              <div class="resume-item">
-                <h4>
-                  FedClean: A Defense Mechanism Against Parameter Poisoning
-                  Attacks in Federated Learning
-                </h4>
-                <p>
-                  <b><em>Venue:</em></b>
-                  <a
-                    href="https://ieeexplore.ieee.org/document/9747497"
-                    target="_blank"
-                    >IEEE ICASSP 2022</a
-                  >
-                </p>
-                <p>
-                  <b><em>Authors:</em></b> A Kumar, <b>V Khimani</b>, D
-                  Chatzopoulos, P Hui
-                </p>
-              </div>
-              <div class="resume-item">
-                <h4>
-                  SplitEasy: A Practical Approach for Training ML models on
-                  Mobile Devices
-                </h4>
-                <p>
-                  <b><em>Venue:</em></b>
-                  <a
-                    href="https://dl.acm.org/doi/10.1145/3446382.3448362"
-                    target="_blank"
-                    >ACM HotMobile 2021, SLDML 2021</a
-                  >
-                </p>
-                <p>
-                  <b><em>Authors:</em></b> K Palanisamy, <b>V Khimani</b>, MH
-                  Moti, D Chatzopoulos
-                </p>
-              </div>
-              <h3 class="resume-title">Relevant Coursework</h3>
-              <div class="resume-item">
-                <h4>College of Computing</h4>
-                <p><em>Drexel University</em></p>
-                <ul>
-                  <li>Advanced Programming Techniques</li>
-                  <li>Mathematical Foundations of Computer Science</li>
-                  <li>Systems Architecture</li>
-                  <li>Systems Programming</li>
-                  <li>Concurrent Programming</li>
-                  <li>Operating Systems</li>
-                  <li>Web & Mobile App Development</li>
-                  <li>Data Mining Applications in Machine Learning</li>
-                  <li>Data Structures & Algorithms I, II</li>
-                  <li>Artificial Intelligence</li>
-                  <li>Machine Learning (Honors)</li>
-                  <li>Deep Learning (Graduate)</li>
-                  <li>Functional Programming (Graduate)</li>
-                  <li>Computer Networks: Theory, Concepts, Applications</li>
-                  <li>Advanced Software Security</li>
-                  <li>Advanced Software Design & Development</li>
-                </ul>
-              </div>
-              <div class="resume-item">
-                <h4>Department of Mathematics</h4>
-                <p><em>Drexel University</em></p>
-                <ul>
-                  <li>Calculus I, II, III</li>
-                  <li>Multivariate Calculus</li>
-                  <li>Linear Algebra</li>
-                  <li>Discrete Mathematics</li>
-                  <li>Probability & Statistics I, II</li>
-                </ul>
-              </div>
-              <h3 class="resume-title">Teaching Assistant</h3>
-              <div class="resume-item">
-                <h4>College of Computing</h4>
-                <p><em>Drexel University</em></p>
-                <ul>
-                  <li><b>CS 615 - </b>Graduate Deep Learning</li>
-                  <li><b>CS 613 - </b>Graduate Machine Learning</li>
-                  <li><b>CS 510 - </b>Graduate Artificial Intelligence</li>
-                  <li><b>CS 472 - </b>Computer Networks</li>
-                  <li><b>CS 283 - </b>Systems Programming</li>
-                  <li><b>CS 265 - </b>Advanced Programming Techniques</li>
-                  <li><b>CS 260 - </b>Data Structures & Algorithms</li>
-                  <li><b>CS 172 - </b>Computer Programming II</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <!-- End #main -->
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-      <div class="container">
-        <h3>Vivek Khimani</h3>
-        <div class="social-links">
-          <a
-            href="https://calendly.com/vivekkhimani"
-            target="_blank"
-            class="calendar"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="Calendly"
-            ><i class="bx bx-calendar bx-tada-hover"></i>
-          </a>
-          <a
-            href="https://www.buymeacoffee.com/vivekkhimani"
-            target="_blank"
-            class="coffee"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="Buy Me A Coffee"
-            ><i class="bx bx-coffee bx-tada-hover"></i>
-          </a>
-          <a href="mailto:vivek@semgrep.com" target="_blank" class="envelope"
-            ><i
-              class="bx bxs-envelope"
-              data-toggle="tooltip"
-              data-placement="top"
-              title="Work email"
-            ></i>
-          </a>
-          <a
-            href="mailto:vivekkhimani07@gmail.com"
-            target="_blank"
-            class="google"
-            ><i
-              class="bx bxl-google bx-tada-hover"
-              data-toggle="tooltip"
-              data-placement="top"
-              title="Google E-mail"
-            ></i>
-          </a>
-          <a
-            href="https://scholar.google.com/citations?user=2CnfovoAAAAJ&hl=en"
-            target="_blank"
-            class="graduation"
-            ><i
-              class="bx bxs-graduation bx-tada-hover"
-              data-toggle="tooltip"
-              data-placement="top"
-              title="Google Scholar"
-            ></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/vivek-khimani-4a466014/"
-            target="_blank"
-            class="linkedin"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="LinkedIn"
-            ><i class="bx bxl-linkedin bx-tada-hover"></i
-          ></a>
-          <a
-            href="https://github.com/vivekkhimani"
-            target="_blank"
-            class="github"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="GitHub"
-            ><i class="bx bxl-github bx-tada-hover"></i
-          ></a>
-          <a
-            href="https://www.quora.com/profile/Vivek-Khimani"
-            target="_blank"
-            class="quora"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="Quora"
-            ><i class="bx bxl-quora bx-tada-hover"></i
-          ></a>
-          <a
-            href="https://medium.com/@vivekkhimani07"
-            target="_blank"
-            class="medium"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="Medium"
-            ><i class="bx bxl-medium bx-tada-hover"></i
-          ></a>
-          <a
-            href="https://stackoverflow.com/users/11372284/vivek-khimani"
-            target="_blank"
-            class="stack-overflow"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="Stack"
-            ><i class="bx bxl-stack-overflow bx-tada-hover"></i
-          ></a>
-          <a
-            href="https://twitter.com/KhimaniVivek"
-            target="_blank"
-            class="twitter"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="Twitter"
-            ><i class="bx bxl-twitter bx-tada-hover"></i
-          ></a>
-          <a
-            href="https://www.facebook.com/vivek.khimani"
-            target="_blank"
-            class="facebook"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="Facebook"
-            ><i class="bx bxl-facebook bx-tada-hover"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/vivekkhimani/"
-            target="_blank"
-            class="instagram"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="Instagram"
-            ><i class="bx bxl-instagram bx-tada-hover"></i
-          ></a>
-          <a
-            href="https://join.skype.com/invite/obA6JrCWtQo2"
-            target="_blank"
-            class="skype"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="Skype"
-            ><i class="bx bxl-skype bx-tada-hover"></i
-          ></a>
-        </div>
-        <div class="copyright">
-          &copy; Copyright 2020 <strong><span>Vivek Khimani</span></strong
-          >. All Rights Reserved.
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: [license-url] -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-      </div>
-    </footer>
-    <!-- End Footer -->
-    <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
-    <div id="preloader"></div>
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/jquery/jquery.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-    <script src="assets/vendor/counterup/counterup.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/venobox/venobox.min.js"></script>
-    <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-    <script src="assets/vendor/typed.js/typed.min.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
-  </body>
-</html>
-
-
-
+<section class="section">
+  <h2>Recently</h2>
+  <ul class="recently">
+    <li>
+      <span class="k">Writing</span>
+      {%- if latest_post %}
+      <span class="v"><a href="{{ latest_post.url | relative_url }}">{{ latest_post.title }}</a></span>
+      <span class="s">{{ latest_post.date | date: "%-d %b %Y" }}</span>
+      {%- else %}
+      <span class="v muted">Nothing published yet.</span>
+      <span class="s"><a href="{{ '/writing/' | relative_url }}">Writing</a></span>
+      {%- endif %}
+    </li>
+    <li>
+      <span class="k">Reading</span>
+      {%- if reading and reading.size > 0 %}
+      <span class="v">{{ reading[0].title }}</span>
+      <span class="s">{{ reading[0].author }} &middot; <a href="{{ '/reading/' | relative_url }}">shelf</a></span>
+      {%- else %}
+      <span class="v muted">Between books.</span>
+      <span class="s"><a href="{{ '/reading/' | relative_url }}">Shelf</a></span>
+      {%- endif %}
+    </li>
+    <li>
+      <span class="k">Photos</span>
+      {%- if latest_album %}
+      <span class="v"><a href="{{ latest_album.url | relative_url }}">{{ latest_album.title }}</a></span>
+      <span class="s">{{ latest_album.date | date: "%B %Y" }}</span>
+      {%- else %}
+      <span class="v muted">No albums yet.</span>
+      <span class="s"><a href="{{ '/travel/' | relative_url }}">The map</a></span>
+      {%- endif %}
+    </li>
+  </ul>
+</section>

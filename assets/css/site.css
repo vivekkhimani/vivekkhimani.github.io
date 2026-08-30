@@ -126,11 +126,20 @@ main { display: block; }
 
 .site-foot {
   margin-top: 5rem; padding: 1.5rem 0 3.5rem; border-top: 1px solid var(--rule);
-  display: flex; flex-wrap: wrap; gap: 0.6rem 1.4rem; align-items: baseline;
+  display: flex; flex-wrap: wrap; gap: 0.8rem 1.4rem; align-items: baseline;
 }
+.foot-links { display: flex; flex-wrap: wrap; gap: 0.55rem 1.4rem; }
 .site-foot a { font-family: var(--mono); font-size: 0.78rem; text-decoration: none; color: var(--muted); }
 .site-foot a:hover { color: var(--accent-ink); }
 .site-foot .rights { margin-left: auto; font-family: var(--mono); font-size: 0.7rem; color: var(--faint); }
+
+/* On a phone the links take their own row and the copyright sits under them,
+   rather than being pinned right against a wrapped, ragged list. */
+@media (max-width: 600px) {
+  .site-foot { margin-top: 3.5rem; padding: 1.3rem 0 2.6rem; gap: 1rem; }
+  .foot-links { width: 100%; gap: 0.6rem 1.3rem; }
+  .site-foot .rights { margin-left: 0; }
+}
 
 /* Page headers ------------------------------------------------------------ */
 .page-head { margin-bottom: 2.6rem; }
@@ -454,6 +463,10 @@ details.queue > summary:hover { color: var(--ink); }
 .essay { max-width: var(--measure); }
 .essay p { font-size: 1.02rem; }
 .essay p:first-of-type { font-size: 1.12rem; }.essay p:last-child { margin-bottom: 0; }
+.more { font-family: var(--mono); font-size: 0.78rem; margin: 1.6rem 0 0; }
+.more a { text-decoration: none; }
+.more a::after { content: " \2192"; color: var(--faint); }
+.more a:hover { text-decoration: underline; }
 
 /* Travel: browsing the places ---------------------------------------------- */
 .region { margin-bottom: 2rem; }

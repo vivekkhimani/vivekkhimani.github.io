@@ -5,8 +5,8 @@ section: academics
 eyebrow: Academics
 heading: The college record
 intro: >-
-  Degree, coursework, the courses I taught, and the papers. Work history lives on
-  the home page.
+  Degree, coursework, and the courses I taught. Roles, projects and papers are on
+  the work page.
 ---
 {%- assign ed = site.data.education -%}
 <div class="cv-grid">
@@ -40,18 +40,6 @@ intro: >-
       {%- endfor %}
     </section>
 
-    <section class="section">
-      <h2>Publications</h2>
-      {%- for pub in site.data.publications %}
-      <div class="entry">
-        <h4><a href="{{ pub.url }}">{{ pub.title }}</a></h4>
-        <p class="sub">
-          {% for a in pub.authors %}{% if a == 'V Khimani' %}<b>{{ a }}</b>{% else %}{{ a }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}
-          &middot; {{ pub.venue }} {{ pub.year }}
-        </p>
-      </div>
-      {%- endfor %}
-    </section>
   </div>
 
   <div>

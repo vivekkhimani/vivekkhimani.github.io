@@ -1,6 +1,7 @@
 <header class="site-head">
   <a class="home" href="{{ '/' | relative_url }}">Vivek Khimani</a>
   <nav aria-label="Sections">
+    <a href="{{ '/work/' | relative_url }}"{% if page.section == 'work' %} aria-current="page"{% endif %}>Work</a>
     <a href="{{ '/writing/' | relative_url }}"{% if page.section == 'writing' %} aria-current="page"{% endif %}>Writing</a>
     <a href="{{ '/reading/' | relative_url }}"{% if page.section == 'reading' %} aria-current="page"{% endif %}>Reading</a>
     <a href="{{ '/photos/' | relative_url }}"{% if page.section == 'photos' %} aria-current="page"{% endif %}>Photos</a>

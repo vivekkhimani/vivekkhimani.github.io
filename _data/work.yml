@@ -8,9 +8,8 @@
   when: 2022 to now
   now: true
   points:
-    - Platforms team.
-    - Led development of Semgrep Assistant.
-    - "Before that: core experiences, findings workflow and database performance."
+    - Founding engineer and tech lead on Semgrep Assistant and Semgrep Agentic Workflows.
+    - "Platforms and infrastructure: database scaling and performance for findings and scans."
 
 - company: Meta
   url: https://about.meta.com

@@ -11,16 +11,17 @@ section: home
   <div>
     <h1>Vivek Khimani</h1>
     <p class="lede">
-      Software engineer at <a href="https://semgrep.dev">Semgrep</a>, on the platforms team.
-      I work on backend systems, and I am most interested in the places where networking,
-      machine learning and security overlap.
+      Software engineer at <a href="https://semgrep.dev">Semgrep</a>. I was a founding engineer
+      and tech lead on Semgrep Assistant and Semgrep Agentic Workflows. Now I am on the platforms
+      and infrastructure team, working on database scaling and performance for findings and scans.
     </p>
     <p class="bio">
-      Before Semgrep I interned at <a href="https://about.meta.com">Meta</a> on Ads ML Infra
-      and at <a href="https://www.sig.com">SIG</a> on market data frameworks. I studied
-      computer science at Drexel, with minors in mathematics and data science, and spent a
-      term researching federated learning at HKUST. Outside work I am usually outdoors,
-      running, playing squash, cooking something vegetarian, or losing an argument with a guitar.
+      I am most interested in computer networking, machine learning and security. Before Semgrep
+      I interned at <a href="https://about.meta.com">Meta</a> on Ads ML Infra and at
+      <a href="https://www.sig.com">SIG</a> on market data frameworks, and I studied computer
+      science at Drexel with minors in mathematics and data science, including a term researching
+      federated learning at HKUST. Outside work I run, play racket sports, read, cook vegetarian
+      food, and am slowly learning guitar.
     </p>
   </div>
   <figure class="portrait">
@@ -67,7 +68,9 @@ section: home
   <ul class="made">
     {%- for p in site.data.projects %}
     <li>
-      <div class="t"><a href="{{ p.url }}">{{ p.name }}</a></div>
+      <div class="t">
+        {%- if p.url %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif -%}
+      </div>
       <p class="d">{{ p.what }}</p>
     </li>
     {%- endfor %}

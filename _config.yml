@@ -1,8 +1,8 @@
 title: Vivek Khimani
 tagline: Software engineer
 description: >-
-  Vivek Khimani is a software engineer at Semgrep. Backend engineering,
-  computer networking, machine learning and security.
+  Vivek Khimani is a software engineer at Semgrep, working on platforms and
+  infrastructure. Computer networking, machine learning and security.
 url: https://vivekkhimani.github.io
 baseurl: ""
 lang: en
@@ -37,9 +37,8 @@ defaults:
 
 permalink: /writing/:title/
 timezone: America/Los_Angeles
-# GitHub Pages defaults to the primer theme when none is named. This site has its
-# own layouts, and primer's generated assets/css/style.css would overwrite the
-# legacy stylesheet that portfolio-details/ still loads.
+# GitHub Pages defaults to the primer theme when none is named. This site has
+# its own layouts and does not want primer's stylesheet in the output.
 theme: null
 
 markdown: kramdown
@@ -70,7 +69,5 @@ exclude:
   - README.md
   - .gitignore
   - CLAUDE.md
-  - assets/vendor/owl.carousel/README.md
 
-# v1/, portfolio-details/ and assets/vendor/ carry no front matter, so Jekyll
-# copies them through byte for byte and every old link keeps working.
+# v1/ carries no front matter, so Jekyll copies it through byte for byte.

@@ -1,15 +1,13 @@
 # Things worth pointing at that are not papers or jobs.
+# `url` is optional; without it the name renders as plain text.
 
 - name: TorchFL
   what: >-
     A PyTorch library for bootstrapping federated learning experiments without
     rebuilding the scaffolding every time.
   url: https://github.com/vivekkhimani/torchfl
-  tags: [python, pytorch, federated-learning]
 
 - name: FedPay
   what: >-
     An incentive protocol for scalable federated learning, built with the
     Machine Learning Lab at IIIT Hyderabad.
-  url: /portfolio-details/portfolio-details-1.html
-  tags: [research, mechanism-design]

@@ -3,6 +3,7 @@
 <header class="site-head">
   <a class="home" href="{{ '/' | relative_url }}">Vivek Khimani</a>
   <nav aria-label="Sections">
+    <a href="{{ '/about/' | relative_url }}"{% if page.section == 'about' %} aria-current="page"{% endif %}>About</a>
     {%- if show_writing %}
     <a href="{{ '/writing/' | relative_url }}"{% if page.section == 'writing' %} aria-current="page"{% endif %}>Writing</a>
     {%- endif %}

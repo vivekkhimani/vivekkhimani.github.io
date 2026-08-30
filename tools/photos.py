@@ -6,13 +6,16 @@ dimensions the justified layout needs before images load, and writes the album
 page. Photos straight off a phone are 3 to 6 MB each and carry the exact
 coordinates they were taken at, including the ones taken at home.
 
-    python tools/photos.py add joshua-tree ~/Pictures/jt/*.jpg
+    python tools/photos.py add joshua-tree ~/Pictures/jt/*.HEIC
     python tools/photos.py add joshua-tree ~/Pictures/jt/*.jpg --title "Joshua Tree" \
         --date 2025-03-15 --place joshua --note "Ryan Mountain, then a night in an Airstream."
 
-Re-running with the same slug adds new photos and leaves existing ones alone.
-Captions are optional: edit `cap:` in _albums/<slug>.md afterwards for any photo
-that wants one. Requires Pillow (pip install Pillow).
+Takes whatever the camera produced, HEIC included, and always writes JPEG and
+WebP. Re-running with the same slug adds new photos and leaves existing ones
+alone. Captions are optional: edit `cap:` in _albums/<slug>.md afterwards for any
+photo that wants one.
+
+    pip install Pillow pillow-heif
 """
 from __future__ import annotations
 
@@ -26,6 +29,17 @@ try:
     from PIL import Image, ImageOps
 except ImportError:
     sys.exit("needs Pillow:  pip install Pillow")
+
+# iPhones shoot HEIC by default and Pillow cannot read it on its own.
+try:
+    from pillow_heif import register_heif_opener
+
+    register_heif_opener()
+    HEIF = True
+except ImportError:
+    HEIF = False
+
+HEIF_SUFFIXES = {".heic", ".heif"}
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 WIDTHS = (640, 1280, 2000)
@@ -95,6 +109,10 @@ def add(args: argparse.Namespace) -> int:
     missing = [str(p) for p in sources if not p.is_file()]
     if missing:
         sys.exit("not found: " + ", ".join(missing))
+
+    if not HEIF and any(p.suffix.lower() in HEIF_SUFFIXES for p in sources):
+        sys.exit("these are HEIC files, which Pillow cannot read on its own.\n"
+                 "  pip install pillow-heif")
 
     out_dir = ROOT / "photos" / slug
     page = ROOT / "_albums" / f"{slug}.md"

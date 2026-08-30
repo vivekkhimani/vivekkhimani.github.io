@@ -13,15 +13,20 @@ It lands at `/writing/some-slug/`. Front matter needs `title`; `summary` and
 **Photos.**
 
 ```
-python tools/photos.py add joshua-tree ~/Pictures/jt/*.jpg \
+python tools/photos.py add joshua-tree ~/Pictures/jt/*.HEIC \
     --title "Joshua Tree" --date 2025-03-15 --place joshua \
     --note "Ryan Mountain, then a night in an Airstream."
 ```
 
+Takes HEIC straight off an iPhone, or JPEG, or PNG, and always writes JPEG and
+WebP.
+
 Resizes to three widths as WebP and JPEG, strips EXIF including GPS, records the
 dimensions the layout needs before images load, and writes `_albums/joshua-tree.md`.
 Re-run with the same slug to add more; existing photos are left alone. Add a
-`cap:` to any photo in that file if it wants a caption. Needs `pip install Pillow`.
+`cap:` to any photo in that file if it wants a caption.
+
+    pip install Pillow pillow-heif
 
 `--place` takes an id from `_data/places.yml` and cross-links the album with its
 marker on the map.

@@ -1,11 +1,25 @@
 # Things worth pointing at that are not papers or jobs.
 # `url` is optional; without it the name renders as plain text.
 
+- name: agentic-fs
+  what: >-
+    Filesystem-style access to documents, so an agent can browse and read them
+    the way it would a directory tree.
+  url: https://github.com/vivekkhimani/agentic-fs
+
+- name: engram
+  what: An agentic enterprise search system.
+  url: https://github.com/vivekkhimani/engram
+
+- name: rsemgrep
+  what: Semgrep, rewritten in Rust, mostly to find out what that would take.
+  url: https://github.com/vivekkhimani/rsemgrep
+
 - name: TorchFL
   what: >-
     A PyTorch library for bootstrapping federated learning experiments without
     rebuilding the scaffolding every time.
-  url: https://github.com/vivekkhimani/torchfl
+  url: https://github.com/torchfl-org/torchfl
 
 - name: FedPay
   what: >-

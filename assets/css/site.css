@@ -20,8 +20,8 @@
   --serif: "Newsreader", Georgia, "Times New Roman", serif;
   --mono:  "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-  --measure: 34rem;   /* ~66 characters of Newsreader at 18px */
-  --page:    62rem;
+  --measure: 38rem;   /* ~68 characters of Newsreader at 18px */
+  --page:    46rem;   /* keeps every section on close to one right edge */
   --gutter:  1.5rem;
 }
 
@@ -362,7 +362,7 @@ details.queue > summary:hover { color: var(--ink); }
 
 /* CV ---------------------------------------------------------------------- */
 .cv-grid { display: grid; gap: 2.6rem; }
-@media (min-width: 860px) { .cv-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3rem; } }
+@media (min-width: 780px) { .cv-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.4rem; } }
 .facts { list-style: none; margin: 0 0 1.6rem; padding: 0; }
 .facts li { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 0.9rem;
   padding: 0.4rem 0; border-bottom: 1px solid var(--rule); font-size: 0.94rem; }

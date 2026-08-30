@@ -96,6 +96,19 @@ section: home
 </section>
 
 <section class="section">
+  <h2>Open source</h2>
+  <ul class="made">
+    {%- for c in site.data.opensource %}
+    <li>
+      <div class="t"><a href="{{ c.url }}">{{ c.repo }}</a></div>
+      <p class="d">{{ c.what }}</p>
+      <p class="cite">{{ c.count }} merged pull request{% unless c.count == 1 %}s{% endunless %}</p>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="section">
   <h2>Papers</h2>
   <ul class="made">
     {%- for pub in site.data.publications %}

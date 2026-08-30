@@ -7,37 +7,34 @@ section: home
 {%- assign latest_album = site.albums | sort: "date" | reverse | first -%}
 {%- assign reading      = site.data.books.shelves.reading -%}
 
-<div class="intro-grid">
-  <div>
-    <h1>Vivek Khimani</h1>
-    <p class="byline">Software engineer at <a href="https://semgrep.dev">Semgrep</a>
-      &middot; San Francisco Bay Area</p>
-    <p class="lede">
-      Most of what I have worked on lives in the same corner: systems that have to work
-      without a trusted middle, or without pooling what they know. My research was
-      federated and split learning, which is that problem in miniature. Security turned
-      out to rhyme with it more than I expected.
-    </p>
-    <p class="bio">
-      I grew up in Rajkot, studied computer science in Philadelphia, spent a term in Hong
-      Kong and a summer on research in Hyderabad, and live in the Bay Area now. Outside
-      work I run, play racket sports, cook vegetarian food, and read more fiction than I
-      plan to. I taught eight computer science courses as an undergraduate and still think
-      explaining something is the fastest way to find out whether you understand it.
-    </p>
-  </div>
-  <figure class="portrait">
-    <picture>
-      <source type="image/webp" sizes="(max-width: 780px) 100vw, 15rem"
-              srcset="{{ '/assets/img/portrait/400.webp' | relative_url }} 400w,
-                      {{ '/assets/img/portrait/800.webp' | relative_url }} 800w">
-      <img src="{{ '/assets/img/portrait/400.jpg' | relative_url }}"
-           sizes="(max-width: 780px) 100vw, 15rem"
-           srcset="{{ '/assets/img/portrait/400.jpg' | relative_url }} 400w,
-                   {{ '/assets/img/portrait/800.jpg' | relative_url }} 800w"
-           alt="Vivek Khimani" width="400" height="500">
-    </picture>
-  </figure>
+<div class="intro">
+  <h1>Vivek Khimani</h1>
+  <p class="byline">Software engineer at <a href="https://semgrep.dev">Semgrep</a>
+    &middot; San Francisco Bay Area</p>
+  <p class="lede">
+    I came to computer science through mathematics, and stayed for the places where the
+    math has to survive contact with something real. For a while that meant
+    privacy-preserving machine learning, which is close to a contradiction in terms and
+    matters most exactly where it is hardest: health data, where the records that would
+    teach a model the most are the ones nobody should be handing over.
+  </p>
+  <p class="bio">
+    I found Semgrep before I found the job. I was using it to grade data structures
+    assignments, and it was the rare open-source developer tool I actually enjoyed. I
+    joined pre-revenue and have watched it become a business, which has taught me more
+    than anything else I have done. At some point I want to build something of my own. I
+    think software does its most interesting work well away from Silicon Valley, in
+    industries nobody has bothered to look at.
+  </p>
+  <p class="bio">
+    I have been an athlete my whole life. Squash was the serious one until college; now it
+    is running, tennis and squash for the pleasure of it. Squash is also where I learned
+    how I learn, which is stubbornly: take the thing apart, stay with it past the point it
+    stops being fun, keep going until the root cause turns up. Running is where I think.
+    Reading is where I go to be somewhere else, mostly fiction and memoir, with a standing
+    weakness for murder mysteries and for anything grounded in a real life. I am still bad
+    at the guitar and considerably better in a kitchen.
+  </p>
 </div>
 
 <section class="section">

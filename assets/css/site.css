@@ -139,18 +139,15 @@ main { display: block; }
 }
 
 /* Home: intro ------------------------------------------------------------- */
-.intro-grid { display: grid; gap: 2rem; margin-bottom: 4rem; }
-@media (min-width: 780px) {
-  .intro-grid { grid-template-columns: minmax(0, 1fr) 15rem; gap: 3rem; align-items: start; }
-}
-.intro-grid h1 { font-size: clamp(2rem, 5vw, 2.9rem); line-height: 1.06; margin-bottom: 0.5rem; }
-.byline { font-family: var(--mono); font-size: 0.78rem; color: var(--muted); margin-bottom: 1.4rem; }
-.byline a { color: var(--muted); text-decoration-color: color-mix(in srgb, var(--muted) 40%, transparent); }
+.intro { max-width: var(--measure); margin-bottom: 4.5rem; }
+.intro h1 { font-size: clamp(2rem, 5vw, 2.9rem); line-height: 1.06; margin-bottom: 0.5rem; }
+.byline { font-family: var(--mono); font-size: 0.78rem; color: var(--muted); margin-bottom: 1.6rem; }
+.byline a { color: var(--muted);
+  text-decoration-color: color-mix(in srgb, var(--muted) 40%, transparent); }
 .byline a:hover { color: var(--accent-ink); text-decoration-color: var(--accent); }
-.intro-grid .lede { font-size: 1.12rem; max-width: var(--measure); }
-.intro-grid .bio { color: var(--muted); max-width: var(--measure); font-size: 0.98rem; }
-.portrait { border-radius: 3px; box-shadow: 0 1px 2px rgba(0,0,0,.14), 0 10px 26px -14px rgba(0,0,0,.4); }
-.portrait figcaption { font-family: var(--mono); font-size: 0.66rem; color: var(--faint); margin-top: 0.5rem; }
+.intro .lede { font-size: 1.12rem; }
+.intro .bio { color: var(--muted); font-size: 0.98rem; }
+.intro .bio:last-child { margin-bottom: 0; }
 figure { margin: 0; }
 
 /* Home: work -------------------------------------------------------------- */

@@ -25,8 +25,10 @@
   --gutter:  1.5rem;
 }
 
+/* Dark palette. Three states: with no attribute the system decides, and an
+   explicit choice from the footer toggle wins in either direction. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --paper:      #101215;
     --raise:      #171a1f;
     --sunk:       #0b0d10;
@@ -38,6 +40,19 @@
     --accent-ink: #a9c7db;
     --accent-wash:#1a232b;
   }
+}
+
+:root[data-theme="dark"] {
+  --paper:      #101215;
+  --raise:      #171a1f;
+  --sunk:       #0b0d10;
+  --ink:        #e3e7ec;
+  --muted:      #98a1ae;
+  --faint:      #79828f;
+  --rule:       #262b32;
+  --accent:     #8fb3cc;
+  --accent-ink: #a9c7db;
+  --accent-wash:#1a232b;
 }
 
 /* Base -------------------------------------------------------------------- */
@@ -434,14 +449,24 @@ details.queue > summary:hover { color: var(--ink); }
   --hl-number:  #7d4f43;
   --hl-name:    #2f5a52;
 }
+/* Code colours, dark. Three states: with no attribute the system decides, and an
+   explicit choice from the footer toggle wins in either direction. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --hl-comment: #79828f;
     --hl-keyword: #8fb3cc;
     --hl-string:  #c9ab7c;
     --hl-number:  #d1998a;
     --hl-name:    #86b8ad;
   }
+}
+
+:root[data-theme="dark"] {
+  --hl-comment: #79828f;
+  --hl-keyword: #8fb3cc;
+  --hl-string:  #c9ab7c;
+  --hl-number:  #d1998a;
+  --hl-name:    #86b8ad;
 }
 .highlight { background: none; }
 .highlight .c, .highlight .c1, .highlight .cm, .highlight .cs,
@@ -488,3 +513,15 @@ details.queue > summary:hover { color: var(--ink); }
   white-space: nowrap; }
 .leaflet-tooltip-top::before { border-top-color: var(--ink); }
 .map-fallback { padding: 1.2rem; color: var(--muted); font-size: 0.92rem; }
+
+/* Theme control ------------------------------------------------------------ */
+.theme-toggle {
+  font-family: var(--mono); font-size: 0.7rem; color: var(--faint);
+  background: none; border: 1px solid var(--rule); border-radius: 3px;
+  padding: 0.16rem 0.5rem; cursor: pointer; line-height: 1.5; margin-left: auto;
+}
+.theme-toggle:hover { color: var(--ink); border-color: var(--muted); }
+.site-foot .theme-toggle + .rights { margin-left: 0; }
+@media (max-width: 600px) {
+  .theme-toggle { margin-left: 0; }
+}

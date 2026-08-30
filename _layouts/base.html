@@ -13,6 +13,7 @@
   {%- if page.leaflet %}
   <script src="{{ '/assets/vendor-lite/leaflet/leaflet.js' | relative_url }}"></script>
   {%- endif %}
+  <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
   {%- for src in page.js %}
   <script src="{{ src | relative_url }}"></script>
   {%- endfor %}

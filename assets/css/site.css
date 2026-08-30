@@ -145,9 +145,6 @@ main { display: block; }
 .byline a { color: var(--muted);
   text-decoration-color: color-mix(in srgb, var(--muted) 40%, transparent); }
 .byline a:hover { color: var(--accent-ink); text-decoration-color: var(--accent); }
-.intro .lede { font-size: 1.12rem; }
-.intro .bio { color: var(--muted); font-size: 0.98rem; }
-.intro .bio:last-child { margin-bottom: 0; }
 figure { margin: 0; }
 
 /* Home: work -------------------------------------------------------------- */
@@ -418,25 +415,7 @@ details.queue > summary:hover { color: var(--ink); }
 .highlight .gd { color: var(--hl-number); }
 .highlight .gi { color: var(--hl-keyword); }
 
-/* Home: link into the longer piece --------------------------------------- */
-.more { font-family: var(--mono); font-size: 0.78rem; margin-bottom: 0; }
-.more a { text-decoration: none; }
-.more a::after { content: " \2192"; }
-.more a:hover { text-decoration: underline; }
-
-/* About ------------------------------------------------------------------- */
+/* The intro essay --------------------------------------------------------- */
 .essay { max-width: var(--measure); }
 .essay p { font-size: 1.02rem; }
-.essay p:first-of-type { font-size: 1.12rem; }
-.portrait-inline { float: right; width: 11rem; margin: 0.3rem 0 1.2rem 1.8rem; }
-.portrait-inline img { border-radius: 3px;
-  box-shadow: 0 1px 2px rgba(0,0,0,.14), 0 10px 26px -14px rgba(0,0,0,.4); }
-@media (max-width: 620px) {
-  .portrait-inline { float: none; width: 60%; margin: 0 0 1.6rem; }
-}
-.essay-out { display: flex; flex-wrap: wrap; gap: 1.4rem; clear: both;
-  font-family: var(--mono); font-size: 0.78rem;
-  padding-top: 1.4rem; border-top: 1px solid var(--rule); margin-top: 2.4rem; }
-.essay-out a { text-decoration: none; }
-.essay-out a::after { content: " \2192"; color: var(--faint); }
-.essay-out a:hover { text-decoration: underline; }
+.essay p:first-of-type { font-size: 1.12rem; }.essay p:last-child { margin-bottom: 0; }

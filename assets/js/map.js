@@ -74,6 +74,11 @@
     }
     if (links.length) html += '<span class="go">' + links.join(" &middot; ") + "</span>";
     marker.bindPopup(html);
+    // Hover names the place without asking for a click.
+    marker.bindTooltip(place.name, { direction: "top", offset: [0, -6], opacity: 1 });
+
+    marker.on("mouseover", function () { marker.setStyle({ radius: style(place).radius + 2.5 }); });
+    marker.on("mouseout", function () { marker.setStyle(style(place)); });
 
     marker._place = place;
     byId[place.id] = marker;
@@ -101,6 +106,21 @@
     return true;
   }
 
+  // Pointing at a name in the list lights up its marker, so a reader can find a
+  // place among fifty-nine dots without clicking through them.
+  function highlight(id, on) {
+    var marker = byId[id];
+    if (!marker) return;
+    if (on) {
+      marker.setStyle({ radius: style(marker._place).radius + 3, fillOpacity: 1 });
+      marker.bringToFront();
+      marker.openTooltip();
+    } else {
+      marker.setStyle(style(marker._place));
+      marker.closeTooltip();
+    }
+  }
+
   // /travel/#joshua opens that marker, which is what album pages link to.
   function focusFromHash() {
     var id = location.hash.slice(1);
@@ -111,13 +131,19 @@
   if (!focusFromHash() && home) home.openPopup();
   addEventListener("hashchange", focusFromHash);
 
-  // "Show on the map" under each note.
-  document.querySelectorAll("[data-focus]").forEach(function (link) {
+  // Every place name on the page: the list under the map, and "Show on the map"
+  // under each note.
+  document.querySelectorAll("[data-place]").forEach(function (link) {
+    var id = link.dataset.place;
+    link.addEventListener("mouseenter", function () { highlight(id, true); });
+    link.addEventListener("mouseleave", function () { highlight(id, false); });
+    link.addEventListener("focus", function () { highlight(id, true); });
+    link.addEventListener("blur", function () { highlight(id, false); });
     link.addEventListener("click", function (e) {
-      if (!focus(link.dataset.focus, true)) return;
+      if (!focus(id, true)) return;
       e.preventDefault();
       host.scrollIntoView({ behavior: "smooth", block: "center" });
-      history.replaceState(null, "", "#" + link.dataset.focus);
+      history.replaceState(null, "", "#" + id);
     });
   });
 

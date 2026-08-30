@@ -446,3 +446,24 @@ details.queue > summary:hover { color: var(--ink); }
 .essay { max-width: var(--measure); }
 .essay p { font-size: 1.02rem; }
 .essay p:first-of-type { font-size: 1.12rem; }.essay p:last-child { margin-bottom: 0; }
+
+/* Travel: browsing the places ---------------------------------------------- */
+.region { margin-bottom: 2rem; }
+.region:last-child { margin-bottom: 0; }
+.region h3 { font-size: 0.95rem; font-weight: 600; margin: 0 0 0.6rem;
+  padding-bottom: 0.45rem; border-bottom: 1px solid var(--rule);
+  display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.region h3 .m { font-family: var(--mono); font-size: 0.72rem; font-weight: 400; color: var(--faint); }
+.place-list { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 2rem; }
+@media (min-width: 640px) { .place-list { columns: 3; } }
+.place-list li { break-inside: avoid; margin-bottom: 0.28rem; font-size: 0.9rem; line-height: 1.4; }
+.place-list a { text-decoration: none; }
+.place-list a:hover { text-decoration: underline; text-decoration-color: var(--accent); }
+.place-list .has { display: inline-block; width: 5px; height: 5px; border-radius: 50%;
+  background: var(--accent); vertical-align: 0.22em; margin-left: 0.15rem; }
+
+.leaflet-tooltip { background: var(--ink); color: var(--paper); border: 0; border-radius: 3px;
+  font-family: var(--mono); font-size: 0.7rem; padding: 0.22rem 0.45rem; box-shadow: none;
+  white-space: nowrap; }
+.leaflet-tooltip-top::before { border-top-color: var(--ink); }
+.map-fallback { padding: 1.2rem; color: var(--muted); font-size: 0.92rem; }

@@ -9,6 +9,7 @@
 #   when        free text, e.g. "March 2025". Sorts the notes below the map.
 #   reflection  longer prose. A place with one gets an entry below the map.
 #   here        true for where you live now. Opens on load.
+#   region      groups the place in the list under the map
 #
 # A photo album links itself to a place by setting `place: joshua` in its own
 # front matter, so there is nothing to add here for photos.
@@ -30,228 +31,266 @@
   note: "Leisure trip to the Lake District."
   lat: 54.43
   lng: -2.96
+  region: "United Kingdom"
 
 - id: nj
   name: "Atlantic City, United States"
   note: "Leisure Trips."
   lat: 39.36
   lng: -74.42
+  region: "United States"
 
 - id: bakersfield
   name: "Bakersfield, CA"
   note: "Low-key the best Indian meal @ Punjabi Dhaba!"
   lat: 35.37
   lng: -119.08
+  region: "United States"
 
 - id: bangalore
   name: "Bangalore, India"
   note: "Work Trip."
   lat: 12.97
   lng: 77.59
+  region: "India"
 
 - id: bellevue
   name: "Bellevue, WA"
   note: "Work + Leisure trip for a week!"
   lat: 47.61
   lng: -122.21
+  region: "United States"
 
 - id: boston
   name: "Boston, MA"
   note: "Work trip."
   lat: 42.3601
   lng: -71.0589
+  region: "United States"
 
 - id: boulder
   name: "Boulder, CO"
   note: "Leisure trip!"
   lat: 40.019
   lng: -105.2747
+  region: "United States"
 
 - id: capitola
   name: "Capitola Beach"
   note: "Day trip!"
   lat: 36.97
   lng: -121.95
+  region: "United States"
 
 - id: coventry
   name: "Coventry, UK"
   note: "Conference presentation at University of Warwick."
   lat: 52.4068
   lng: -1.5197
+  region: "United Kingdom"
 
 - id: dallas
   name: "Dallas, United States"
   note: "Airport Visit."
   lat: 32.78
   lng: -96.79
+  region: "United States"
 
 - id: denver
   name: "Denver, CO"
   note: "Work + Leisure trip!"
   lat: 39.7392
   lng: -104.9903
+  region: "United States"
 
 - id: flagstaff
   name: "Flagstaff, AZ"
   note: "Day trip from Phoenix!"
   lat: 35.2
   lng: -111.65
+  region: "United States"
 
 - id: fresno
   name: "Fresno, CA"
   note: "Pit stop during a road trip!"
   lat: 36.7378
   lng: -119.7871
+  region: "United States"
 
 - id: goa
   name: "Goa, India"
   note: "Leisure Trip."
   lat: 15.5
   lng: 73.91
+  region: "India"
 
 - id: grandcanyon
   name: "Grand Canyon, AZ"
   note: "Solo Hiking trip!"
   lat: 36.06
   lng: -112.14
+  region: "United States"
 
 - id: grand_teton
-  name: "Grand Teton National Park."
+  name: "Grand Teton National Park"
   note: "Vacation."
   lat: 43.7904
   lng: -110.6818
+  region: "United States"
 
 - id: hyderabad
   name: "Hyderabad, India"
   note: "Machine Learning Researcher @ IIIT Hyderabad."
   lat: 17.38
   lng: 78.49
+  region: "India"
 
 - id: joshua
   name: "Joshua Tree National Park"
   note: "Day trip to Joshua Tree National Park. Hiked Ryan Mountain, star-gazed, and spent a night in an AirStream!"
   lat: 33.87
   lng: -115.9
+  region: "United States"
 
 - id: keswick
   name: "Keswick, UK"
   note: "Leisure trip to the Lake District"
   lat: 54.61
   lng: -3.15
+  region: "United Kingdom"
 
 - id: kcnp
   name: "Kings Canyon National Park, CA"
   note: "Road trip with roomie!"
   lat: 36.53
   lng: -118.33
+  region: "United States"
 
 - id: hk
   name: "Kowloon, Hong Kong"
   note: "Machine Learning Researcher @ HKUST."
   lat: 22.32
   lng: 114.17
+  region: "Hong Kong"
 
 - id: lv
-  name: "Las Vegas, Nevada."
+  name: "Las Vegas, Nevada"
   note: "Vacation."
   lat: 36.17
   lng: -115.14
+  region: "United States"
 
 - id: lassen
   name: "Lassen Volcanic National Park"
   note: "Mt. Lassen Hike @ 10457 Feet."
   lat: 40.4881
   lng: -121.51
+  region: "United States"
 
 - id: london
   name: "London, UK"
   note: "Vacation."
   lat: 51.5072
   lng: -0.1276
+  region: "United Kingdom"
 
 - id: la
   name: "Los Angeles"
   note: "Long weekend trip to Hollywood, DTLA, Santa Monica, and more."
   lat: 34.0522
   lng: -118.24
+  region: "United States"
 
 - id: menlopark
   name: "Menlo Park"
   note: "Software Engineering Intern at Meta."
   lat: 37.45
   lng: -122.18
+  region: "United States"
 
 - id: monterey
   name: "Monterey"
   note: "Day trip to Monterey Bay Aquarium."
   lat: 36.6
   lng: -121.89
+  region: "United States"
 
 - id: shasta
   name: "Mount Shasta"
   note: "Lake Siskiyou View Point."
   lat: 41.31
   lng: -122.31
+  region: "United States"
 
 - id: mumbai
   name: "Mumbai, India"
   note: "Leisure and Work trips."
   lat: 19.07
   lng: 72.88
+  region: "India"
 
 - id: newyork
   name: "New York City, United States"
   note: "Leisure & Work Trips."
   lat: 40.72
   lng: -74.0
+  region: "United States"
 
 - id: pacifica
   name: "Pacifica"
   note: "Road trip!"
   lat: 37.62
   lng: -122.48
+  region: "United States"
 
 - id: philly
   name: "Philadelphia, United States"
   note: "Drexel University."
   lat: 39.96
   lng: -75.16
+  region: "United States"
 
 - id: phoenix
   name: "Phoenix, AZ"
   note: "Solo road trip!"
   lat: 33.45
   lng: -112.07
+  region: "United States"
 
 - id: rajkot
   name: "Rajkot, India"
   note: "Home."
   lat: 22.31
   lng: 70.81
+  region: "India"
 
 - id: redbluff
   name: "Red Bluff, CA"
   note: "Brunch stop!"
   lat: 40.18
   lng: -122.23
+  region: "United States"
 
 - id: redding
   name: "Redding, CA"
   note: "Brunch stop at Trendy's. (Highly recommend the fresh orange juice!)"
   lat: 40.59
   lng: -122.39
+  region: "United States"
 
 - id: slc
-  name: "Salt Lake City."
+  name: "Salt Lake City"
   note: "Vacation."
   lat: 40.77
   lng: -111.89
+  region: "United States"
 
 - id: sfo
   name: "San Francisco Bay Area, United States"
   note: "Software Engineer at Semgrep"
   lat: 37.78
   lng: -122.42
+  region: "United States"
   here: true
 
 - id: sausalito
@@ -259,112 +298,133 @@
   note: "Day trip!"
   lat: 37.86
   lng: -122.49
+  region: "United States"
 
 - id: seattle
   name: "Seattle, WA"
   note: "Work + Leisure trip for a week!"
   lat: 47.61
   lng: -122.33
+  region: "United States"
 
 - id: sedona
   name: "Sedona, AZ"
   note: "Solo Hiking trip!"
   lat: 34.87
   lng: -111.76
+  region: "United States"
 
 - id: snp
   name: "Sequoia National Park, CA"
   note: "Road trip with roomie!"
   lat: 36.4864
   lng: -118.5658
+  region: "United States"
 
 - id: singapore
   name: "Singapore"
   note: "Vacation!"
   lat: 1.3521
   lng: 103.8198
+  region: "Singapore"
 
 - id: stanford
   name: "Stanford University"
   note: "Pre-Collegiate Summer Institutes."
   lat: 37.43
   lng: -122.16
+  region: "United States"
 
 - id: vina
   name: "Vina, CA"
   note: "AirBnb on the farm!"
   lat: 39.94
   lng: -122.05
+  region: "United States"
 
 - id: dc
   name: "Washington DC, United States"
   note: "Leisure & Work Trips."
   lat: 38.91
   lng: -77.03
+  region: "United States"
 
 - id: yellowstone
-  name: "Yellowstone National Park."
+  name: "Yellowstone National Park"
   note: "Vacation."
   lat: 44.42
   lng: -110.59
+  region: "United States"
 
 - id: yosemite
   name: "Yosemite National Park"
   note: "Clouds Rest Hike @ 10000 ft."
   lat: 37.87
   lng: -119.54
+  region: "United States"
 
 - id: agra
   name: "Agra, India"
   lat: 27.17
   lng: 78.0
+  region: "India"
 
 - id: ahmedabad
   name: "Ahmedabad, India"
   lat: 23.02
   lng: 72.57
+  region: "India"
 
 - id: aurangabad
   name: "Aurangabad, India"
   lat: 19.88
   lng: 75.34
+  region: "India"
 
 - id: chennai
   name: "Chennai, India"
   lat: 13.08
   lng: 80.27
+  region: "India"
 
 - id: delhi
   name: "Delhi, India"
   lat: 28.7
   lng: 77.1
+  region: "India"
 
 - id: mpur
   name: "Madhavpur, India"
   lat: 21.25
   lng: 69.96
+  region: "India"
 
 - id: nashik
   name: "Nashik, India"
   lat: 19.99
   lng: 73.78
+  region: "India"
 
 - id: surat
   name: "Surat, India"
   lat: 21.17
   lng: 72.83
+  region: "India"
 
 - id: tirupati
   name: "Tirupati, India"
   lat: 13.63
   lng: 79.41
+  region: "India"
 
 - id: udaipur
   name: "Udaipur, India"
   lat: 24.58
   lng: 73.71
+  region: "India"
 
 - id: vadodara
   name: "Vadodara, India"
   lat: 22.31
   lng: 73.18
+  region: "India"

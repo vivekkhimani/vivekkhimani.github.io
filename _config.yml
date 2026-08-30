@@ -21,9 +21,6 @@ links:
 
 goodreads_user: "177773639"
 
-# /writing stays out of the nav until there are this many published posts.
-writing_nav_threshold: 3
-
 collections:
   albums:
     output: true

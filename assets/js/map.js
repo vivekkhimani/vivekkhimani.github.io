@@ -12,15 +12,19 @@
   try { places = JSON.parse(data.textContent); } catch (e) { return; }
   if (!places.length) return;
 
-  // CARTO's Positron and Dark Matter are deliberately quiet basemaps, which is
-  // what a page like this wants: the markers should be the loud part.
+  // Esri's Gray Canvas basemaps are built as a quiet backdrop for data overlays,
+  // which is what this page wants: the markers should be the loud part. They need
+  // no API key. Note the {z}/{y}/{x} order, which is not the usual {z}/{x}/{y}.
+  // CARTO's Positron was the obvious choice and now watermarks keyless requests
+  // with "API KEY REQUIRED", serving it as a normal 200, so it cannot be used.
+  var BASE = "https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/";
   var BASEMAPS = {
-    light: "https://basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
-    dark:  "https://basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+    light: BASE + "World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",
+    dark:  BASE + "World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}"
   };
   var ATTRIBUTION =
-    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
-    '&copy; <a href="https://carto.com/attributions">CARTO</a>';
+    'Tiles &copy; <a href="https://www.esri.com/">Esri</a> &middot; ' +
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 
   var darkQuery = matchMedia("(prefers-color-scheme: dark)");
   function themeName() { return darkQuery.matches ? "dark" : "light"; }
@@ -33,7 +37,7 @@
   var map = L.map(host, { scrollWheelZoom: false, worldCopyJump: true });
 
   var tiles = L.tileLayer(BASEMAPS[themeName()], {
-    maxZoom: 19, attribution: ATTRIBUTION, detectRetina: true
+    maxZoom: 16, attribution: ATTRIBUTION
   }).addTo(map);
 
   function escapeHtml(s) {

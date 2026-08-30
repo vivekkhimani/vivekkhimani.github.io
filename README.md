@@ -10,9 +10,6 @@ It lands at `/writing/some-slug/`. Front matter needs `title`; `summary` and
 `tags` are optional. Copy `_drafts/TEMPLATE.md` to start. Anything left in
 `_drafts/` is never published, so half-written posts are safe to commit.
 
-`/writing` stays out of the top nav until there are three published posts. Change
-`writing_nav_threshold` in `_config.yml` to override.
-
 **Photos.**
 
 ```

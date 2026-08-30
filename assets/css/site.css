@@ -382,9 +382,21 @@ details.queue > summary:hover { color: var(--ink); }
 .lightbox button:disabled { opacity: 0.3; cursor: default; }
 
 /* Travel ------------------------------------------------------------------ */
-#map { width: 100%; height: min(70vh, 34rem); border: 1px solid var(--rule); border-radius: 4px;
+/* The old site's map was 2.5:1 and short. Tall maps at world zoom are mostly
+   empty ocean above and below the inhabited band. */
+#map { width: 100%; height: min(52vh, 24rem); border: 1px solid var(--rule); border-radius: 4px;
   background: var(--sunk); z-index: 0; }
 .leaflet-container { font-family: var(--serif); font-size: 0.9rem; background: var(--sunk); }
+/* The basemap is the same in both themes; in dark it is dimmed rather than
+   swapped, so land and water keep the separation a flat grey map loses. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .leaflet-tile-pane {
+    filter: brightness(0.86) saturate(0.82);
+  }
+}
+:root[data-theme="dark"] .leaflet-tile-pane {
+  filter: brightness(0.86) saturate(0.82);
+}
 .leaflet-popup-content-wrapper { background: var(--raise); color: var(--ink);
   border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,.12), 0 12px 28px -12px rgba(0,0,0,.35); }
 .leaflet-popup-tip { background: var(--raise); }
@@ -399,6 +411,10 @@ details.queue > summary:hover { color: var(--ink); }
 .leaflet-control-attribution { background: color-mix(in srgb, var(--paper) 85%, transparent) !important;
   color: var(--faint) !important; font-family: var(--mono); font-size: 0.62rem !important; }
 .leaflet-control-attribution a { color: var(--muted) !important; }
+
+/* The map reads better wider than the text column, so it breaks out of it up to
+   the viewport, and pulls the legend under it back into line. */
+.map-wide { width: min(64rem, calc(100vw - 3rem)); margin-inline: calc(50% - min(32rem, 50vw - 1.5rem)); }
 
 .map-note { display: flex; flex-wrap: wrap; gap: 0.4rem 1.3rem; margin-top: 0.9rem;
   font-family: var(--mono); font-size: 0.7rem; color: var(--faint); }

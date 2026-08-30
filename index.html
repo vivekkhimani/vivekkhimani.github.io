@@ -44,6 +44,38 @@ section: home
   <p class="more"><a href="{{ '/work/' | relative_url }}">Roles, projects and papers</a></p>
 </div>
 
+{%- comment -%}
+  Six frames from the newest album. An album can name the ones it wants shown
+  with a `strip:` list of filenames in its front matter; otherwise the first six
+  in the album are used.
+{%- endcomment -%}
+{%- assign picks = latest_album.photos -%}
+{%- if latest_album.strip -%}
+  {%- assign picks = "" | split: "" -%}
+  {%- for name in latest_album.strip -%}
+    {%- assign hit = latest_album.photos | where: "f", name | first -%}
+    {%- if hit %}{%- assign picks = picks | push: hit -%}{% endif -%}
+  {%- endfor -%}
+{%- endif -%}
+{%- if picks.size > 2 %}
+<section class="strip-sec">
+  <a class="strip-link" href="{{ latest_album.url | relative_url }}">
+    <span class="strip">
+      {%- assign dir = latest_album.dir | default: latest_album.slug -%}
+      {%- for p in picks limit: 6 %}
+      {%- assign base = '/photos/' | append: dir | append: '/320/' | append: p.f -%}
+      <picture>
+        <source type="image/webp" srcset="{{ base | append: '.webp' | relative_url }}">
+        <img src="{{ base | append: '.jpg' | relative_url }}"
+             width="{{ p.w }}" height="{{ p.h }}" loading="lazy" decoding="async" alt="">
+      </picture>
+      {%- endfor %}
+    </span>
+    <span class="strip-cap">{{ latest_album.title }} &middot; {{ latest_album.photos | size }} photos</span>
+  </a>
+</section>
+{%- endif %}
+
 <section class="section">
   <h2>Recently</h2>
   <ul class="recently">

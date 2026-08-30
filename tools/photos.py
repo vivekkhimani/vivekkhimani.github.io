@@ -42,7 +42,7 @@ except ImportError:
 HEIF_SUFFIXES = {".heic", ".heif"}
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-WIDTHS = (640, 1280, 2000)
+WIDTHS = (320, 640, 1280, 2000)
 JPEG_QUALITY = 82
 WEBP_QUALITY = 80
 

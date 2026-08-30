@@ -509,6 +509,29 @@ details.queue > summary:hover { color: var(--ink); }
 .more a::after { content: " \2192"; color: var(--faint); }
 .more a:hover { text-decoration: underline; }
 
+/* The strip of recent photographs ------------------------------------------
+   Built like .recently: hairline gaps over the rule colour inside one rounded
+   frame, so the pictures read as a single band rather than six loose thumbs.
+   Frames are equal width and the photographs are cropped to fill them, which
+   is what lets a portrait album and the odd landscape sit in the same row.
+   The negative top margin pulls the strip up out of .intro's 4.5rem, so it
+   closes the essay rather than opening the section below it. */
+.strip-sec { margin: -2.4rem 0 4rem; }
+.strip-link { display: block; text-decoration: none; color: inherit; }
+.strip { display: flex; gap: 1px; background: var(--rule); border: 1px solid var(--rule);
+  border-radius: 4px; overflow: hidden; }
+.strip picture { flex: 1 1 0; min-width: 0; display: block; background: var(--sunk); }
+.strip img { width: 100%; height: clamp(104px, 15vw, 156px); object-fit: cover; display: block; }
+.strip-cap { display: block; font-family: var(--mono); font-size: 0.7rem;
+  color: var(--faint); margin-top: 0.55rem; }
+.strip-link:hover .strip-cap { color: var(--accent-ink); text-decoration: underline; }
+.strip-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px;
+  border-radius: 4px; }
+/* Six narrow crops on a phone is a colour bar, not photographs. */
+@media (max-width: 560px) {
+  .strip picture:nth-child(n+5) { display: none; }
+}
+
 /* Travel: browsing the places ---------------------------------------------- */
 .region { margin-bottom: 2rem; }
 .region:last-child { margin-bottom: 0; }

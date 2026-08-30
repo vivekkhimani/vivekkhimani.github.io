@@ -1,8 +1,29 @@
 # Places on the map at /travel/.
-# Adding one here adds a marker. Set `album:` to link a marker to a photo album.
-#   name  label shown in the popup
-#   note  one line, shown under the name
-#   here  true for where you live now (opens on load)
+#
+# Adding an entry here adds a marker. Every field except id, name, lat and lng
+# is optional.
+#
+#   id          used by the URL fragment (/travel/#joshua) and by albums
+#   name        shown in the popup and as the heading below the map
+#   note        one line, shown under the name
+#   when        free text, e.g. "March 2025". Sorts the notes below the map.
+#   reflection  longer prose. A place with one gets an entry below the map.
+#   here        true for where you live now. Opens on load.
+#
+# A photo album links itself to a place by setting `place: joshua` in its own
+# front matter, so there is nothing to add here for photos.
+#
+# A fuller entry looks like this:
+#
+#   - id: joshua
+#     name: "Joshua Tree National Park"
+#     note: "Ryan Mountain, then a night in an Airstream."
+#     when: March 2025
+#     reflection: >-
+#       Two or three sentences about what the place was actually like. This is
+#       the part that makes the map yours rather than a list of coordinates.
+#     lat: 33.87
+#     lng: -115.9
 
 - id: ambleside
   name: "Ambleside, UK"

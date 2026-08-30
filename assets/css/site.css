@@ -330,13 +330,41 @@ details.queue > summary:hover { color: var(--ink); }
 
 /* Travel ------------------------------------------------------------------ */
 #map { width: 100%; height: min(70vh, 34rem); border: 1px solid var(--rule); border-radius: 4px;
-  background: var(--sunk); }
+  background: var(--sunk); z-index: 0; }
 .leaflet-container { font-family: var(--serif); font-size: 0.9rem; background: var(--sunk); }
-.leaflet-popup-content { margin: 0.7rem 0.9rem; line-height: 1.45; }
+.leaflet-popup-content-wrapper { background: var(--raise); color: var(--ink);
+  border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,.12), 0 12px 28px -12px rgba(0,0,0,.35); }
+.leaflet-popup-tip { background: var(--raise); }
+.leaflet-popup-content { margin: 0.75rem 0.95rem; line-height: 1.45; }
 .leaflet-popup-content b { display: block; margin-bottom: 0.15rem; }
-.leaflet-popup-content .go { font-family: var(--mono); font-size: 0.72rem; }
-.leaflet-control-attribution { font-family: var(--mono); font-size: 0.62rem !important; }
-.map-note { font-family: var(--mono); font-size: 0.72rem; color: var(--faint); margin-top: 0.8rem; }
+.leaflet-popup-content .go { display: block; margin-top: 0.5rem; padding-top: 0.5rem;
+  border-top: 1px solid var(--rule); font-family: var(--mono); font-size: 0.72rem; }
+.leaflet-popup-close-button { color: var(--faint) !important; }
+.leaflet-popup-close-button:hover { color: var(--ink) !important; }
+.leaflet-bar a { background: var(--raise); color: var(--ink); border-bottom-color: var(--rule); }
+.leaflet-bar a:hover { background: var(--sunk); color: var(--ink); }
+.leaflet-control-attribution { background: color-mix(in srgb, var(--paper) 85%, transparent) !important;
+  color: var(--faint) !important; font-family: var(--mono); font-size: 0.62rem !important; }
+.leaflet-control-attribution a { color: var(--muted) !important; }
+
+.map-note { display: flex; flex-wrap: wrap; gap: 0.4rem 1.3rem; margin-top: 0.9rem;
+  font-family: var(--mono); font-size: 0.7rem; color: var(--faint); }
+.map-note .key { display: inline-flex; align-items: center; gap: 0.45rem; }
+.map-note .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent);
+  opacity: 0.6; flex: none; }
+.map-note .dot-told { width: 11px; height: 11px; opacity: 1;
+  box-shadow: 0 0 0 2px var(--paper), 0 0 0 3px color-mix(in srgb, var(--accent) 35%, transparent); }
+.map-note .dot-here { width: 14px; height: 14px; opacity: 1;
+  box-shadow: 0 0 0 2.5px var(--paper), 0 0 0 4px var(--accent); }
+
+.place { padding-bottom: 1.6rem; margin-bottom: 1.6rem; border-bottom: 1px solid var(--rule); }
+.place:last-child { border-bottom: 0; margin-bottom: 0; }
+.place h3 { font-size: 1.05rem; font-weight: 600; margin: 0; }
+.place p { max-width: var(--measure); color: var(--muted); font-size: 0.95rem; }
+.place-links { font-family: var(--mono); font-size: 0.74rem; display: flex; gap: 1.2rem;
+  margin-bottom: 0; }
+.place-links a { text-decoration: none; }
+.place-links a:hover { text-decoration: underline; }
 
 /* CV ---------------------------------------------------------------------- */
 .cv-grid { display: grid; gap: 2.6rem; }

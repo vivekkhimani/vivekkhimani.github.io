@@ -4,11 +4,21 @@ title: Travel
 section: travel
 eyebrow: Travel
 heading: Places
-intro: Everywhere I have spent time, for work or otherwise. The open marker is where I live now.
+intro: Everywhere I have spent time, for work or otherwise.
 leaflet: true
 js: [/assets/js/map.js]
 ---
 {%- assign albums = site.albums -%}
+{%- comment -%}
+  Places worth reading about: anything carrying a reflection or a photo album.
+  The map is the index; these are the entries.
+{%- endcomment -%}
+{%- assign told = "" | split: "" -%}
+{%- for p in site.data.places -%}
+  {%- assign album = albums | where: "place", p.id | first -%}
+  {%- if p.reflection or album -%}{%- assign told = told | push: p -%}{%- endif -%}
+{%- endfor -%}
+
 <div id="map" role="application" aria-label="Map of places visited">
   <noscript>
     <ul class="plain" style="padding:1rem">
@@ -18,13 +28,50 @@ js: [/assets/js/map.js]
     </ul>
   </noscript>
 </div>
-<p class="map-note">{{ site.data.places | size }} places. Click a marker for the story.</p>
+
+<p class="map-note">
+  <span class="key"><i class="dot dot-here"></i> where I live now</span>
+  <span class="key"><i class="dot dot-told"></i> has a note or photos</span>
+  <span class="key"><i class="dot"></i> been there</span>
+  <span class="key nums">{{ site.data.places | size }} places</span>
+</p>
+
+{%- if told.size > 0 %}
+<section class="section" id="notes">
+  <h2>Notes from some of them</h2>
+  {%- for p in told %}
+  {%- assign album = albums | where: "place", p.id | first %}
+  <article class="place" id="note-{{ p.id }}">
+    <div class="album-head">
+      <h3>{{ p.name }}</h3>
+      <span class="m">
+        {%- if p.when %}{{ p.when }}{% endif -%}
+        {%- if p.when and album %} &middot; {% endif -%}
+        {%- if album %}<a href="{{ album.url | relative_url }}">{{ album.photos | size }} photos</a>{% endif -%}
+      </span>
+    </div>
+    {%- if p.reflection %}<p>{{ p.reflection }}</p>{% elsif p.note %}<p>{{ p.note }}</p>{% endif %}
+    <p class="place-links">
+      <a href="#{{ p.id }}" data-focus="{{ p.id }}">Show on the map</a>
+      {%- if album %} <a href="{{ album.url | relative_url }}">Photos</a>{% endif %}
+    </p>
+  </article>
+  {%- endfor %}
+</section>
+{%- else %}
+<div class="empty" style="margin-top:2.5rem">
+  <p>No notes yet, just markers.</p>
+  <p>Add a <code>reflection:</code> to any entry in <code>_data/places.yml</code> and it
+    gets a note here. Point a photo album at a place with <code>place:</code> in the
+    album's front matter and the two link themselves together.</p>
+</div>
+{%- endif %}
 
 <script id="places-data" type="application/json">
 [
 {%- for p in site.data.places -%}
 {%- assign album = albums | where: "place", p.id | first -%}
-{"id":{{ p.id | jsonify }},"name":{{ p.name | jsonify }},"note":{{ p.note | default: "" | jsonify }},"lat":{{ p.lat }},"lng":{{ p.lng }}{% if p.here %},"here":true{% endif %}{% if album %},"album":{{ album.url | relative_url | jsonify }},"albumTitle":{{ album.title | jsonify }}{% endif %}}{%- unless forloop.last -%},{%- endunless -%}
+{"id":{{ p.id | jsonify }},"name":{{ p.name | jsonify }},"note":{{ p.note | default: "" | jsonify }},"lat":{{ p.lat }},"lng":{{ p.lng }}{% if p.here %},"here":true{% endif %}{% if p.reflection %},"told":true{% endif %}{% if album %},"album":{{ album.url | relative_url | jsonify }},"albumCount":{{ album.photos | size }}{% endif %}}{%- unless forloop.last -%},{%- endunless -%}
 {%- endfor -%}
 ]
 </script>

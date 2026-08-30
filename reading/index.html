@@ -41,7 +41,7 @@ intro: Pulled from Goodreads once a day. Ratings are mine, not the community's.
   <div class="shelf">
     {%- for b in read %}
     <a href="{{ b.link }}">
-      <img class="book-cover" src="{{ b.cover }}" alt="" loading="lazy">
+      <img class="book-cover" src="{{ b.coverSmall | default: b.cover }}" alt="" loading="lazy">
       <span class="meta">
         <span class="stars" aria-label="{{ b.rating }} out of 5">{% for i in (1..b.rating) %}&#9733;{% endfor %}</span>
         <span>{{ b.readAt | date: "%Y" }}</span>

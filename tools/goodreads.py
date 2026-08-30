@@ -13,6 +13,7 @@ from __future__ import annotations
 import argparse
 import json
 import pathlib
+import re
 import sys
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -39,10 +40,23 @@ def parse_date(raw: str) -> str | None:
     return None
 
 
-def cover(item: ET.Element) -> str:
-    """Ask for a larger crop than the thumbnail the feed defaults to."""
+SIZE_RE = re.compile(r"\._S[XY]\d+_(?=\.[a-zA-Z]+$)")
+
+
+def cover(item: ET.Element, height: int) -> str:
+    """Ask Goodreads for a cover bounded to `height` pixels.
+
+    The feed hands back thumbnails, and half the covers carry no size token at
+    all, which serves the full scan and runs to a couple of hundred KB each.
+    """
     url = text(item, "book_large_image_url") or text(item, "book_medium_image_url")
-    return url.replace("._SY75_", "._SY475_").replace("._SX50_", "._SX318_")
+    if not url:
+        return ""
+    token = f"._SY{height}_"
+    if SIZE_RE.search(url):
+        return SIZE_RE.sub(token, url)
+    stem, dot, ext = url.rpartition(".")
+    return f"{stem}{token}{dot}{ext}" if dot else url
 
 
 def fetch_shelf(user: str, shelf: str) -> list[dict]:
@@ -60,7 +74,10 @@ def fetch_shelf(user: str, shelf: str) -> list[dict]:
                 "id": book_id,
                 "title": text(item, "title"),
                 "author": " ".join(text(item, "author_name").split()),
-                "cover": cover(item),
+                # Two crops: the shelf grid renders at about 92px, the
+                # currently-reading cards at about four times that.
+                "cover": cover(item, 475),
+                "coverSmall": cover(item, 300),
                 "link": f"https://www.goodreads.com/book/show/{book_id}",
                 "rating": int(rating) if rating.isdigit() and rating != "0" else None,
                 "avgRating": text(item, "average_rating") or None,

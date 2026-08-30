@@ -26,8 +26,7 @@ js: [/assets/js/gallery.js]
 {%- else %}
 <div class="empty">
   <p>No albums yet.</p>
-  <p>Add one with <code>python tools/photos.py add &lt;slug&gt; ~/path/to/*.jpg</code>.
-    It resizes, strips GPS out of EXIF, writes the manifest, and creates the album
-    page. Then commit.</p>
+  <p>The places they will come from are
+    <a href="{{ '/travel/' | relative_url }}">on the map</a>.</p>
 </div>
 {%- endif %}

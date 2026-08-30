@@ -58,13 +58,6 @@ js: [/assets/js/map.js]
   </article>
   {%- endfor %}
 </section>
-{%- else %}
-<div class="empty" style="margin-top:2.5rem">
-  <p>No notes yet, just markers.</p>
-  <p>Add a <code>reflection:</code> to any entry in <code>_data/places.yml</code> and it
-    gets a note here. Point a photo album at a place with <code>place:</code> in the
-    album's front matter and the two link themselves together.</p>
-</div>
 {%- endif %}
 
 <script id="places-data" type="application/json">

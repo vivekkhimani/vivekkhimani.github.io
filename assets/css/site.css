@@ -258,8 +258,35 @@ figure { margin: 0; }
 .shelf .t { font-size: 0.79rem; line-height: 1.28;
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 
-.shelf-stats { display: flex; flex-wrap: wrap; gap: 1.4rem 2.6rem; padding: 1.3rem 0; margin-bottom: 2.4rem;
-  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+/* Reading: a book he wrote about ----------------------------------------- */
+.note { display: grid; gap: 0.9rem 1.4rem; padding-bottom: 2rem; margin-bottom: 2rem;
+  border-bottom: 1px solid var(--rule); }
+.note:last-child { border-bottom: 0; padding-bottom: 0; margin-bottom: 0; }
+@media (min-width: 620px) { .note { grid-template-columns: 5.5rem minmax(0, 1fr); } }
+.note-cover { display: block; }
+.note-cover .book-cover { width: 5.5rem; }
+@media (max-width: 619px) { .note-cover .book-cover { width: 4.5rem; } }
+.note h3 { font-size: 1.08rem; font-weight: 600; margin: 0; line-height: 1.3; }
+.note-meta { font-family: var(--mono); font-size: 0.72rem; color: var(--faint);
+  margin: 0.25rem 0 0.8rem; }
+.note-meta .stars { color: var(--accent); letter-spacing: 0.04em; }
+.note-text p { font-size: 0.97rem; margin-bottom: 0.85em; }
+.note-text p:last-child { margin-bottom: 0; }
+
+/* Long notes open in place, and still read fully with no JavaScript. */
+details.note-text > summary { list-style: none; cursor: pointer; }
+details.note-text > summary::-webkit-details-marker { display: none; }
+details.note-text > summary > span { display: block; font-size: 0.97rem; }
+details.note-text > summary::after { content: "Read the rest"; display: inline-block;
+  font-family: var(--mono); font-size: 0.72rem; color: var(--accent-ink);
+  margin-top: 0.55rem; border-bottom: 1px solid color-mix(in srgb, var(--accent) 45%, transparent); }
+details.note-text[open] > summary::after { content: "Close"; }
+details.note-text > summary:hover::after { border-bottom-color: var(--accent); }
+details.note-text[open] > summary > span { margin-bottom: 0.85em; }
+details.note-text > p:first-of-type { margin-top: 0.85em; }
+
+.shelf-stats { display: flex; flex-wrap: wrap; gap: 1.3rem 2.4rem; padding: 1.2rem 0;
+  margin: 0 0 3rem; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
 .shelf-stats div { display: flex; flex-direction: column; gap: 0.1rem; }
 .shelf-stats b { font-family: var(--mono); font-size: 1.35rem; font-weight: 500; line-height: 1; font-variant-numeric: tabular-nums; }
 

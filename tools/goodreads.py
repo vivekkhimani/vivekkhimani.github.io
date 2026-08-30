@@ -11,6 +11,7 @@ browser avoids a CORS proxy and keeps the page rendering if Goodreads is down.
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import pathlib
 import re
@@ -59,6 +60,23 @@ def cover(item: ET.Element, height: int) -> str:
     return f"{stem}{token}{dot}{ext}" if dot else url
 
 
+BR_RUN = re.compile(r"(?:\s*<br\s*/?>\s*)+", re.I)
+TAG = re.compile(r"<[^>]+>")
+
+
+def review_paragraphs(raw: str) -> list[str]:
+    """Split a Goodreads review into paragraphs.
+
+    Reviews come back as plain text with <br> for line breaks and nothing else.
+    Any other markup is dropped rather than trusted, and the result is stored as
+    plain strings so the template escapes it like any other text.
+    """
+    if not raw:
+        return []
+    parts = (html.unescape(TAG.sub("", chunk)).strip() for chunk in BR_RUN.split(raw))
+    return [p for p in parts if p]
+
+
 def fetch_shelf(user: str, shelf: str) -> list[dict]:
     books: list[dict] = []
     for page in range(1, MAX_PAGES + 1):
@@ -84,6 +102,7 @@ def fetch_shelf(user: str, shelf: str) -> list[dict]:
                 "published": text(item, "book_published") or None,
                 "readAt": parse_date(text(item, "user_read_at")),
                 "addedAt": parse_date(text(item, "user_date_added")),
+                "review": review_paragraphs(text(item, "user_review")),
             })
     return books
 

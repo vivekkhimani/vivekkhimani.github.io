@@ -257,6 +257,40 @@ figure { margin: 0; }
   margin: 1.4rem 0; padding: 0.2rem 0 0.2rem 1.2rem;
   border-left: 2px solid var(--accent); color: var(--muted); font-style: italic;
 }
+/* Writing: the shape of an essay -----------------------------------------
+   Three things a personal essay wants that a technical post does not.
+
+   .stanza is a run of lines set tight: parallel openings ("To go to sleep on
+   time. / To let a day end...") are the point of such a run, and a full
+   paragraph gap between them hides the parallel. Each line is its own <span>
+   so that a line too long for the measure can hang -- with markdown's <br> a
+   wrapped line looks exactly like the next line of the run, which on a phone
+   is every line.
+
+   .turn is the one line an essay pivots on, set larger with air around it.
+   One per piece: this kind of emphasis works only by being rare.
+
+   The section breaks are a dinkus rather than a rule, because the gaps between
+   movements of an essay are silences, not new chapters -- and the site's
+   hairline rules already mean structure. It is three of the same middle dot
+   the bylines and captions use as a separator. */
+.post-body .stanza span, .post-body .turn span {
+  display: block; padding-left: 1.35em; text-indent: -1.35em;
+}
+.post-body .stanza { margin: 1.5rem 0; line-height: 1.46; }
+.post-body .turn {
+  margin: 2.4rem 0; font-size: 1.42rem; line-height: 1.34;
+  letter-spacing: -0.016em; text-wrap: pretty;
+}
+.post-body hr {
+  border: 0; overflow: visible; text-align: center; line-height: 1;
+  margin: 3.2rem 0 3rem;
+}
+.post-body hr::before {
+  content: "\00B7 \00B7 \00B7"; font-family: var(--serif); font-size: 1.5rem;
+  letter-spacing: 0.55em; text-indent: 0.55em; color: var(--muted);
+}
+
 .post-body img { border-radius: 3px; margin: 1.6rem 0; }
 .post-body figcaption { font-family: var(--mono); font-size: 0.7rem; color: var(--faint); margin-top: -1rem; margin-bottom: 1.6rem; }
 .post-body table { border-collapse: collapse; width: 100%; font-size: 0.92rem; margin: 1.4rem 0; }

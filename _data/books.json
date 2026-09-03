@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-02T13:41:08+00:00",
+  "generated": "2026-09-03T13:35:32+00:00",
   "profile": "https://www.goodreads.com/user/show/177773639",
   "shelves": {
     "reading": [
@@ -386,6 +386,20 @@
       }
     ],
     "queue": [
+      {
+        "id": "24113",
+        "title": "Gödel, Escher, Bach: An Eternal Golden Braid",
+        "author": "Douglas R. Hofstadter",
+        "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1547125681l/24113._SY475_.jpg",
+        "coverSmall": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1547125681l/24113._SY300_.jpg",
+        "link": "https://www.goodreads.com/book/show/24113",
+        "rating": null,
+        "avgRating": "4.28",
+        "published": "1979",
+        "readAt": null,
+        "addedAt": "2026-09-02",
+        "review": []
+      },
       {
         "id": "11",
         "title": "The Hitchhiker's Guide to the Galaxy (Hitchhiker's Guide to the Galaxy, #1)",

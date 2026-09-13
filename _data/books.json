@@ -1,22 +1,8 @@
 {
-  "generated": "2026-09-12T12:51:56+00:00",
+  "generated": "2026-09-13T09:37:07+00:00",
   "profile": "https://www.goodreads.com/user/show/177773639",
   "shelves": {
     "reading": [
-      {
-        "id": "29780253",
-        "title": "Born a Crime: Stories from a South African Childhood",
-        "author": "Trevor Noah",
-        "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1473867911l/29780253._SY475_.jpg",
-        "coverSmall": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1473867911l/29780253._SY300_.jpg",
-        "link": "https://www.goodreads.com/book/show/29780253",
-        "rating": null,
-        "avgRating": "4.47",
-        "published": "2016",
-        "readAt": null,
-        "addedAt": "2026-08-02",
-        "review": []
-      },
       {
         "id": "222685808",
         "title": "What Is Intelligence?: Lessons from AI About Evolution, Computing, and Minds (Antikythera)",
@@ -61,6 +47,26 @@
       }
     ],
     "read": [
+      {
+        "id": "29780253",
+        "title": "Born a Crime: Stories from a South African Childhood",
+        "author": "Trevor Noah",
+        "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1473867911l/29780253._SY475_.jpg",
+        "coverSmall": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1473867911l/29780253._SY300_.jpg",
+        "link": "https://www.goodreads.com/book/show/29780253",
+        "rating": 4,
+        "avgRating": "4.47",
+        "published": "2016",
+        "readAt": "2026-09-13",
+        "addedAt": "2026-09-13",
+        "review": [
+          "After a string of fictions, I wanted to get back into memoirs, and a stranger recommended this one. I read (most of) the 10th anniversary edition (which adds an epilogue) in a single sitting on a flight from SF to Singapore.",
+          "I've watched a decent bit of Trevor Noah and always enjoyed his humor, but I went in with no real expectations. The first thing that struck me is how much the book sounds like him. Given the weight of the subject matter (apartheid, everything his family lived through), it's awesome how light-hearted and warm it manages to be for most of its length. I knew basically nothing about South African history going in and I'm not someone who picks up history books, but the way this is structured made reading it feel effortless.",
+          "The other thing I loved: this is really a tribute to his mom, and to everyone who shaped his childhood. She comes across as this force of opinions, free will, and a completely self-determined way of living, and it's obvious how much of him comes from her.",
+          "More critically, a few sections could've been trimmed, both in length and in emotional pitch. Though that may partly be me dozing off on the plane.",
+          "I'll almost certainly revisit this as the audiobook as Noah narrates it himself!"
+        ]
+      },
       {
         "id": "131359",
         "title": "Death on the Nile (Hercule Poirot, #18)",
@@ -224,7 +230,7 @@
         "coverSmall": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1610927353l/49247043._SY300_.jpg",
         "link": "https://www.goodreads.com/book/show/49247043",
         "rating": 4,
-        "avgRating": "4.30",
+        "avgRating": "4.29",
         "published": "2021",
         "readAt": null,
         "addedAt": "2025-12-25",

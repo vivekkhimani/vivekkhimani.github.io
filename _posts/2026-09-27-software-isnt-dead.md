@@ -18,6 +18,8 @@ solving a real problem for people last week, it's probably still solving it this
 What a release changes is how easily someone else can solve that problem, which is a
 different question.
 
+---
+
 You see this most clearly in sales right now. Build vs buy used to be a fairly easy
 conversation. AI has changed that, and it would be silly to pretend otherwise.
 
@@ -52,6 +54,8 @@ So if a customer goes through all of that anyway, something is really wrong. It 
 price, or it could be that the product stopped keeping up with what they needed. Either
 way, the useful thing to do as a company is be honest with yourself about which one it is.
 
+---
+
 Underneath both the model-release fear and the build vs buy conversation, I think there's
 a bigger shift that doesn't get talked about as much.
 
@@ -70,9 +74,15 @@ it's continuous, repetitive, needs a lot of context, and splits easily across pa
 tracks, which is exactly the kind of work agents are good at.
 
 What stays with people is the work that needs authority and accountability rather than
-effort. Deciding what matters and how much risk is acceptable. Signing off on the calls
-that can't be undone. Supervising the agents doing the execution, and improving how they
-work over time. You can delegate execution, but you can't delegate responsibility.
+effort.
+
+<p class="stanza" markdown="1">
+<span>Deciding what matters and how much risk is acceptable.</span>
+<span>Signing off on the calls that can't be undone.</span>
+<span>Supervising the agents doing the execution, and improving how they work over time.</span>
+</p>
+
+You can delegate execution, but you can't delegate responsibility.
 
 Sequoia's recent essay on the cognitive revolution lands in a similar place. It describes
 what stays human the longest as "wanting things, choosing between them, being accountable
@@ -99,6 +109,8 @@ understand that nobody wants to manually turn context into tickets anymore, when
 are good at reading that context and doing a lot of the parallel work. So they built for
 what the human is actually doing now. Kudos to them for that.
 
+---
+
 There's one more reason I don't buy the "software is dead" story, and it's the one I'm
 most excited about.
 
@@ -108,14 +120,14 @@ is changing much more slowly than what the models can do.
 
 <figure class="chart">
 <svg viewBox="0 0 600 340" role="img" aria-label="Model capabilities rising steeply while adoption rises slowly, with the gap between them shaded" style="max-width:100%;height:auto;color:inherit">
-<path d="M50,295 C250,290 380,200 430,30 L570,30 L570,190 C480,270 300,295 50,298 Z" fill="#3a9d74" fill-opacity="0.12"/>
+<path d="M50,295 C250,290 380,200 430,30 L570,30 L570,190 C480,270 300,295 50,298 Z" class="gap"/>
 <line x1="50" y1="300" x2="570" y2="300" stroke="currentColor" stroke-opacity="0.35"/>
 <line x1="50" y1="300" x2="50" y2="25" stroke="currentColor" stroke-opacity="0.35"/>
-<path d="M50,295 C250,290 380,200 430,30" fill="none" stroke="#3a9d74" stroke-width="3"/>
+<path d="M50,295 C250,290 380,200 430,30" fill="none" class="cap" stroke-width="3"/>
 <path d="M50,298 C300,295 480,270 570,190" fill="none" stroke="currentColor" stroke-width="3"/>
-<text x="440" y="50" fill="currentColor" font-size="15">Model capabilities</text>
-<text x="500" y="220" fill="currentColor" font-size="15">Adoption</text>
-<text x="455" y="140" fill="currentColor" font-size="15" font-style="italic" opacity="0.8">the gap</text>
+<text x="410" y="45" fill="currentColor" font-size="14" text-anchor="end">Model capabilities</text>
+<text x="570" y="268" fill="currentColor" font-size="14" text-anchor="end">Adoption</text>
+<text x="455" y="140" fill="currentColor" font-size="14" font-style="italic" opacity="0.8">the gap</text>
 <text x="545" y="322" fill="currentColor" font-size="13" opacity="0.6">time</text>
 </svg>
 <figcaption>A rough sketch of the idea, not to scale.</figcaption>
@@ -135,6 +147,8 @@ also brings up Jevons: when steam engines got more efficient, Britain didn't bur
 coal, it burned far more.<sup><a href="#ref-1" id="cite-1b">1</a></sup> I think software
 follows the same pattern. When building gets cheap, I'd expect more software, not less,
 pointed at problems nobody could afford to think about before.
+
+---
 
 So yes, a model release can kill a company, and plenty of teams will have hard renewals
 because building got cheaper. I'm not going to pretend that isn't happening.

@@ -299,6 +299,9 @@ figure { margin: 0; }
    against, so the figure carries the space itself. */
 .post-body figure.chart { margin: 2rem 0; }
 .post-body figure.chart svg { display: block; }
+.post-body figure.chart .cap { stroke: var(--accent); }
+.post-body figure.chart .gap { fill: var(--accent); fill-opacity: 0.1; }
+.post-body figure.chart text { font-family: var(--mono); }
 .post-body figure.chart figcaption { margin: 0.6rem 0 0; }
 .post-body sup { line-height: 0; }
 .post-body sup a { font-family: var(--mono); font-size: 0.7em; text-decoration: none; padding: 0 0.1em; }

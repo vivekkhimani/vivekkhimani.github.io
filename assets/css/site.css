@@ -295,6 +295,17 @@ figure { margin: 0; }
 
 .post-body img { border-radius: 3px; margin: 1.6rem 0; }
 .post-body figcaption { font-family: var(--mono); font-size: 0.7rem; color: var(--faint); margin-top: -1rem; margin-bottom: 1.6rem; }
+/* An inline SVG chart has no img margins for the caption's -1rem to pull
+   against, so the figure carries the space itself. */
+.post-body figure.chart { margin: 2rem 0; }
+.post-body figure.chart svg { display: block; }
+.post-body figure.chart figcaption { margin: 0.6rem 0 0; }
+.post-body sup { line-height: 0; }
+.post-body sup a { font-family: var(--mono); font-size: 0.7em; text-decoration: none; padding: 0 0.1em; }
+.post-body .refs { margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); }
+.post-body .refs h2 { font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--faint); font-weight: 500; margin: 0 0 0.6rem; }
+.post-body .refs ol { font-size: 0.9rem; color: var(--muted); padding-left: 1.2rem; margin: 0; }
 .post-body table { border-collapse: collapse; width: 100%; font-size: 0.92rem; margin: 1.4rem 0; }
 .post-body th, .post-body td { text-align: left; padding: 0.5rem 0.7rem; border-bottom: 1px solid var(--rule); }
 .post-body th { font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--faint); font-weight: 500; }

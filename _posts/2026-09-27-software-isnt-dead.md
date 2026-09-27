@@ -1,5 +1,5 @@
 ---
-title: Software Isn't Dead. The Work Moved.
+title: Software Isn't Dead.
 date: 2026-09-27
 summary: On model releases, build vs buy, and what software is for when agents do the work.
 ---
